@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangwoo Eom</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --text: #222;
+      --muted: #666;
+      --accent: #2a6496;
+      --border: #ddd;
+      --max-width: 720px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Nav ────────────────────────────── */
+    nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 0 1rem;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      margin-right: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* ── Main layout ────────────────────── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-bottom: 4rem;
+    }
+
+    /* ── Header ─────────────────────────── */
+    header {
+      padding: 2rem 0 1.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+
+    header .subtitle {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    header .contact {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+
+    header .contact a {
+      color: var(--muted);
+    }
+
+    header .contact a:hover {
+      color: var(--accent);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.75rem 0;
+    }
+
+    /* ── Sections ───────────────────────── */
+    section {
+      margin-bottom: 0.5rem;
+    }
+
+    section h2 {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Bio ────────────────────────────── */
+    .bio p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text);
+    }
+
+    /* ── Research interests ─────────────── */
+    .interest-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .interest-list li {
+      padding: 0.5rem 0;
+      padding-left: 1.2rem;
+      border-left: 2px solid var(--border);
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .interest-list li strong {
+      display: block;
+      color: var(--text);
+    }
+
+    .interest-list li span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ── Education ──────────────────────── */
+    .edu-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .edu-item .year {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 110px;
+      padding-top: 0.1rem;
+    }
+
+    .edu-item .detail strong {
+      display: block;
+    }
+
+    .edu-item .detail span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* ── Publications ───────────────────── */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pub-list li {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .pub-list li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    .pub-list li .journal {
+      font-style: italic;
+    }
+
+    .pub-list li .year-tag {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .pub-label {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 1rem 0 0.5rem;
+    }
+
+    /* ── Presentations ──────────────────── */
+    .pres-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pres-list li {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .pres-list li .pres-year {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 38px;
+      padding-top: 0.1rem;
+    }
+
+    .pres-list li .pres-tag {
+      display: inline-block;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 3px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      letter-spacing: 0.03em;
+    }
+
+    .tag-oral {
+      background: #e8f0fe;
+      color: #2a6496;
+    }
+
+    .tag-poster {
+      background: #f3f4f6;
+      color: #555;
+    }
+
+    /* ── Skills ─────────────────────────── */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 2rem;
+      font-size: 0.92rem;
+    }
+
+    .skill-item strong {
+      display: block;
+      font-size: 0.82rem;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── Honors ─────────────────────────── */
+    .honor-item {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.93rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .honor-item .year {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+      min-width: 40px;
+    }
+
+    /* ── Footer ─────────────────────────── */
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-item {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .pres-list li {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">about</a>
+    <a href="#research">research</a>
+    <a href="#education">education</a>
+    <a href="#publications">publications</a>
+    <a href="#presentations">presentations</a>
+    <a href="#skills">skills</a>
+  </nav>
+
+  <main>
+
+    <!-- ── Header ── -->
+    <header id="about">
+      <h1>Sangwoo Eom</h1>
+      <p class="subtitle">Ph.D. Candidate · Environmental and Energy Engineering</p>
+      <p class="subtitle">Gwangju Institute of Science and Technology (GIST)</p>
+      <p class="contact">
+        <a href="mailto:sangwooe@gm.gist.ac.kr">sangwooe@gm.gist.ac.kr</a>
+        &nbsp;·&nbsp; +82-10-9058-5246
+        &nbsp;·&nbsp; Gwangju, Republic of Korea
+      </p>
+    </header>
+
+    <hr>
+
+    <!-- ── Bio ── -->
+    <section class="bio">
+      <p>
+        I am an Arctic mercury biogeochemist specializing in photoredox kinetics and air–sea Hg(0) exchange.
+        My research investigates how light, dissolved organic matter, and inorganic carbon
+        control the redox cycling of mercury in the ocean—from contaminated estuaries
+        to the ice-covered Arctic. I combine lab photochemistry, field cruises aboard the research
+        vessel <em>Araon</em>, and multi-compartment modeling to understand mercury's fate
+        at the ocean–atmosphere interface.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- ── Research Interests ── -->
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul class="interest-list">
+        <li>
+          <strong>Redox Chemistry of Trace Elements in the Ocean</strong>
+          <span>Elucidating mechanisms of Hg redox reactions mediated by superoxide, carbonate radicals,
+          and halogen radicals under dark and light conditions.</span>
+        </li>
+        <li>
+          <strong>Particle Effects on Marine Biogeochemistry</strong>
+          <span>Investigating how particle-adsorbed metals (Mn, Fe), organic matter, and
+          genomic composition influence marine biogeochemical processes.</span>
+        </li>
+        <li>
+          <strong>Development of Air–Sea Flux Chambers</strong>
+          <span>Designing chambers that account for ocean waves and microbubbles, and comparing
+          in-situ flux measurements with Fick's law estimates.</span>
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ── Education ── -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="year">2020 – 2026</div>
+        <div class="detail">
+          <strong>Integrated Ph.D., Environmental and Energy Engineering</strong>
+          <span>Gwangju Institute of Science and Technology (GIST), Republic of Korea<br>
+          Advisor: Prof. Seunghee Han</span>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="year">2016 – 2020</div>
+        <div class="detail">
+          <strong>B.S., Earth Sciences and Environmental Engineering</strong>
+          <span>Gwangju Institute of Science and Technology (GIST), Republic of Korea</span>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── Honors ── -->
+    <section id="honors">
+      <h2>Honors &amp; Awards</h2>
+
+      <div class="honor-item">
+        <div class="year">2025</div>
+        <div>Marine &amp; Fisheries Academic Achievement Generation Support Program, KIMST</div>
+      </div>
+      <div class="honor-item">
+        <div class="year">2023</div>
+        <div>Best Poster Award, Korean Chemical Society (KCS) — Division of Environmental &amp; Energy Winter Symposium</div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── Publications ── -->
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <p class="pub-label">Published</p>
+      <ul class="pub-list">
+        <li>
+          <strong>Eom, S.</strong>; Soerensen, A. L.; Rhee, T. S.; Hong, J. K.; Son, P.; Rho, T. K.; Han, S.
+          Properties of inflowing Pacific and Atlantic water govern total and methylated mercury profiles in the Arctic Ocean.
+          <span class="journal">Environmental Pollution</span> 374 (2025), 126254.
+        </li>
+        <li>
+          <strong>Eom, S.</strong>; Kim, J.; Jung, E.; Kwon, S.; Hong, S.; Lee, M.; Park, J.; Han, S.
+          Effects of hydrologic regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary.
+          <span class="journal">Marine Pollution Bulletin</span> 206 (2024), 116703.
+        </li>
+        <li>
+          Rahman, M. M.; Jung, E.; <strong>Eom, S.</strong>; Lee, W.; Han, S.
+          Mercury concentrations in sediments and oysters in a temperate coastal zone: a comparison of farmed and wild varieties.
+          <span class="journal">Environmental Science and Pollution Research</span> 30 (2023), 109810–109824.
+        </li>
+        <li>
+          <strong>Eom, S.</strong>; Lee, H.; Kim, J.; Park, K.; Kim, Y.; Sheu, G. R.; Gay, D. A.; Schmeltz, D.; Han, S.
+          Potential sources, scavenging processes, and source regions of mercury in the wet deposition of South Korea.
+          <span class="journal">Science of the Total Environment</span> 762 (2021), 143934.
+        </li>
+        <li>
+          Kim, J.; Soerensen, A. L.; Kim, M.; <strong>Eom, S.</strong>; Rhee, T. S.; Jin, Y. K.; Han, S.
+          Mass budget of methylmercury in the East Siberian Sea: the importance of sediment sources.
+          <span class="journal">Environmental Science &amp; Technology</span> 54 (2020), 9949–9957.
+        </li>
+      </ul>
+
+      <p class="pub-label">In Preparation</p>
+      <ul class="pub-list">
+        <li>
+          <strong>Eom, S.</strong>; Nguyen, H. V.; Qureshi, A.; Han, S.
+          Mechanistic insights into mercury photoreduction: effects of dissolved organic matter and inorganic carbon in seawater.
+          <span class="journal">Environmental Science &amp; Technology</span> (major revision requested).
+        </li>
+        <li>
+          <strong>Eom, S.</strong>; Qureshi, A.; Lee, W.; Rhee, T. S.; Hong, J. K.; Rho, T. K.; Son, P.; Jang, K. S.; Han, S.
+          Sea ice melt modulates oceanic evasion and net production of dissolved gaseous mercury in Arctic summer.
+          Target journal: <span class="journal">Nature Communications</span>.
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ── Presentations ── -->
+    <section id="presentations">
+      <h2>Presentations</h2>
+
+      <p class="pub-label">International</p>
+      <ul class="pres-list">
+        <li>
+          <span class="pres-year">2026</span>
+          <span>
+            Ocean Sciences Meeting (OSM), Glasgow, Scotland.
+            "Properties of Inflowing Pacific and Atlantic Water Govern Total and Methylated Mercury Profiles in the Arctic Ocean."
+            <span class="pres-tag tag-poster">Poster</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2025</span>
+          <span>
+            Xiamen Symposium on Marine Environmental Sciences (XMAS), Xiamen, China.
+            "Properties of inflowing Pacific and Atlantic water govern Arctic Ocean mercury variability."
+            <span class="pres-tag tag-oral">Oral</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2024</span>
+          <span>
+            QUISS-Symposium: Biogeochemical Controls on Mercury Dynamics, Federal Institute of Hydrology (BfG), Koblenz, Germany.
+            "Effects of hydrological regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary."
+            <span class="pres-tag tag-oral">Oral</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2023</span>
+          <span>
+            Goldschmidt 2023, Lyon, France.
+            "Distribution of dissolved gaseous mercury concentrations and photo-induced reduction rate constants of divalent mercury in the Southern Beaufort Sea."
+            <span class="pres-tag tag-poster">Poster</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2023</span>
+          <span>
+            Xiamen Symposium on Marine Environmental Sciences (XMAS), Xiamen, China.
+            (same title as above)
+            <span class="pres-tag tag-oral">Oral</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2019</span>
+          <span>
+            14th International Conference on Mercury as a Global Pollutant (ICMGP), Krakow, Poland.
+            "Source characterization for mercury wet deposition over five cities in South Korea."
+            <span class="pres-tag tag-poster">Poster</span>
+          </span>
+        </li>
+        <li>
+          <span class="pres-year">2019</span>
+          <span>
+            8th Annual Asia-Pacific Mercury Monitoring Network Partners Meeting, Jakarta, Indonesia.
+            "National mercury monitoring activities in Korea."
+            <span class="pres-tag tag-oral">Oral</span>
+          </span>
+        </li>
+      </ul>
+
+      <p class="pub-label">Domestic (Korea)</p>
+      <ul class="pres-list">
+        <li>
+          <span class="pres-year">2025</span>
+          <span>The Korean Society of Oceanography, Gwangju. "Characteristics of inflowing Pacific and Atlantic water govern profiles of total and methylated mercury in the Arctic Ocean." <span class="pres-tag tag-oral">Oral</span></span>
+        </li>
+        <li>
+          <span class="pres-year">2024</span>
+          <span>Asia Oceania Geosciences Society, Pyeongchang. "Influence of Beaufort Gyre on the spatiotemporal variation of total and methylated mercury in the Western Arctic Ocean." <span class="pres-tag tag-oral">Oral</span></span>
+        </li>
+        <li>
+          <span class="pres-year">2024</span>
+          <span>Korean Society of Economic and Environmental Geology, Gyeongju. "Distribution and sources of total and methylated mercury in the Arctic Ocean." <span class="pres-tag tag-oral">Oral</span></span>
+        </li>
+        <li>
+          <span class="pres-year">2023</span>
+          <span>The Korean Society of Oceanography, Siheung. "Distribution and source of mercury in the East Siberian Sea and the Beaufort Sea." <span class="pres-tag tag-oral">Oral</span></span>
+        </li>
+        <li>
+          <span class="pres-year">2023</span>
+          <span>KCS Division of Environmental &amp; Energy Winter Symposium, Hongcheon. <span class="pres-tag tag-poster">Poster</span> — Best Poster Award</span>
+        </li>
+        <li>
+          <span class="pres-year">2022</span>
+          <span>The Korean Society of Oceanography, Jeju. "Photoreduction and air-sea exchange of mercury in the East Siberian Sea." <span class="pres-tag tag-oral">Oral</span></span>
+        </li>
+        <li>
+          <span class="pres-year">2021</span>
+          <span>128th Korean Chemical Society, Busan. "Mixing behaviors and seasonal dynamics of total and methylated mercury in a shallow microtidal estuary: Hyeongsan River Estuary." <span class="pres-tag tag-poster">Poster</span></span>
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- ── Skills ── -->
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-item">
+          <strong>Mercury Analysis</strong>
+          CVAFS (BrooksRand &amp; Tekran 2537 series); THg, MeHg, Hg(0),
+          methylation/demethylation rate constants
+        </div>
+        <div class="skill-item">
+          <strong>Fieldwork</strong>
+          Trace-metal clean sampling in ambient water and sediment;
+          Arctic Araon cruises (ARA13C, ARA15B)
+        </div>
+        <div class="skill-item">
+          <strong>Organic Matter</strong>
+          DOC (VarioTOC), SPE for FT-ICR-MS, FDOM (Hitachi F-2500)
+        </div>
+        <div class="skill-item">
+          <strong>Modeling &amp; Software</strong>
+          R, MATLAB, QGIS, Ocean Data View, MINEQL+5.0,
+          multi-compartment Hg modeling
+        </div>
+        <div class="skill-item">
+          <strong>Experimental Design</strong>
+          Photoredox kinetics setup (k<sub>r</sub>, k<sub>o</sub>);
+          continuous dissolved Hg(0) measurement
+        </div>
+        <div class="skill-item">
+          <strong>Ancillary Parameters</strong>
+          Chlorophyll-a, SPM, UV-Vis, acid volatile sulfide,
+          YSI meter, glove box, ferrioxalate actinometry
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Sangwoo Eom &nbsp;·&nbsp; GIST &nbsp;·&nbsp;
+    <a href="mailto:sangwooe@gm.gist.ac.kr">sangwooe@gm.gist.ac.kr</a>
+  </footer>
+
+</body>
+</html>
