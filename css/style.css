@@ -1,9 +1,10 @@
 :root {
   --bg: #fafafa;
-  --text: #222;
+  --text: #1a1a1a;
   --muted: #666;
-  --accent: #2a6496;
-  --border: #ddd;
+  --accent: #2d6a4f;        /* Forest Green */
+  --accent-light: #eaf4ee;  /* 연한 배경용 */
+  --border: #e0e0e0;
   --max-width: 720px;
 }
 
@@ -64,9 +65,9 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;
-  font-weight: normal;
-  letter-spacing: -0.01em;
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
   margin-bottom: 0.4rem;
 }
 
@@ -95,7 +96,7 @@ header .contact a:hover {
 hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 1.75rem 0;
+  margin: 2.25rem 0;
 }
 
 /* ── Sections ───────────────────────── */
@@ -105,12 +106,14 @@ section {
 
 section h2 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 1.1rem;
+  color: var(--accent);
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--accent);
+  margin-bottom: 1.25rem;
 }
 
 /* ── Bio ────────────────────────────── */
@@ -127,16 +130,22 @@ section h2 {
 }
 
 .interest-list li {
-  padding: 0.5rem 0;
-  padding-left: 1.2rem;
-  border-left: 2px solid var(--border);
-  margin-bottom: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  border-left: 3px solid var(--accent-light);
+  background: var(--accent-light);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 0.7rem;
   font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.interest-list li:hover {
+  border-left-color: var(--accent);
 }
 
 .interest-list li strong {
   display: block;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .interest-list li span {
@@ -188,7 +197,8 @@ section h2 {
   content: "–";
   position: absolute;
   left: 0;
-  color: var(--muted);
+  color: var(--accent);
+  font-weight: bold;
 }
 
 .pub-list li .journal {
@@ -239,8 +249,8 @@ section h2 {
 }
 
 .tag-oral {
-  background: #e8f0fe;
-  color: #2a6496;
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
 .tag-poster {
@@ -307,7 +317,7 @@ footer {
 
 /* ── Nav active (scroll-spy) ─────────── */
 nav a.nav-active {
-  color: var(--text);
+  color: var(--accent);
   font-weight: bold;
 }
 

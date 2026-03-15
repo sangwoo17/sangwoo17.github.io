@@ -37,12 +37,9 @@ function renderBio(bio) {
 
 // ── Research Interests ──────────────────────────────────────────
 function renderInterests(items) {
-  const ul = items.map(({ title, desc }) => `
-    <li>
-      <strong>${title}</strong>
-      <span>${desc}</span>
-    </li>
-  `).join('');
+  const ul = items.map(({ title, desc }) =>
+    `<li><strong>${title}</strong><span>${desc}</span></li>`
+  ).join('');
 
   document.getElementById('research').innerHTML = `
     <h2>Research Interests</h2>
@@ -52,19 +49,11 @@ function renderInterests(items) {
 
 // ── Education ───────────────────────────────────────────────────
 function renderEducation(items) {
-  const rows = items.map(({ period, degree, institution, note }) => `
-    <div class="edu-item">
-      <div class="year">${period}</div>
-      <div class="detail">
-        <strong>${degree}</strong>
-        <span>${institution}${note ? '<br>' + note : ''}</span>
-      </div>
-    </div>
-  `).join('');
+  const rows = items.map(({ period, degree, institution, note }) =>
+    `<div class="edu-item"><div class="year">${period}</div><div class="detail"><strong>${degree}</strong><span>${institution}${note ? '<br>' + note : ''}</span></div></div>`
+  ).join('');
 
-  document.getElementById('education').innerHTML = `
-    <h2>Education</h2>${rows}
-  `;
+  document.getElementById('education').innerHTML = `<h2>Education</h2>${rows}`;
 }
 
 // ── Honors ──────────────────────────────────────────────────────
@@ -135,17 +124,11 @@ function presItem({ year, venue, title, type, note }) {
 
 // ── Skills ──────────────────────────────────────────────────────
 function renderSkills(items) {
-  const cells = items.map(({ category, desc }) => `
-    <div class="skill-item">
-      <strong>${category}</strong>
-      ${desc}
-    </div>
-  `).join('');
+  const cells = items.map(({ category, desc }) =>
+    `<div class="skill-item"><strong>${category}</strong>${desc}</div>`
+  ).join('');
 
-  document.getElementById('skills').innerHTML = `
-    <h2>Technical Skills</h2>
-    <div class="skill-grid">${cells}</div>
-  `;
+  document.getElementById('skills').innerHTML = `<h2>Technical Skills</h2><div class="skill-grid">${cells}</div>`;
 }
 
 // ── Footer ──────────────────────────────────────────────────────
