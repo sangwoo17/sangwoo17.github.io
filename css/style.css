@@ -14,12 +14,17 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.7;
+  letter-spacing: 0.015em;
   padding: 0 1.5rem;
 }
 
@@ -36,7 +41,7 @@ a:hover {
 nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 0 1rem;
+  padding: 1rem 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
 }
@@ -45,11 +50,25 @@ nav a {
   color: var(--muted);
   margin-right: 1.25rem;
   letter-spacing: 0.02em;
+  transition: color 0.15s ease;
 }
 
 nav a:hover {
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
+}
+
+/* 상단 accent 포인트 바 */
+body::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: var(--accent);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 /* ── Main layout ────────────────────── */
@@ -61,7 +80,7 @@ main {
 
 /* ── Header ─────────────────────────── */
 header {
-  padding: 2rem 0 1.5rem;
+  padding: 3.5rem 0 2.25rem;
 }
 
 header h1 {
@@ -96,7 +115,7 @@ header .contact a:hover {
 hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2.25rem 0;
+  margin: 3rem 0;
 }
 
 /* ── Sections ───────────────────────── */
@@ -105,6 +124,9 @@ section {
 }
 
 section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
@@ -113,7 +135,12 @@ section h2 {
   color: var(--accent);
   padding-left: 0.8rem;
   border-left: 3px solid var(--accent);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 svg {
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 /* ── Bio ────────────────────────────── */
@@ -121,6 +148,14 @@ section h2 {
   font-size: 1rem;
   line-height: 1.75;
   color: var(--text);
+}
+
+.bio strong {
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 /* ── Research interests ─────────────── */
@@ -199,6 +234,15 @@ section h2 {
   left: 0;
   color: var(--accent);
   font-weight: bold;
+}
+
+/* 저자 목록의 본인 이름 강조 */
+.pub-list li strong {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .pub-list li .journal {
@@ -330,6 +374,7 @@ nav a.nav-active {
   color: var(--muted);
   cursor: pointer;
   text-decoration: underline dotted;
+  transition: color 0.2s ease;
 }
 
 .copy-email:hover {
