@@ -34,8 +34,6 @@ function renderHeader({ name, title, institution, contact }) {
       <button class="copy-email" data-email="${contact.email}" title="Copy email">
         ${contact.email}
       </button>
-      &nbsp;·&nbsp; ${contact.phone}
-      &nbsp;·&nbsp; ${contact.location}
     </p>
   `;
 }
