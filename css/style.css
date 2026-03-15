@@ -178,12 +178,15 @@ section h2 svg {
   border-left-color: var(--accent);
 }
 
-.interest-list li strong {
+.interest-title {
   display: block;
+  font-weight: bold;
   color: var(--accent);
+  margin-bottom: 0.15rem;
 }
 
-.interest-list li span {
+.interest-desc {
+  display: block;
   color: var(--muted);
   font-size: 0.9rem;
 }

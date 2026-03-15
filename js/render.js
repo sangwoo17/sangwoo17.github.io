@@ -48,7 +48,7 @@ function renderBio(bio) {
 // ── Research Interests ──────────────────────────────────────────
 function renderInterests(items) {
   const ul = items.map(({ title, desc }) =>
-    `<li><strong>${title}</strong><span>${desc}</span></li>`
+    `<li><span class="interest-title">${title}</span><span class="interest-desc">${desc}</span></li>`
   ).join('');
 
   document.getElementById('research').innerHTML = `
