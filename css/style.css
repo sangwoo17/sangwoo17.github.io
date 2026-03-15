@@ -1,0 +1,396 @@
+:root {
+  --bg: #fafafa;
+  --text: #222;
+  --muted: #666;
+  --accent: #2a6496;
+  --border: #ddd;
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Nav ────────────────────────────── */
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 0 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+nav a {
+  color: var(--muted);
+  margin-right: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ── Main layout ────────────────────── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* ── Header ─────────────────────────── */
+header {
+  padding: 2rem 0 1.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+header .subtitle {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+header .contact {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+}
+
+header .contact a {
+  color: var(--muted);
+}
+
+header .contact a:hover {
+  color: var(--accent);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0;
+}
+
+/* ── Sections ───────────────────────── */
+section {
+  margin-bottom: 0.5rem;
+}
+
+section h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+/* ── Bio ────────────────────────────── */
+.bio p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+/* ── Research interests ─────────────── */
+.interest-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interest-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--border);
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.interest-list li strong {
+  display: block;
+  color: var(--text);
+}
+
+.interest-list li span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ── Education ──────────────────────── */
+.edu-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.edu-item .year {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 110px;
+  padding-top: 0.1rem;
+}
+
+.edu-item .detail strong {
+  display: block;
+}
+
+.edu-item .detail span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ── Publications ───────────────────── */
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin-bottom: 0.9rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.pub-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+.pub-list li .journal {
+  font-style: italic;
+}
+
+.pub-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 1rem 0 0.5rem;
+}
+
+/* ── Presentations ──────────────────── */
+.pres-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pres-list li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.pres-list li .pres-year {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 38px;
+  padding-top: 0.1rem;
+}
+
+.pres-list li .pres-tag {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  letter-spacing: 0.03em;
+}
+
+.tag-oral {
+  background: #e8f0fe;
+  color: #2a6496;
+}
+
+.tag-poster {
+  background: #f3f4f6;
+  color: #555;
+}
+
+/* ── Skills ─────────────────────────── */
+.skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 2rem;
+  font-size: 0.92rem;
+}
+
+.skill-item strong {
+  display: block;
+  font-size: 0.82rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Honors ─────────────────────────── */
+.honor-item {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.93rem;
+  margin-bottom: 0.6rem;
+}
+
+.honor-item .year {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 40px;
+}
+
+/* ── Footer ─────────────────────────── */
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ── Scroll fade-in ──────────────────── */
+.fade-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-item.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Nav active (scroll-spy) ─────────── */
+nav a.nav-active {
+  color: var(--text);
+  font-weight: bold;
+}
+
+/* ── Copy email button ───────────────── */
+.copy-email {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+.copy-email:hover {
+  color: var(--accent);
+}
+
+/* ── Toast ───────────────────────────── */
+#toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--text);
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.82rem;
+  padding: 0.45rem 1rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+#toast.toast-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Presentation filter buttons ─────── */
+.pres-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.65rem;
+  cursor: pointer;
+  color: var(--muted);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .pres-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

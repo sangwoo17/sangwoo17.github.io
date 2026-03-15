@@ -1,0 +1,214 @@
+{
+  "name": "Sangwoo Eom",
+  "title": "Ph.D. Candidate · Environmental and Energy Engineering",
+  "institution": "Gwangju Institute of Science and Technology (GIST)",
+  "contact": {
+    "email": "sangwooe@gm.gist.ac.kr",
+    "phone": "+82-10-9058-5246",
+    "location": "Gwangju, Republic of Korea"
+  },
+  "bio": "I am an <strong>Arctic mercury biogeochemist</strong> specializing in <strong>photoredox kinetics</strong> and <strong>air–sea Hg(0) exchange</strong>. My research investigates how light, dissolved organic matter, and inorganic carbon control the <strong>redox cycling of mercury</strong> in the ocean—from contaminated estuaries to the ice-covered Arctic. I combine lab photochemistry, field cruises aboard the research vessel <em>Araon</em>, and multi-compartment modeling to understand mercury's fate at the ocean–atmosphere interface.",
+  "interests": [
+    {
+      "title": "Redox Chemistry of Trace Elements in the Ocean",
+      "desc": "Elucidating mechanisms of <strong>Hg redox reactions</strong> mediated by <strong>superoxide</strong>, <strong>carbonate radicals</strong>, and <strong>halogen radicals</strong> under dark and light conditions."
+    },
+    {
+      "title": "Particle Effects on Marine Biogeochemistry",
+      "desc": "Investigating how <strong>particle-adsorbed metals</strong> (Mn, Fe), <strong>organic matter</strong>, and genomic composition influence marine biogeochemical processes."
+    },
+    {
+      "title": "Development of Air–Sea Flux Chambers",
+      "desc": "Designing chambers that account for <strong>ocean waves</strong> and <strong>microbubbles</strong>, and comparing <strong>in-situ flux measurements</strong> with Fick's law estimates."
+    }
+  ],
+  "education": [
+    {
+      "period": "2020 – 2026",
+      "degree": "Integrated Ph.D., Environmental and Energy Engineering",
+      "institution": "Gwangju Institute of Science and Technology (GIST), Republic of Korea",
+      "note": "Advisor: Prof. Seunghee Han"
+    },
+    {
+      "period": "2016 – 2020",
+      "degree": "B.S., Earth Sciences and Environmental Engineering",
+      "institution": "Gwangju Institute of Science and Technology (GIST), Republic of Korea",
+      "note": ""
+    }
+  ],
+  "honors": [
+    {
+      "year": "2025",
+      "desc": "Marine & Fisheries Academic Achievement Generation Support Program, KIMST"
+    },
+    {
+      "year": "2023",
+      "desc": "Best Poster Award, Korean Chemical Society (KCS) — Division of Environmental & Energy Winter Symposium"
+    }
+  ],
+  "publications": {
+    "published": [
+      {
+        "authors": "<strong>Eom, S.</strong>; Soerensen, A. L.; Rhee, T. S.; Hong, J. K.; Son, P.; Rho, T. K.; Han, S.",
+        "title": "Properties of inflowing Pacific and Atlantic water govern total and methylated mercury profiles in the Arctic Ocean.",
+        "journal": "Environmental Pollution",
+        "info": "374 (2025), 126254."
+      },
+      {
+        "authors": "<strong>Eom, S.</strong>; Kim, J.; Jung, E.; Kwon, S.; Hong, S.; Lee, M.; Park, J.; Han, S.",
+        "title": "Effects of hydrologic regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary.",
+        "journal": "Marine Pollution Bulletin",
+        "info": "206 (2024), 116703."
+      },
+      {
+        "authors": "Rahman, M. M.; Jung, E.; <strong>Eom, S.</strong>; Lee, W.; Han, S.",
+        "title": "Mercury concentrations in sediments and oysters in a temperate coastal zone: a comparison of farmed and wild varieties.",
+        "journal": "Environmental Science and Pollution Research",
+        "info": "30 (2023), 109810–109824."
+      },
+      {
+        "authors": "<strong>Eom, S.</strong>; Lee, H.; Kim, J.; Park, K.; Kim, Y.; Sheu, G. R.; Gay, D. A.; Schmeltz, D.; Han, S.",
+        "title": "Potential sources, scavenging processes, and source regions of mercury in the wet deposition of South Korea.",
+        "journal": "Science of the Total Environment",
+        "info": "762 (2021), 143934."
+      },
+      {
+        "authors": "Kim, J.; Soerensen, A. L.; Kim, M.; <strong>Eom, S.</strong>; Rhee, T. S.; Jin, Y. K.; Han, S.",
+        "title": "Mass budget of methylmercury in the East Siberian Sea: the importance of sediment sources.",
+        "journal": "Environmental Science & Technology",
+        "info": "54 (2020), 9949–9957."
+      }
+    ],
+    "inPrep": [
+      {
+        "authors": "<strong>Eom, S.</strong>; Nguyen, H. V.; Qureshi, A.; Han, S.",
+        "title": "Mechanistic insights into mercury photoreduction: effects of dissolved organic matter and inorganic carbon in seawater.",
+        "journal": "Environmental Science & Technology",
+        "info": "(major revision requested)."
+      },
+      {
+        "authors": "<strong>Eom, S.</strong>; Qureshi, A.; Lee, W.; Rhee, T. S.; Hong, J. K.; Rho, T. K.; Son, P.; Jang, K. S.; Han, S.",
+        "title": "Sea ice melt modulates oceanic evasion and net production of dissolved gaseous mercury in Arctic summer.",
+        "journal": "Nature Communications",
+        "info": "(in preparation)."
+      }
+    ]
+  },
+  "presentations": {
+    "international": [
+      {
+        "year": "2026",
+        "venue": "Ocean Sciences Meeting (OSM), Glasgow, Scotland.",
+        "title": "Properties of Inflowing Pacific and Atlantic Water Govern Total and Methylated Mercury Profiles in the Arctic Ocean.",
+        "type": "poster"
+      },
+      {
+        "year": "2025",
+        "venue": "Xiamen Symposium on Marine Environmental Sciences (XMAS), Xiamen, China.",
+        "title": "Properties of inflowing Pacific and Atlantic water govern Arctic Ocean mercury variability.",
+        "type": "oral"
+      },
+      {
+        "year": "2024",
+        "venue": "QUISS-Symposium: Biogeochemical Controls on Mercury Dynamics, Federal Institute of Hydrology (BfG), Koblenz, Germany.",
+        "title": "Effects of hydrological regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary.",
+        "type": "oral"
+      },
+      {
+        "year": "2023",
+        "venue": "Goldschmidt 2023, Lyon, France.",
+        "title": "Distribution of dissolved gaseous mercury concentrations and photo-induced reduction rate constants of divalent mercury in the Southern Beaufort Sea.",
+        "type": "poster"
+      },
+      {
+        "year": "2023",
+        "venue": "Xiamen Symposium on Marine Environmental Sciences (XMAS), Xiamen, China.",
+        "title": "Distribution of dissolved gaseous mercury concentrations and photo-induced reduction rate constants of divalent mercury in the Southern Beaufort Sea.",
+        "type": "oral"
+      },
+      {
+        "year": "2019",
+        "venue": "14th International Conference on Mercury as a Global Pollutant (ICMGP), Krakow, Poland.",
+        "title": "Source characterization for mercury wet deposition over five cities in South Korea.",
+        "type": "poster"
+      },
+      {
+        "year": "2019",
+        "venue": "8th Annual Asia-Pacific Mercury Monitoring Network Partners Meeting, Jakarta, Indonesia.",
+        "title": "National mercury monitoring activities in Korea.",
+        "type": "oral"
+      }
+    ],
+    "domestic": [
+      {
+        "year": "2025",
+        "venue": "The Korean Society of Oceanography, Gwangju.",
+        "title": "Characteristics of inflowing Pacific and Atlantic water govern profiles of total and methylated mercury in the Arctic Ocean.",
+        "type": "oral"
+      },
+      {
+        "year": "2024",
+        "venue": "Asia Oceania Geosciences Society, Pyeongchang.",
+        "title": "Influence of Beaufort Gyre on the spatiotemporal variation of total and methylated mercury in the Western Arctic Ocean.",
+        "type": "oral"
+      },
+      {
+        "year": "2024",
+        "venue": "Korean Society of Economic and Environmental Geology, Gyeongju.",
+        "title": "Distribution and sources of total and methylated mercury in the Arctic Ocean.",
+        "type": "oral"
+      },
+      {
+        "year": "2023",
+        "venue": "The Korean Society of Oceanography, Siheung.",
+        "title": "Distribution and source of mercury in the East Siberian Sea and the Beaufort Sea.",
+        "type": "oral"
+      },
+      {
+        "year": "2023",
+        "venue": "KCS Division of Environmental & Energy Winter Symposium, Hongcheon.",
+        "title": "Distribution of dissolved gaseous mercury concentrations and photo-induced reduction rate constants of divalent mercury in the Southern Beaufort Sea.",
+        "type": "poster",
+        "note": "Best Poster Award"
+      },
+      {
+        "year": "2022",
+        "venue": "The Korean Society of Oceanography, Jeju.",
+        "title": "Photoreduction and air-sea exchange of mercury in the East Siberian Sea.",
+        "type": "oral"
+      },
+      {
+        "year": "2021",
+        "venue": "128th Korean Chemical Society, Busan.",
+        "title": "Mixing behaviors and seasonal dynamics of total and methylated mercury in a shallow microtidal estuary: Hyeongsan River Estuary.",
+        "type": "poster"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Mercury Analysis",
+      "desc": "CVAFS (BrooksRand & Tekran 2537 series); THg, MeHg, Hg(0), methylation/demethylation rate constants"
+    },
+    {
+      "category": "Fieldwork",
+      "desc": "Trace-metal clean sampling in ambient water and sediment; Arctic Araon cruises (ARA13C, ARA15B)"
+    },
+    {
+      "category": "Organic Matter",
+      "desc": "DOC (VarioTOC), SPE for FT-ICR-MS, FDOM (Hitachi F-2500)"
+    },
+    {
+      "category": "Modeling & Software",
+      "desc": "R, MATLAB, QGIS, Ocean Data View, MINEQL+5.0, multi-compartment Hg modeling"
+    },
+    {
+      "category": "Experimental Design",
+      "desc": "Photoredox kinetics setup (k_r, k_o); continuous dissolved Hg(0) measurement"
+    },
+    {
+      "category": "Ancillary Parameters",
+      "desc": "Chlorophyll-a, SPM, UV-Vis, acid volatile sulfide, YSI meter, glove box, ferrioxalate actinometry"
+    }
+  ]
+}
