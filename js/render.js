@@ -3,7 +3,8 @@ const NAV_ITEMS = [
   ['research', 'Research'],
   ['publications', 'Publications'],
   ['profile', 'Profile'],
-  ['presentations', 'Presentations']
+  ['presentations', 'Presentations'],
+  ['photo-album', 'Photo Album']
 ];
 
 function escapeHtml(value) {
@@ -83,10 +84,17 @@ function renderPublications(items, type) {
   return items.map((item, index) => `
     <article class="list-row publication-item ${index > 2 && type === 'published' ? 'publication-hidden' : ''}" ${index > 2 && type === 'published' ? 'data-extra-publication="true"' : ''}>
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
-      <div>
+      <div class="publication-content">
+        ${type === 'published' && index < 3 ? `
+          <div class="publication-thumb" aria-label="Figure placeholder for ${escapeHtml(item.journal)} ${escapeHtml(item.year)}">
+            <span>Figure</span>
+          </div>
+        ` : ''}
+        <div class="publication-copy">
         <p class="item-subtitle">${escapeHtml(item.authors)}</p>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.journal)}${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
+        </div>
       </div>
     </article>
   `).join('');
@@ -254,6 +262,21 @@ export function render(data) {
         </div>
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
+        </div>
+      </div>
+
+      <div class="section-block section-anchor" id="photo-album">
+        <div class="section-heading">
+          <p class="section-kicker">Photo Album</p>
+          <h2>Photo album</h2>
+        </div>
+        <div class="photo-grid" aria-label="Photo album placeholders">
+          <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-slot"><span>Add photo</span></div>
         </div>
       </div>
 
