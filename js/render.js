@@ -271,14 +271,6 @@ export function render(data) {
           <p class="section-kicker">Contact</p>
           <h2>Contact</h2>
         </div>
-        <div class="contact-panel">
-          <p>For research collaboration, postdoctoral opportunities, or questions about mercury biogeochemistry, please get in touch.</p>
-          <div class="contact-list">
-            <a class="contact-link" href="mailto:${escapeHtml(data.contact.email)}">${escapeHtml(data.contact.email)}</a>
-            <a class="contact-link" href="tel:${escapeHtml(data.contact.phone)}">${escapeHtml(data.contact.phone)}</a>
-            <p>${escapeHtml(data.contact.address)}</p>
-          </div>
-        </div>
       </div>
     </section>
   `;
