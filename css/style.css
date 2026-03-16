@@ -14,11 +14,14 @@
 }
 
 html {
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  padding: 0;
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
@@ -38,12 +41,12 @@ button {
 .page-shell {
   width: min(calc(100% - 40px), var(--content-width));
   margin: 0 auto;
-  padding: 24px 0 88px;
+  padding: 0 0 88px;
 }
 
 .site-header {
   position: sticky;
-  top: 16px;
+  top: 0;
   z-index: 20;
   display: flex;
   align-items: center;
@@ -337,11 +340,11 @@ button {
 @media (max-width: 760px) {
   .page-shell {
     width: min(calc(100% - 24px), var(--content-width));
-    padding-top: 12px;
+    padding-top: 0;
   }
 
   .site-header {
-    top: 8px;
+    top: 0;
     align-items: flex-start;
     margin-bottom: 24px;
     padding: 12px 0;
