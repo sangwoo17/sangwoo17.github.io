@@ -70,8 +70,8 @@ button {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-left: 10px;
+  gap: 22px;
+  margin-left: auto;
 }
 
 .site-nav a {
