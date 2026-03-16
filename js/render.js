@@ -180,7 +180,7 @@ export function render(data) {
         </aside>
         <div class="subsection">
           <div class="subsection-heading">
-            <h3>Selected projects</h3>
+            <h3>Projects</h3>
           </div>
           <div class="simple-list">
             ${renderProjects(data.projects)}
