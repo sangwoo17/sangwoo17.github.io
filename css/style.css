@@ -417,22 +417,22 @@ button {
 
 .year-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .presentation-entry {
   display: grid;
-  gap: 6px;
-  padding: 0 0 12px;
+  gap: 4px;
+  padding: 0 0 10px;
   border-bottom: 1px solid var(--line);
 }
 
 .presentation-entry p {
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 .presentation-entry .item-subtitle {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .presentation-hidden {
