@@ -137,6 +137,10 @@ button {
   text-transform: uppercase;
 }
 
+.section-kicker {
+  display: none;
+}
+
 .hero h1,
 .section-heading h2,
 .subsection-heading h3,
