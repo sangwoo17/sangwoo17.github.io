@@ -440,6 +440,10 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
+.year-group:last-child .presentation-entry:last-child {
+  padding-bottom: 2px;
+}
+
 .presentation-entry p {
   line-height: 1.35;
 }
