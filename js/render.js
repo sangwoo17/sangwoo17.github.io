@@ -179,14 +179,6 @@ export function render(data) {
         </div>
         <div class="subsection">
           <div class="subsection-heading">
-            <h3>Research areas</h3>
-          </div>
-          <div class="list-grid">
-            ${renderFocus(data.focusAreas)}
-          </div>
-        </div>
-        <div class="subsection">
-          <div class="subsection-heading">
             <h3>Selected projects</h3>
           </div>
           <div class="simple-list">
