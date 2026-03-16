@@ -227,7 +227,8 @@ button {
 
 .metrics-panel {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
   align-content: start;
   padding: 4px 0;
 }
@@ -337,6 +338,11 @@ button {
   .contact-layout,
   .list-grid {
     grid-template-columns: 1fr;
+  }
+
+  .metrics-panel {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
