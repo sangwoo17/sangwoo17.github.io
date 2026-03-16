@@ -248,7 +248,6 @@ button {
 .rich-copy {
   display: grid;
   gap: 16px;
-  max-width: 70ch;
 }
 
 .overview-grid {
