@@ -255,7 +255,7 @@ export function render(data) {
       <div class="section-block section-anchor" id="publications">
         <div class="section-heading">
           <p class="section-kicker">Publications</p>
-          <h2>Selected publications</h2>
+          <h2>Publications</h2>
         </div>
         <div class="publication-group">
           <div class="group-label">Published</div>
