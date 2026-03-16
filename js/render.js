@@ -245,8 +245,8 @@ export function render(data) {
           ${renderStats(data.stats)}
         </aside>
         <div class="subsection section-anchor" id="projects">
-          <div class="subsection-heading">
-            <h3>Projects</h3>
+          <div class="section-heading">
+            <h2>Projects</h2>
           </div>
           <div class="simple-list">
             ${renderProjects(data.projects)}
