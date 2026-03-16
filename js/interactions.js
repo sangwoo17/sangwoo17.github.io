@@ -1,6 +1,7 @@
 export function initInteractions() {
   initNavigation();
   initPublicationToggle();
+  initPresentationToggle();
   initHeroSlideshow();
 }
 
@@ -54,7 +55,24 @@ function initPublicationToggle() {
 
     items.forEach(item => item.classList.toggle('publication-hidden', expanded));
     button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more publications' : 'Show fewer publications';
+    button.textContent = expanded ? 'Show more' : 'Show less';
+  });
+}
+
+function initPresentationToggle() {
+  const button = document.querySelector('.presentation-toggle');
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const items = document.querySelectorAll('[data-extra-presentation="true"]');
+    const expanded = button.dataset.expanded === 'true';
+
+    items.forEach(item => item.classList.toggle('presentation-hidden', expanded));
+    button.dataset.expanded = String(!expanded);
+    button.textContent = expanded ? 'Show more' : 'Show less';
   });
 }
 

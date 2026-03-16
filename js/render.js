@@ -82,7 +82,7 @@ function renderProjects(items) {
 
 function renderPublications(items, type) {
   return items.map((item, index) => `
-    <article class="list-row publication-item ${index > 2 && type === 'published' ? 'publication-hidden' : ''}" ${index > 2 && type === 'published' ? 'data-extra-publication="true"' : ''}>
+    <article class="list-row publication-item ${index > 1 && type === 'published' ? 'publication-hidden' : ''}" ${index > 1 && type === 'published' ? 'data-extra-publication="true"' : ''}>
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
       <div class="publication-content">
         ${type === 'published' && index < 3 ? `
@@ -125,6 +125,7 @@ function formatLabel(value) {
 }
 
 function renderPresentations(items) {
+  let visibleCount = 0;
   const groups = items.reduce((acc, item) => {
     if (!acc.has(item.year)) {
       acc.set(item.year, []);
@@ -140,9 +141,11 @@ function renderPresentations(items) {
       <div class="year-list">
         ${entries.map(item => {
           const venue = splitVenue(item.venue);
+          const isHidden = visibleCount > 1;
+          visibleCount += 1;
 
           return `
-    <article class="presentation-entry">
+    <article class="presentation-entry ${isHidden ? 'presentation-hidden' : ''}" ${isHidden ? 'data-extra-presentation="true"' : ''}>
       <div class="tag-row">
         <span class="tag">${escapeHtml(formatLabel(item.type))}</span>
         <span class="tag">${escapeHtml(formatLabel(item.region))}</span>
@@ -325,6 +328,7 @@ export function render(data) {
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
         </div>
+        <button class="button-secondary presentation-toggle" type="button">Show more</button>
       </div>
 
       <div class="section-block section-anchor" id="photo-album">
