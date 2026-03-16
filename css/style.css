@@ -351,6 +351,11 @@ button {
   min-width: 0;
 }
 
+.publication-content-text-only {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+
 .publication-copy .item-subtitle {
   margin-bottom: 8px;
 }

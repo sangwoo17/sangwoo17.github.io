@@ -84,7 +84,7 @@ function renderPublications(items, type) {
   return items.map((item, index) => `
     <article class="list-row publication-item ${index > 1 && type === 'published' ? 'publication-hidden' : ''}" ${index > 1 && type === 'published' ? 'data-extra-publication="true"' : ''}>
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
-      <div class="publication-content">
+      <div class="publication-content ${type !== 'published' || index >= 3 ? 'publication-content-text-only' : ''}">
         ${type === 'published' && index < 3 ? `
           <div class="publication-thumb" aria-label="Figure placeholder for ${escapeHtml(item.journal)} ${escapeHtml(item.year)}">
             <span>Figure</span>
