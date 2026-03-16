@@ -146,8 +146,8 @@ function renderPresentations(items) {
           return `
     <article class="presentation-entry ${isHidden ? 'presentation-hidden' : ''}" ${isHidden ? 'data-extra-presentation="true"' : ''}>
       <div class="tag-row">
-        <span class="tag">${escapeHtml(formatLabel(item.type))}</span>
-        <span class="tag">${escapeHtml(formatLabel(item.region))}</span>
+        <span class="tag tag-${escapeHtml(item.type)}">${escapeHtml(formatLabel(item.type))}</span>
+        <span class="tag tag-${escapeHtml(item.region)}">${escapeHtml(formatLabel(item.region))}</span>
       </div>
       <div>
         <h3>${escapeHtml(item.title)}</h3>
@@ -327,7 +327,7 @@ export function render(data) {
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
         </div>
-        <button class="button-secondary presentation-toggle" type="button">Show more</button>
+        <button class="button-secondary presentation-toggle" type="button">Show more conferences</button>
       </div>
 
       <div class="section-block section-anchor" id="photo-album">

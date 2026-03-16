@@ -414,7 +414,7 @@ button {
 
 .presentation-toggle {
   display: block;
-  margin: 4px auto 0;
+  margin: 0 auto 0;
 }
 
 .year-group + .year-group {
@@ -473,6 +473,30 @@ button {
   font-size: 0.78rem;
   font-weight: 500;
   background: var(--surface);
+}
+
+.tag-oral {
+  color: #0b5a8f;
+  border-color: #b9d8ee;
+  background: #eef7fd;
+}
+
+.tag-poster {
+  color: #7a4a06;
+  border-color: #f0d3a7;
+  background: #fff6ea;
+}
+
+.tag-international {
+  color: #245b2a;
+  border-color: #bddcba;
+  background: #eff9ef;
+}
+
+.tag-domestic {
+  color: #7a1f57;
+  border-color: #ecc0dd;
+  background: #fdf0f8;
 }
 
 .photo-grid {
