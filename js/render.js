@@ -70,7 +70,7 @@ function renderHonors(items) {
 function renderProjects(items) {
   return items.map(({ period, title, support, outcome }) => `
     <article class="list-row">
-      <div class="list-meta">${escapeHtml(period)}</div>
+      <div class="list-meta project-year">${escapeHtml(period)}</div>
       <div>
         <h3>${escapeHtml(title)}</h3>
         <p class="item-subtitle">${escapeHtml(support)}</p>

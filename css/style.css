@@ -386,6 +386,10 @@ button {
   letter-spacing: 0.04em;
 }
 
+.project-year {
+  color: var(--accent);
+}
+
 .item-subtitle {
   margin-bottom: 6px;
 }
