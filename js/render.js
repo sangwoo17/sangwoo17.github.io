@@ -16,6 +16,10 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;');
 }
 
+function formatInlineBreaks(value) {
+  return escapeHtml(value).replaceAll('&lt;br&gt;', '<br>');
+}
+
 function renderStats(stats) {
   return stats.map(({ value, label }) => `
     <div class="metric-item">
@@ -135,16 +139,6 @@ function renderPrograms(items) {
   `).join('');
 }
 
-function renderReferences(items) {
-  return items.map(({ name, role, email }) => `
-    <article class="list-entry">
-      <h3>${escapeHtml(name)}</h3>
-      <p>${escapeHtml(role)}</p>
-      <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>
-    </article>
-  `).join('');
-}
-
 export function render(data) {
   const nav = document.getElementById('site-nav');
   const app = document.getElementById('app');
@@ -155,7 +149,7 @@ export function render(data) {
     <section class="hero section-anchor" id="intro">
       <div class="hero-copy">
         <h1>${escapeHtml(data.site.title)}</h1>
-        <p class="hero-subtagline">${escapeHtml(data.site.subtagline)}</p>
+        <p class="hero-subtagline">${formatInlineBreaks(data.site.subtagline)}</p>
         <div class="hero-actions">
           <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
           <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
@@ -275,19 +269,14 @@ export function render(data) {
       <div class="section-block section-anchor" id="contact">
         <div class="section-heading">
           <p class="section-kicker">Contact</p>
-          <h2>Contact and references</h2>
+          <h2>Contact</h2>
         </div>
-        <div class="contact-layout">
-          <div class="contact-panel">
-            <p>For research collaboration, postdoctoral opportunities, or questions about mercury biogeochemistry, please get in touch.</p>
-            <div class="contact-list">
-              <a class="contact-link" href="mailto:${escapeHtml(data.contact.email)}">${escapeHtml(data.contact.email)}</a>
-              <a class="contact-link" href="tel:${escapeHtml(data.contact.phone)}">${escapeHtml(data.contact.phone)}</a>
-              <p>${escapeHtml(data.contact.address)}</p>
-            </div>
-          </div>
-          <div class="list-grid">
-            ${renderReferences(data.references)}
+        <div class="contact-panel">
+          <p>For research collaboration, postdoctoral opportunities, or questions about mercury biogeochemistry, please get in touch.</p>
+          <div class="contact-list">
+            <a class="contact-link" href="mailto:${escapeHtml(data.contact.email)}">${escapeHtml(data.contact.email)}</a>
+            <a class="contact-link" href="tel:${escapeHtml(data.contact.phone)}">${escapeHtml(data.contact.phone)}</a>
+            <p>${escapeHtml(data.contact.address)}</p>
           </div>
         </div>
       </div>
