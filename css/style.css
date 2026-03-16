@@ -225,19 +225,25 @@ button {
   max-width: 70ch;
 }
 
+.overview-grid {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
 .overview-grid + .subsection {
   margin-top: 14px;
 }
 
 .metrics-panel {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 20px;
-  align-content: start;
-  padding: 4px 0;
+  padding: 4px 0 0;
 }
 
 .metric-item {
+  flex: 1 1 0;
   text-align: center;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
@@ -392,7 +398,7 @@ button {
   }
 
   .metrics-panel {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 16px;
   }
 

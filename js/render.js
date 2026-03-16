@@ -174,10 +174,10 @@ export function render(data) {
           <div class="rich-copy">
             ${renderBio(data.bio)}
           </div>
-          <aside class="metrics-panel" aria-label="Research highlights">
-            ${renderStats(data.stats)}
-          </aside>
         </div>
+        <aside class="metrics-panel" aria-label="Research highlights">
+          ${renderStats(data.stats)}
+        </aside>
         <div class="subsection">
           <div class="subsection-heading">
             <h3>Selected projects</h3>
