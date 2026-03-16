@@ -48,9 +48,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 18px 0;
-  margin-bottom: 44px;
+  gap: 16px;
+  padding: 14px 0;
+  margin-bottom: 40px;
   background: rgba(247, 248, 250, 0.94);
   border-bottom: 1px solid rgba(216, 224, 232, 0.85);
   backdrop-filter: blur(8px);
@@ -65,12 +65,13 @@ button {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 14px;
 }
 
 .site-nav a {
   font-size: 0.95rem;
   color: var(--muted);
+  padding: 2px 0;
 }
 
 .site-nav a:hover,
@@ -342,8 +343,8 @@ button {
   .site-header {
     top: 8px;
     align-items: flex-start;
-    margin-bottom: 28px;
-    padding: 14px 0;
+    margin-bottom: 24px;
+    padding: 12px 0;
   }
 
   .nav-toggle {
@@ -357,9 +358,9 @@ button {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
     min-width: 200px;
-    padding: 16px;
+    padding: 14px;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 12px;
