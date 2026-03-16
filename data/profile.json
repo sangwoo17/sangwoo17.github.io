@@ -2,7 +2,21 @@
   "site": {
     "title": "Sangwoo Eom",
     "tagline": "Arctic mercury biogeochemist with expertise in photoredox kinetics and air-sea Hg(0) exchange",
-    "subtagline": "Ph.D. Candidate, Department of Environmental and Energy Engineering,<br>Gwangju Institute of Science and Technology (GIST), Republic of Korea"
+    "subtagline": "Ph.D. Candidate, Department of Environmental and Energy Engineering,<br>Gwangju Institute of Science and Technology (GIST), Republic of Korea",
+    "heroSlides": [
+      {
+        "src": "images/hero-slide-1.svg",
+        "alt": "Fieldwork placeholder"
+      },
+      {
+        "src": "images/hero-slide-2.svg",
+        "alt": "Laboratory placeholder"
+      },
+      {
+        "src": "images/hero-slide-3.svg",
+        "alt": "Research presentation placeholder"
+      }
+    ]
   },
   "contact": {
     "email": "sangwooe@gm.gist.ac.kr",

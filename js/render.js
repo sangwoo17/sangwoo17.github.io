@@ -100,16 +100,64 @@ function renderPublications(items, type) {
   `).join('');
 }
 
+function splitVenue(value) {
+  const parts = String(value).split(',').map(part => part.trim());
+
+  if (parts.length < 2) {
+    return {
+      event: value,
+      location: ''
+    };
+  }
+
+  return {
+    event: parts.slice(0, -1).join(', '),
+    location: parts.at(-1)
+  };
+}
+
+function formatLabel(value) {
+  if (!value) {
+    return '';
+  }
+
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
 function renderPresentations(items) {
-  return items.map(item => `
-    <article class="list-row">
-      <div class="list-meta">${escapeHtml(item.year)}</div>
+  const groups = items.reduce((acc, item) => {
+    if (!acc.has(item.year)) {
+      acc.set(item.year, []);
+    }
+
+    acc.get(item.year).push(item);
+    return acc;
+  }, new Map());
+
+  return [...groups.entries()].map(([year, entries]) => `
+    <section class="year-group">
+      <h3 class="year-heading">${escapeHtml(year)}</h3>
+      <div class="year-list">
+        ${entries.map(item => {
+          const venue = splitVenue(item.venue);
+
+          return `
+    <article class="presentation-entry">
+      <div class="tag-row">
+        <span class="tag">${escapeHtml(formatLabel(item.type))}</span>
+        <span class="tag">${escapeHtml(formatLabel(item.region))}</span>
+      </div>
       <div>
         <h3>${escapeHtml(item.title)}</h3>
-        <p class="item-subtitle">${escapeHtml(item.venue)}</p>
-        <p>${escapeHtml(item.region)} / ${escapeHtml(item.type)}${item.note ? ` / ${escapeHtml(item.note)}` : ''}</p>
+        <p class="item-subtitle">${escapeHtml(venue.event)}</p>
+        ${venue.location ? `<p>${escapeHtml(venue.location)}</p>` : ''}
+        ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ''}
       </div>
     </article>
+  `;
+        }).join('')}
+      </div>
+    </section>
   `).join('');
 }
 
@@ -146,6 +194,17 @@ function renderPrograms(items) {
   `).join('');
 }
 
+function renderHeroSlides(items = []) {
+  return items.map((item, index) => `
+    <img
+      class="hero-slide ${index === 0 ? 'is-active' : ''}"
+      src="${escapeHtml(item.src)}"
+      alt="${escapeHtml(item.alt)}"
+      ${index === 0 ? '' : 'aria-hidden="true"'}
+    >
+  `).join('');
+}
+
 export function render(data) {
   const nav = document.getElementById('site-nav');
   const app = document.getElementById('app');
@@ -155,6 +214,9 @@ export function render(data) {
   app.innerHTML = `
     <section class="hero section-anchor" id="intro">
       <div class="hero-copy">
+        <div class="hero-slideshow" data-slideshow>
+          ${renderHeroSlides(data.site.heroSlides)}
+        </div>
         <h1>${escapeHtml(data.site.title)}</h1>
         <p class="hero-subtagline">${formatInlineBreaks(data.site.subtagline)}</p>
         <div class="hero-actions">

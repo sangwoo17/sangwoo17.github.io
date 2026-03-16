@@ -1,6 +1,7 @@
 export function initInteractions() {
   initNavigation();
   initPublicationToggle();
+  initHeroSlideshow();
 }
 
 function initNavigation() {
@@ -55,4 +56,30 @@ function initPublicationToggle() {
     button.dataset.expanded = String(!expanded);
     button.textContent = expanded ? 'Show more publications' : 'Show fewer publications';
   });
+}
+
+function initHeroSlideshow() {
+  const slideshow = document.querySelector('[data-slideshow]');
+
+  if (!slideshow) {
+    return;
+  }
+
+  const slides = [...slideshow.querySelectorAll('.hero-slide')];
+
+  if (slides.length < 2) {
+    return;
+  }
+
+  let activeIndex = 0;
+
+  window.setInterval(() => {
+    slides[activeIndex].classList.remove('is-active');
+    slides[activeIndex].setAttribute('aria-hidden', 'true');
+
+    activeIndex = (activeIndex + 1) % slides.length;
+
+    slides[activeIndex].classList.add('is-active');
+    slides[activeIndex].removeAttribute('aria-hidden');
+  }, 2600);
 }
