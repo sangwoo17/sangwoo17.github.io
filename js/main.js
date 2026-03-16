@@ -1,13 +1,27 @@
-// ── Entry point ─────────────────────────────────────────────────
-// profile.json을 불러와 렌더링 → 인터랙션 초기화 순서로 실행합니다.
-
 import { render } from './render.js';
 import { initInteractions } from './interactions.js';
 
-fetch('data/profile.json')
-  .then(res => res.json())
-  .then(data => {
+async function bootstrap() {
+  const app = document.getElementById('app');
+
+  try {
+    const response = await fetch('data/profile.json');
+
+    if (!response.ok) {
+      throw new Error(`Failed to load portfolio data: ${response.status}`);
+    }
+
+    const data = await response.json();
     render(data);
     initInteractions();
-  })
-  .catch(err => console.error('profile.json 로드 실패:', err));
+  } catch (error) {
+    console.error(error);
+    app.innerHTML = `
+      <section class="load-error">
+        <p>Unable to load portfolio content.</p>
+      </section>
+    `;
+  }
+}
+
+bootstrap();

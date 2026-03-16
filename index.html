@@ -3,39 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sangwoo Eom</title>
+  <title>Sangwoo Eom | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website for Sangwoo Eom, an Arctic mercury biogeochemist specializing in photoredox kinetics and air-sea Hg(0) exchange."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="page-shell">
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#intro">Sangwoo Eom</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary"></nav>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+    </header>
 
-  <nav>
-    <a href="#about">about</a>
-    <a href="#research">research</a>
-    <a href="#education">education</a>
-    <a href="#publications">publications</a>
-    <a href="#presentations">presentations</a>
-    <a href="#skills">skills</a>
-  </nav>
-
-  <main>
-    <header id="header"></header>
-    <hr>
-    <section class="bio" id="bio"></section>
-    <hr>
-    <section id="research"></section>
-    <hr>
-    <section id="education"></section>
-    <hr>
-    <section id="honors"></section>
-    <hr>
-    <section id="publications"></section>
-    <hr>
-    <section id="presentations"></section>
-    <hr>
-    <section id="skills"></section>
-  </main>
-
-  <footer id="footer"></footer>
+    <main id="app" aria-live="polite"></main>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 </body>
