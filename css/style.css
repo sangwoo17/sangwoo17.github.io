@@ -69,23 +69,15 @@ button {
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
   gap: 22px;
   margin-left: auto;
-  max-width: 720px;
 }
 
 .site-nav a {
   font-size: 0.95rem;
   color: var(--muted);
   padding: 2px 0;
-}
-
-.site-nav .nav-secondary {
-  flex-basis: 100%;
-  text-align: right;
 }
 
 .site-nav a:hover,
@@ -548,7 +540,6 @@ button {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
     gap: 12px;
     min-width: 200px;
     padding: 14px;
@@ -559,11 +550,6 @@ button {
 
   .site-nav.open {
     display: flex;
-  }
-
-  .site-nav .nav-secondary {
-    flex-basis: auto;
-    text-align: left;
   }
 
   .content-grid {

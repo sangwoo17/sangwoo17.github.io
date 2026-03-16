@@ -2,10 +2,9 @@ const NAV_ITEMS = [
   { id: 'intro', label: 'Intro' },
   { id: 'research', label: 'Research' },
   { id: 'publications', label: 'Publications' },
-  { id: 'profile', label: 'Profile' },
-  { id: 'presentations', label: 'Presentations' },
-  { id: 'photo-album', label: 'Photo Album' },
-  { id: 'technical-background', label: 'Technical Background', secondary: true }
+  { id: 'presentations', label: 'Conference' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'photo-album', label: 'Photos' }
 ];
 
 function escapeHtml(value) {
@@ -212,8 +211,8 @@ export function render(data) {
   const nav = document.getElementById('site-nav');
   const app = document.getElementById('app');
 
-  nav.innerHTML = NAV_ITEMS.map(({ id, label, secondary }) => `
-    <a class="${secondary ? 'nav-secondary' : ''}" href="#${id}">${label}</a>
+  nav.innerHTML = NAV_ITEMS.map(({ id, label }) => `
+    <a href="#${id}">${label}</a>
   `).join('');
 
   app.innerHTML = `
@@ -245,7 +244,7 @@ export function render(data) {
         <aside class="metrics-panel" aria-label="Research highlights">
           ${renderStats(data.stats)}
         </aside>
-        <div class="subsection">
+        <div class="subsection section-anchor" id="projects">
           <div class="subsection-heading">
             <h3>Projects</h3>
           </div>
