@@ -317,6 +317,13 @@ button {
   gap: 18px;
 }
 
+#profile .subsection,
+#profile .simple-list,
+#profile .list-row {
+  width: 100%;
+  max-width: none;
+}
+
 .list-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
