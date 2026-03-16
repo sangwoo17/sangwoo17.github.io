@@ -225,6 +225,10 @@ button {
   max-width: 70ch;
 }
 
+.overview-grid + .subsection {
+  margin-top: 14px;
+}
+
 .metrics-panel {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
