@@ -41,19 +41,21 @@ button {
 .page-shell {
   width: min(calc(100% - 40px), var(--content-width));
   margin: 0 auto;
-  padding: 0 0 88px;
+  padding: 72px 0 88px;
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 14px 0;
-  margin-bottom: 40px;
+  margin: 0;
+  padding: 14px 20px;
   background: rgba(247, 248, 250, 0.94);
   border-bottom: 1px solid rgba(216, 224, 232, 0.85);
   backdrop-filter: blur(8px);
@@ -340,14 +342,13 @@ button {
 @media (max-width: 760px) {
   .page-shell {
     width: min(calc(100% - 24px), var(--content-width));
-    padding-top: 0;
+    padding-top: 64px;
   }
 
   .site-header {
     top: 0;
     align-items: flex-start;
-    margin-bottom: 24px;
-    padding: 12px 0;
+    padding: 12px 12px;
   }
 
   .nav-toggle {
