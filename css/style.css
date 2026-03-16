@@ -341,9 +341,9 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
+  grid-template-columns: 200px minmax(0, 1fr);
   align-items: start;
-  gap: 18px;
+  gap: 28px;
 }
 
 .publication-copy {
@@ -354,7 +354,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 132px;
+  width: 200px;
+  max-width: 100%;
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line);
   background: #f1f4f7;
