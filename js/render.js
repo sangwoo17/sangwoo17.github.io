@@ -333,7 +333,7 @@ export function render(data) {
       <div class="section-block section-anchor" id="photo-album">
         <div class="section-heading">
           <p class="section-kicker">Photo Album</p>
-          <h2>Photo album</h2>
+          <h2>Photos</h2>
         </div>
         <div class="photo-grid" aria-label="Photo album placeholders">
           <div class="photo-slot"><span>Add photo</span></div>
