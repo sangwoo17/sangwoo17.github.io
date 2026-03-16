@@ -137,7 +137,6 @@ function renderPresentations(items) {
 
   return [...groups.entries()].map(([year, entries]) => `
     <section class="year-group">
-      <h3 class="year-heading">${escapeHtml(year)}</h3>
       <div class="year-list">
         ${entries.map(item => {
           const venue = splitVenue(item.venue);
