@@ -223,14 +223,6 @@ export function render(data) {
               ${renderHonors(data.honors)}
             </div>
           </div>
-          <div class="subsection">
-            <div class="subsection-heading">
-              <h3>Mentoring and teaching</h3>
-            </div>
-            <div class="simple-list">
-              ${renderResponsibilities(data.responsibilities)}
-            </div>
-          </div>
         </div>
         <div>
           <div class="section-heading">
