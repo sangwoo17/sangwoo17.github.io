@@ -379,6 +379,11 @@ button {
   display: none;
 }
 
+.publication-toggle {
+  display: block;
+  margin: 18px auto 0;
+}
+
 .year-group + .year-group {
   margin-top: 32px;
 }
