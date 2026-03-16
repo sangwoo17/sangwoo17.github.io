@@ -270,7 +270,9 @@ button {
 .metric-item {
   flex: 1 1 0;
   text-align: center;
+  padding-top: 14px;
   padding-bottom: 14px;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
