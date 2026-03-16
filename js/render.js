@@ -3,8 +3,7 @@ const NAV_ITEMS = [
   ['research', 'Research'],
   ['publications', 'Publications'],
   ['profile', 'Profile'],
-  ['presentations', 'Presentations'],
-  ['contact', 'Contact']
+  ['presentations', 'Presentations']
 ];
 
 function escapeHtml(value) {
@@ -258,12 +257,6 @@ export function render(data) {
         </div>
       </div>
 
-      <div class="section-block section-anchor" id="contact">
-        <div class="section-heading">
-          <p class="section-kicker">Contact</p>
-          <h2>Contact</h2>
-        </div>
-      </div>
     </section>
   `;
 }
