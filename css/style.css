@@ -387,7 +387,8 @@ button {
   letter-spacing: 0.04em;
 }
 
-.project-year {
+.project-year,
+.publication-item .list-meta {
   color: var(--accent);
 }
 
