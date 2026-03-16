@@ -343,9 +343,9 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-columns: 216px minmax(0, 1fr);
   align-items: start;
-  gap: 28px;
+  gap: 30px;
 }
 
 .publication-copy {
@@ -363,13 +363,14 @@ button {
 
 .publication-copy h3 {
   margin-bottom: 8px;
+  letter-spacing: 0.01em;
 }
 
 .publication-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 216px;
   max-width: 100%;
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line);
