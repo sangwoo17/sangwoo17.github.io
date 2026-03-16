@@ -100,6 +100,7 @@ button {
 
 .hero-copy {
   max-width: 760px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -152,7 +153,7 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(1.9rem, 5.4vw, 3.2rem);
+  font-size: clamp(1.7rem, 4.8vw, 2.9rem);
   line-height: 1;
   margin-bottom: 16px;
 }
