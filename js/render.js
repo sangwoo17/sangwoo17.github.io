@@ -20,7 +20,7 @@ function renderStats(stats) {
   return stats.map(({ value, label }) => `
     <div class="metric-item">
       <strong>${escapeHtml(value)}</strong>
-      <span>${escapeHtml(label)}</span>
+      <span>${escapeHtml(label).replace(' ', '<br>')}</span>
     </div>
   `).join('');
 }
