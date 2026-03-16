@@ -396,10 +396,6 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-.project-year,
-.publication-item .list-meta {
   color: var(--accent);
 }
 
