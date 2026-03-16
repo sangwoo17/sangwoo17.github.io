@@ -274,49 +274,48 @@ export function render(data) {
         </div>
       </div>
 
-      <div class="section-block split-layout section-anchor" id="profile">
-        <div>
-          <div class="section-heading">
-            <p class="section-kicker">Profile</p>
-            <h2>Academic profile</h2>
+      <div class="section-block section-anchor" id="profile">
+        <div class="section-heading">
+          <p class="section-kicker">Profile</p>
+          <h2>Academic profile</h2>
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Education</h3>
           </div>
-          <div class="subsection">
-            <div class="subsection-heading">
-              <h3>Education</h3>
-            </div>
-            <div class="simple-list">
-              ${renderEducation(data.education)}
-            </div>
-          </div>
-          <div class="subsection">
-            <div class="subsection-heading">
-              <h3>Honors</h3>
-            </div>
-            <div class="simple-list">
-              ${renderHonors(data.honors)}
-            </div>
+          <div class="simple-list">
+            ${renderEducation(data.education)}
           </div>
         </div>
-        <div class="section-anchor" id="technical-background">
-          <div class="section-heading">
-            <p class="section-kicker">Methods</p>
-            <h2>Technical background</h2>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Honors</h3>
           </div>
-          <div class="subsection">
-            <div class="subsection-heading">
-              <h3>Tools and methods</h3>
-            </div>
-            <div class="list-grid">
-              ${renderSkills(data.skills)}
-            </div>
+          <div class="simple-list">
+            ${renderHonors(data.honors)}
           </div>
-          <div class="subsection">
-            <div class="subsection-heading">
-              <h3>Programs and collaborations</h3>
-            </div>
-            <div class="simple-list">
-              ${renderPrograms(data.programs)}
-            </div>
+        </div>
+      </div>
+
+      <div class="section-block section-anchor" id="technical-background">
+        <div class="section-heading">
+          <p class="section-kicker">Methods</p>
+          <h2>Technical background</h2>
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Tools and methods</h3>
+          </div>
+          <div class="list-grid">
+            ${renderSkills(data.skills)}
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Programs and collaborations</h3>
+          </div>
+          <div class="simple-list">
+            ${renderPrograms(data.programs)}
           </div>
         </div>
       </div>
