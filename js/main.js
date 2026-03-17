@@ -1,6 +1,12 @@
 import { render } from './render.js';
 import { initInteractions } from './interactions.js';
 
+function highlightPrimaryAuthor() {
+  document.querySelectorAll('.publication-copy .item-subtitle').forEach(node => {
+    node.innerHTML = node.textContent.replaceAll('Eom, S.', '<strong>Eom, S.</strong>');
+  });
+}
+
 async function bootstrap() {
   const app = document.getElementById('app');
 
@@ -14,6 +20,7 @@ async function bootstrap() {
     const data = await response.json();
     render(data);
     initInteractions();
+    highlightPrimaryAuthor();
   } catch (error) {
     console.error(error);
     app.innerHTML = `
