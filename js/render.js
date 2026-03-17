@@ -2,7 +2,7 @@ const NAV_ITEMS = [
   { id: 'intro', label: 'Intro' },
   { id: 'research', label: 'Research' },
   { id: 'publications', label: 'Publications' },
-  { id: 'presentations', label: 'Presentation' },
+  { id: 'presentations', label: 'Presentations' },
   { id: 'projects', label: 'Projects' },
   { id: 'photo-album', label: 'Photos' }
 ];
@@ -131,7 +131,7 @@ function renderPublications(items, type) {
             ${escapeHtml(item.title)}
           `}
         </h3>
-        <p>${escapeHtml(item.journal)}${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
+        <p class="publication-meta">${escapeHtml(item.journal)}${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
         </div>
       </div>
     </article>
@@ -261,7 +261,8 @@ export function render(data) {
           ${renderHeroSlides(data.site.heroSlides)}
         </div>
         <h1>${escapeHtml(data.site.title)}</h1>
-        <p class="hero-subtagline">${formatInlineBreaks(data.site.subtagline)}</p>
+        <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
+        <p class="hero-subtagline hero-affiliation">${formatInlineBreaks(data.site.subtagline)}</p>
         <div class="hero-actions">
           <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
           <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
@@ -366,7 +367,7 @@ export function render(data) {
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
         </div>
-        <button class="button-secondary presentation-toggle" type="button">Show more presentation</button>
+        <button class="button-secondary presentation-toggle" type="button">Show more presentations</button>
       </div>
 
       <div class="section-block section-anchor" id="photo-album">

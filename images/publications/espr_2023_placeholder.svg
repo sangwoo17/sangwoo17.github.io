@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 324" role="img" aria-labelledby="title desc">
+  <title id="title">2023 publication placeholder</title>
+  <desc id="desc">Placeholder figure for the 2023 Environmental Science and Pollution Research paper.</desc>
+  <rect width="432" height="324" fill="#f8f3eb"/>
+  <rect x="44" y="42" width="344" height="164" rx="20" fill="#e9dcc8"/>
+  <circle cx="118" cy="124" r="46" fill="#c7a97b"/>
+  <path d="M198 92h146M198 126h124M198 160h138" stroke="#8a6d47" stroke-width="12" stroke-linecap="round"/>
+  <text x="36" y="264" font-family="Arial, sans-serif" font-size="18" fill="#6d5637">Environ. Sci. Pollut. Res.</text>
+  <text x="36" y="292" font-family="Arial, sans-serif" font-size="16" fill="#8f7758">2023 figure placeholder</text>
+</svg>
