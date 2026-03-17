@@ -395,6 +395,7 @@ button {
 .publication-thumb-image {
   display: block;
   object-fit: cover;
+  object-position: center center;
   color: inherit;
 }
 
