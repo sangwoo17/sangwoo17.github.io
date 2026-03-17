@@ -72,7 +72,7 @@ function initPresentationToggle() {
 
     items.forEach(item => item.classList.toggle('presentation-hidden', expanded));
     button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more conferences' : 'Show less';
+    button.textContent = expanded ? 'Show more presentation' : 'Show less';
   });
 }
 

@@ -2,7 +2,7 @@ const NAV_ITEMS = [
   { id: 'intro', label: 'Intro' },
   { id: 'research', label: 'Research' },
   { id: 'publications', label: 'Publications' },
-  { id: 'presentations', label: 'Conference' },
+  { id: 'presentations', label: 'Presentation' },
   { id: 'projects', label: 'Projects' },
   { id: 'photo-album', label: 'Photos' }
 ];
@@ -328,7 +328,7 @@ export function render(data) {
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
         </div>
-        <button class="button-secondary presentation-toggle" type="button">Show more conferences</button>
+        <button class="button-secondary presentation-toggle" type="button">Show more presentation</button>
       </div>
 
       <div class="section-block section-anchor" id="photo-album">
