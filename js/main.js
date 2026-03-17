@@ -1,6 +1,20 @@
 import { render } from './render.js';
 import { initInteractions } from './interactions.js';
 
+function reorderPublicationText() {
+  document.querySelectorAll('.publication-copy').forEach(node => {
+    const authors = node.querySelector('.item-subtitle');
+    const title = node.querySelector('h3');
+    const journal = node.querySelector('.publication-meta, p:last-of-type');
+
+    if (!authors || !title || !journal) {
+      return;
+    }
+
+    node.append(title, authors, journal);
+  });
+}
+
 function highlightPrimaryAuthor() {
   document.querySelectorAll('.publication-copy .item-subtitle').forEach(node => {
     node.innerHTML = node.textContent.replaceAll('Eom, S.', '<strong>Eom, S.</strong>');
@@ -20,6 +34,7 @@ async function bootstrap() {
     const data = await response.json();
     render(data);
     initInteractions();
+    reorderPublicationText();
     highlightPrimaryAuthor();
   } catch (error) {
     console.error(error);
