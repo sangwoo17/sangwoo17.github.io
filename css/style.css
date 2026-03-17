@@ -392,6 +392,24 @@ button {
   font-weight: 500;
 }
 
+.publication-thumb-link {
+  display: block;
+  width: 216px;
+  max-width: 100%;
+  border-radius: 2px;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.publication-thumb-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.publication-thumb-link:hover .publication-thumb {
+  box-shadow: 0 6px 16px rgba(15, 92, 153, 0.12);
+  border-color: #b8cee0;
+}
+
 .list-meta {
   font-size: 0.85rem;
   font-weight: 600;

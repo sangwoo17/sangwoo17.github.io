@@ -86,9 +86,23 @@ function renderPublications(items, type) {
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
       <div class="publication-content ${type !== 'published' || index >= 3 ? 'publication-content-text-only' : ''}">
         ${type === 'published' && index < 3 ? `
-          <div class="publication-thumb" aria-label="Figure placeholder for ${escapeHtml(item.journal)} ${escapeHtml(item.year)}">
-            <span>Figure</span>
-          </div>
+          ${item.url ? `
+            <a
+              class="publication-thumb-link"
+              href="${escapeHtml(item.url)}"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open ${escapeHtml(item.title)}"
+            >
+              <div class="publication-thumb" aria-hidden="true">
+                <span>Figure</span>
+              </div>
+            </a>
+          ` : `
+            <div class="publication-thumb" aria-label="Figure placeholder for ${escapeHtml(item.journal)} ${escapeHtml(item.year)}">
+              <span>Figure</span>
+            </div>
+          `}
         ` : ''}
         <div class="publication-copy">
         <p class="item-subtitle">${escapeHtml(item.authors)}</p>
