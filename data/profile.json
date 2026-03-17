@@ -121,7 +121,9 @@
         "title": "Properties of inflowing Pacific and Atlantic water govern total and methylated mercury profiles in the Arctic Ocean.",
         "journal": "Environmental Pollution",
         "detail": "374, 126254.",
-        "url": "https://doi.org/10.1016/j.envpol.2025.126254"
+        "link": "https://doi.org/10.1016/j.envpol.2025.126254",
+        "figure": "images/publication-2025.svg",
+        "figureAlt": "Graphical abstract placeholder for the 2025 Environmental Pollution paper"
       },
       {
         "year": "2024",
@@ -129,7 +131,9 @@
         "title": "Effects of hydrologic regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary.",
         "journal": "Marine Pollution Bulletin",
         "detail": "206, 116703.",
-        "url": "https://doi.org/10.1016/j.marpolbul.2024.116703"
+        "link": "https://doi.org/10.1016/j.marpolbul.2024.116703",
+        "figure": "images/publication-2024.svg",
+        "figureAlt": "Graphical abstract placeholder for the 2024 Marine Pollution Bulletin paper"
       },
       {
         "year": "2023",
@@ -137,21 +141,29 @@
         "title": "Mercury concentrations in sediments and oysters in a temperate coastal zone: a comparison of farmed and wild varieties.",
         "journal": "Environmental Science and Pollution Research",
         "detail": "30(50), 109810-109824.",
-        "url": "https://doi.org/10.1007/s11356-023-29992-7"
+        "link": "https://doi.org/10.1007/s11356-023-29992-7",
+        "figure": "images/publication-2023.svg",
+        "figureAlt": "Graphical abstract placeholder for the 2023 Environmental Science and Pollution Research paper"
       },
       {
         "year": "2021",
         "authors": "Eom, S.; Lee, H.; Kim, J.; Park, K.; Kim, Y.; Sheu, G. R.; Gay, D. A.; Schmeltz, D.; Han, S.",
         "title": "Potential sources, scavenging processes, and source regions of mercury in the wet deposition of South Korea.",
         "journal": "Science of the Total Environment",
-        "detail": "762, 143934."
+        "detail": "762, 143934.",
+        "link": "https://doi.org/10.1016/j.scitotenv.2020.143934",
+        "figure": "images/publication-2021.svg",
+        "figureAlt": "Graphical abstract placeholder for the 2021 Science of the Total Environment paper"
       },
       {
         "year": "2020",
         "authors": "Kim, J.; Soerensen, A. L.; Kim, M.; Eom, S.; Rhee, T. S.; Jin, Y. K.; Han, S.",
         "title": "Mass budget of methylmercury in the East Siberian Sea: the importance of sediment sources.",
         "journal": "Environmental Science & Technology",
-        "detail": "54(16), 9949-9957."
+        "detail": "54(16), 9949-9957.",
+        "link": "https://doi.org/10.1021/acs.est.0c00154",
+        "figure": "images/publication-2020.svg",
+        "figureAlt": "Graphical abstract placeholder for the 2020 Environmental Science and Technology paper"
       }
     ],
     "inPrep": [

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 324" role="img" aria-labelledby="title desc">
+  <title id="title">2025 publication placeholder</title>
+  <desc id="desc">Placeholder figure for the 2025 Environmental Pollution paper.</desc>
+  <rect width="432" height="324" fill="#eef4fb"/>
+  <rect x="28" y="28" width="376" height="188" rx="18" fill="#d9e8f7"/>
+  <circle cx="112" cy="122" r="42" fill="#7fb0db"/>
+  <path d="M180 92h160M180 126h124M180 160h146" stroke="#5b84a8" stroke-width="12" stroke-linecap="round"/>
+  <text x="36" y="264" font-family="Arial, sans-serif" font-size="20" fill="#35516b">Environmental Pollution</text>
+  <text x="36" y="292" font-family="Arial, sans-serif" font-size="16" fill="#587793">2025 figure placeholder</text>
+</svg>

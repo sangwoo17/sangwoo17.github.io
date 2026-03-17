@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 324" role="img" aria-labelledby="title desc">
+  <title id="title">2024 publication placeholder</title>
+  <desc id="desc">Placeholder figure for the 2024 Marine Pollution Bulletin paper.</desc>
+  <rect width="432" height="324" fill="#eff7f7"/>
+  <rect x="36" y="44" width="156" height="134" rx="16" fill="#8cc7c3"/>
+  <rect x="216" y="44" width="180" height="26" rx="13" fill="#6f9f9b"/>
+  <rect x="216" y="88" width="148" height="26" rx="13" fill="#6f9f9b"/>
+  <rect x="216" y="132" width="166" height="26" rx="13" fill="#6f9f9b"/>
+  <path d="M48 220c38-32 82-48 132-48 64 0 120 18 204 48" fill="none" stroke="#4e7f7a" stroke-width="14" stroke-linecap="round"/>
+  <text x="36" y="264" font-family="Arial, sans-serif" font-size="20" fill="#315d59">Marine Pollution Bulletin</text>
+  <text x="36" y="292" font-family="Arial, sans-serif" font-size="16" fill="#4d7d79">2024 figure placeholder</text>
+</svg>

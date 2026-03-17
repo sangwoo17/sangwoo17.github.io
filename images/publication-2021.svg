@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 324" role="img" aria-labelledby="title desc">
+  <title id="title">2021 publication placeholder</title>
+  <desc id="desc">Placeholder figure for the 2021 Science of the Total Environment paper.</desc>
+  <rect width="432" height="324" fill="#f0f6ee"/>
+  <rect x="36" y="36" width="360" height="176" rx="18" fill="#d8e8d2"/>
+  <path d="M72 172c34-48 66-72 108-72 38 0 68 18 100 52 28-18 54-28 82-30" fill="none" stroke="#6d9b66" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="120" cy="98" r="22" fill="#8fbc88"/>
+  <circle cx="188" cy="126" r="18" fill="#8fbc88"/>
+  <circle cx="258" cy="92" r="16" fill="#8fbc88"/>
+  <text x="36" y="264" font-family="Arial, sans-serif" font-size="18" fill="#50724b">Science of the Total Environment</text>
+  <text x="36" y="292" font-family="Arial, sans-serif" font-size="16" fill="#6f8d69">2021 figure placeholder</text>
+</svg>

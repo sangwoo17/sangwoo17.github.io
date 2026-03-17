@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 324" role="img" aria-labelledby="title desc">
+  <title id="title">2020 publication placeholder</title>
+  <desc id="desc">Placeholder figure for the 2020 Environmental Science and Technology paper.</desc>
+  <rect width="432" height="324" fill="#eef1f8"/>
+  <rect x="34" y="40" width="364" height="170" rx="18" fill="#dbe2f1"/>
+  <rect x="66" y="78" width="126" height="96" rx="14" fill="#8fa3c9"/>
+  <path d="M222 82h128M222 116h102M222 150h136" stroke="#667ba4" stroke-width="12" stroke-linecap="round"/>
+  <text x="36" y="264" font-family="Arial, sans-serif" font-size="18" fill="#495a7b">Environmental Science &amp; Technology</text>
+  <text x="36" y="292" font-family="Arial, sans-serif" font-size="16" fill="#68789a">2020 figure placeholder</text>
+</svg>

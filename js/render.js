@@ -84,29 +84,53 @@ function renderPublications(items, type) {
   return items.map((item, index) => `
     <article class="list-row publication-item ${index > 1 && type === 'published' ? 'publication-hidden' : ''}" ${index > 1 && type === 'published' ? 'data-extra-publication="true"' : ''}>
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
-      <div class="publication-content ${type !== 'published' || index >= 3 ? 'publication-content-text-only' : ''}">
-        ${type === 'published' && index < 3 ? `
-          ${item.url ? `
+      <div class="publication-content ${type !== 'published' ? 'publication-content-text-only' : ''}">
+        ${type === 'published' ? `
+          ${(item.link || item.url) ? `
             <a
               class="publication-thumb-link"
-              href="${escapeHtml(item.url)}"
+              href="${escapeHtml(item.link || item.url)}"
               target="_blank"
               rel="noreferrer"
               aria-label="Open ${escapeHtml(item.title)}"
             >
-              <div class="publication-thumb" aria-hidden="true">
-                <span>Figure</span>
-              </div>
+              ${item.figure ? `
+                <img
+                  class="publication-thumb publication-thumb-image"
+                  src="${escapeHtml(item.figure)}"
+                  alt="${escapeHtml(item.figureAlt || `Figure for ${item.title}`)}"
+                >
+              ` : `
+                <div class="publication-thumb" aria-hidden="true">
+                  <span>Figure</span>
+                </div>
+              `}
             </a>
           ` : `
             <div class="publication-thumb" aria-label="Figure placeholder for ${escapeHtml(item.journal)} ${escapeHtml(item.year)}">
-              <span>Figure</span>
+              ${item.figure ? `
+                <img
+                  class="publication-thumb publication-thumb-image"
+                  src="${escapeHtml(item.figure)}"
+                  alt="${escapeHtml(item.figureAlt || `Figure for ${item.title}`)}"
+                >
+              ` : `
+                <span>Figure</span>
+              `}
             </div>
           `}
         ` : ''}
         <div class="publication-copy">
         <p class="item-subtitle">${escapeHtml(item.authors)}</p>
-        <h3>${escapeHtml(item.title)}</h3>
+        <h3>
+          ${(item.link || item.url) ? `
+            <a class="publication-title-link" href="${escapeHtml(item.link || item.url)}" target="_blank" rel="noreferrer">
+              ${escapeHtml(item.title)}
+            </a>
+          ` : `
+            ${escapeHtml(item.title)}
+          `}
+        </h3>
         <p>${escapeHtml(item.journal)}${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
         </div>
       </div>

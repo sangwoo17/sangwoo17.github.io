@@ -392,6 +392,12 @@ button {
   font-weight: 500;
 }
 
+.publication-thumb-image {
+  display: block;
+  object-fit: cover;
+  color: inherit;
+}
+
 .publication-thumb-link {
   display: block;
   width: 216px;
@@ -408,6 +414,15 @@ button {
 .publication-thumb-link:hover .publication-thumb {
   box-shadow: 0 6px 16px rgba(15, 92, 153, 0.12);
   border-color: #b8cee0;
+}
+
+.publication-title-link {
+  color: inherit;
+  transition: color 160ms ease;
+}
+
+.publication-title-link:hover {
+  color: var(--accent);
 }
 
 .list-meta {
