@@ -125,8 +125,9 @@ function formatLabel(value) {
 }
 
 function renderPresentations(items) {
+  const internationalItems = items.filter(item => item.region === 'international');
   let visibleCount = 0;
-  const groups = items.reduce((acc, item) => {
+  const groups = internationalItems.reduce((acc, item) => {
     if (!acc.has(item.year)) {
       acc.set(item.year, []);
     }
@@ -322,7 +323,7 @@ export function render(data) {
       <div class="section-block section-anchor" id="presentations">
         <div class="section-heading">
           <p class="section-kicker">Presentations</p>
-          <h2>Conferences</h2>
+          <h2>Presentations</h2>
         </div>
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
