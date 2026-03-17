@@ -514,29 +514,6 @@ button {
   color: var(--accent);
 }
 
-.year-group {
-  display: grid;
-  grid-template-columns: var(--year-column-width) minmax(0, 1fr);
-  gap: 18px;
-  align-items: start;
-}
-
-.year-group + .year-group {
-  margin-top: 28px;
-}
-
-.year-label,
-.list-meta {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-
-.year-list {
-  display: grid;
-  gap: 12px;
-}
-
 .presentation-entry {
   display: grid;
   gap: 4px;
@@ -544,12 +521,9 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
-.year-group:last-child .presentation-entry:last-child {
-  padding-bottom: 0;
-}
-
 #presentations .simple-list {
-  gap: 18px;
+  display: grid;
+  gap: 12px;
 }
 
 .presentation-entry p {
@@ -628,12 +602,14 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.92);
   color: var(--muted);
+  font-size: 1.9rem;
+  line-height: 1;
   cursor: pointer;
   transform: translateY(-50%);
   box-shadow: 0 4px 12px rgba(21, 32, 43, 0.08);
@@ -657,17 +633,17 @@ button {
 .photo-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 18px) / 2);
-  gap: 18px;
+  grid-auto-columns: calc((100% - 24px) / 2);
+  gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--line) transparent;
-  padding: 0 54px 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 58px;
 }
 
 .photo-track::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
 
 .photo-track::-webkit-scrollbar-thumb {
@@ -679,7 +655,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 240px;
+  min-height: 280px;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
@@ -721,7 +697,9 @@ button {
   }
 
   .photo-track {
-    grid-auto-columns: calc((100% - 18px) / 2);
+    grid-auto-columns: calc((100% - 16px) / 2);
+    gap: 16px;
+    padding: 0 44px;
   }
 }
 
@@ -797,8 +775,12 @@ button {
 
   .photo-track {
     grid-auto-columns: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    gap: 0;
+    padding: 0 40px;
+  }
+
+  .photo-slot {
+    min-height: 220px;
   }
 
   .photo-slider-button-prev {
@@ -809,6 +791,9 @@ button {
     right: 8px;
   }
 }
+
+
+
 
 
 

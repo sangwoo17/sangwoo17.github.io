@@ -164,26 +164,12 @@ function formatLabel(value) {
 
 function renderPresentations(items) {
   const internationalItems = items.filter(item => item.region === 'international');
-  let visibleCount = 0;
-  const groups = internationalItems.reduce((acc, item) => {
-    if (!acc.has(item.year)) {
-      acc.set(item.year, []);
-    }
 
-    acc.get(item.year).push(item);
-    return acc;
-  }, new Map());
+  return internationalItems.map((item, index) => {
+    const venue = splitVenue(item.venue);
+    const isHidden = index > 1;
 
-  return [...groups.entries()].map(([year, entries]) => `
-    <section class="year-group">
-      <span class="list-meta year-label">${escapeHtml(year)}</span>
-      <div class="year-list">
-        ${entries.map(item => {
-          const venue = splitVenue(item.venue);
-          const isHidden = visibleCount > 1;
-          visibleCount += 1;
-
-          return `
+    return `
     <article class="presentation-entry ${isHidden ? 'presentation-hidden' : ''}" ${isHidden ? 'data-extra-presentation="true"' : ''}>
       <div class="tag-row">
         <span class="tag tag-${escapeHtml(item.type)}">${escapeHtml(formatLabel(item.type))}</span>
@@ -197,10 +183,7 @@ function renderPresentations(items) {
       </div>
     </article>
   `;
-        }).join('')}
-      </div>
-    </section>
-  `).join('');
+  }).join('');
 }
 
 function renderSkills(items) {
@@ -272,30 +255,6 @@ export function render(data) {
     </section>
 
     <section class="content-grid">
-      <div class="section-block section-anchor" id="profile">
-        <div class="section-heading">
-          <p class="section-kicker">Profile</p>
-          <h2>Academic profile</h2>
-        </div>
-        <div class="subsection">
-          <div class="subsection-heading">
-            <h3>Education</h3>
-          </div>
-          <div class="simple-list">
-            ${renderEducation(data.education)}
-          </div>
-        </div>
-        <div class="subsection">
-          <div class="subsection-heading">
-            <h3>Honors</h3>
-          </div>
-          <div class="simple-list">
-            ${renderHonors(data.honors)}
-          </div>
-        </div>
-      </div>
-
-
       <div class="section-block section-anchor" id="research">
         <div class="section-heading">
           <p class="section-kicker">Overview</p>
@@ -319,6 +278,31 @@ export function render(data) {
           ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button">Show more projects</button>' : ''}
         </div>
       </div>
+
+      
+      <div class="section-block section-anchor" id="profile">
+        <div class="section-heading">
+          <p class="section-kicker">Profile</p>
+          <h2>Academic profile</h2>
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Education</h3>
+          </div>
+          <div class="simple-list">
+            ${renderEducation(data.education)}
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="subsection-heading">
+            <h3>Honors</h3>
+          </div>
+          <div class="simple-list">
+            ${renderHonors(data.honors)}
+          </div>
+        </div>
+      </div>
+
 
       <div class="section-block section-anchor" id="publications">
         <div class="section-heading">
@@ -371,7 +355,7 @@ export function render(data) {
         <div class="simple-list">
           ${renderPresentations(data.presentations)}
         </div>
-        <button class="button-secondary presentation-toggle" type="button">Show more presentations</button>
+        ${data.presentations.filter(item => item.region === 'international').length > 2 ? '<button class="button-secondary presentation-toggle" type="button">Show more presentations</button>' : ''}
       </div>
 
       <div class="section-block section-anchor" id="photo-album">
@@ -380,8 +364,8 @@ export function render(data) {
           <h2>Photos</h2>
         </div>
         <div class="photo-slider">
-          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">??/button>
-          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">??/button>
+          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">&#8249;</button>
+          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">&#8250;</button>
           <div class="photo-track" data-photo-track aria-label="Photo album placeholders" tabindex="0">
             <div class="photo-slot"><span>Add photo</span></div>
             <div class="photo-slot"><span>Add photo</span></div>
@@ -396,6 +380,11 @@ export function render(data) {
     </section>
   `;
 }
+
+
+
+
+
 
 
 

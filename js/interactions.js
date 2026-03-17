@@ -74,7 +74,7 @@ function initPresentationToggle() {
 
     items.forEach(item => item.classList.toggle('presentation-hidden', expanded));
     button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more presentations' : 'Show less';
+    button.textContent = expanded ? 'Show more presentations' : 'Show less presentations';
   });
 }
 
@@ -146,5 +146,6 @@ function initPhotoSlider() {
     });
   });
 }
+
 
 
