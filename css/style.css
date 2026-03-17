@@ -415,7 +415,7 @@ button {
 
 .presentation-toggle {
   display: block;
-  margin: -1px auto 0;
+  margin: -4px auto 0;
 }
 
 .year-group + .year-group {
@@ -443,6 +443,10 @@ button {
 
 .year-group:last-child .presentation-entry:last-child {
   padding-bottom: 0;
+}
+
+#presentations .simple-list {
+  gap: 0;
 }
 
 .presentation-entry p {
