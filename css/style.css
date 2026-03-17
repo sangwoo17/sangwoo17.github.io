@@ -375,20 +375,20 @@ button {
 }
 
 .publication-copy .item-subtitle {
-  margin-bottom: 8px;
-  line-height: 1.5;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .publication-copy h3 {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   letter-spacing: 0.01em;
-  line-height: 1.34;
+  line-height: 1.42;
 }
 
 .publication-meta {
   color: var(--muted);
   font-size: 0.94rem;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 .publication-thumb {
