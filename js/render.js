@@ -18,6 +18,15 @@ function renderBio(paragraphs = []) {
   return paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('');
 }
 
+function renderStats(stats = []) {
+  return stats.map(({ value, label }) => `
+    <div class="metric-item">
+      <strong>${escapeHtml(value)}</strong>
+      <span>${escapeHtml(label)}</span>
+    </div>
+  `).join('');
+}
+
 function renderEducation(items = []) {
   return items.map(({ period, degree, institution, detail }) => `
     <article class="list-row">
@@ -122,6 +131,9 @@ export function render(data) {
           <h2>Research</h2>
           <p>Research focus, current work, and academic background in one place.</p>
         </div>
+        <aside class="metrics-panel" aria-label="Research highlights">
+          ${renderStats(data.stats)}
+        </aside>
         <div class="split-layout research-layout">
           <div>
             <div class="rich-copy">

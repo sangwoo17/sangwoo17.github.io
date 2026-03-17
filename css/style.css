@@ -91,7 +91,7 @@ button {
 }
 
 .hero-copy {
-  max-width: 100%;
+  max-width: 720px;
 }
 
 .hero-eyebrow,
@@ -194,6 +194,31 @@ button {
 .content-grid {
   display: grid;
   gap: 88px;
+}
+
+.metrics-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.metric-item {
+  padding: 14px 0 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.metric-item strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.metric-item span {
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 .section-block {
@@ -336,6 +361,10 @@ button {
     gap: 28px;
   }
 
+  .metrics-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sidebar-panel {
     padding: 20px;
   }
@@ -390,6 +419,11 @@ button {
 
   .hero h1 {
     font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .metrics-panel {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .list-row,
