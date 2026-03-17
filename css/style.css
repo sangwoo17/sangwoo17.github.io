@@ -399,7 +399,7 @@ button {
   justify-content: center;
   width: 364px;
   max-width: 100%;
-  aspect-ratio: 4 / 2.3;
+  aspect-ratio: 4 / 2;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
