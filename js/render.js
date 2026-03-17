@@ -68,8 +68,8 @@ function renderHonors(items) {
 }
 
 function renderProjects(items) {
-  return items.map(({ period, title, support, outcome }) => `
-    <article class="list-row">
+  return items.map(({ period, title, support, outcome }, index) => `
+    <article class="list-row project-item ${index > 1 ? 'project-hidden' : ''}" ${index > 1 ? 'data-extra-project="true"' : ''}>
       <div class="list-meta project-year">${escapeHtml(period)}</div>
       <div>
         <h3>${escapeHtml(title)}</h3>
@@ -176,6 +176,7 @@ function renderPresentations(items) {
 
   return [...groups.entries()].map(([year, entries]) => `
     <section class="year-group">
+      <span class="list-meta year-label">${escapeHtml(year)}</span>
       <div class="year-list">
         ${entries.map(item => {
           const venue = splitVenue(item.venue);
@@ -271,48 +272,6 @@ export function render(data) {
     </section>
 
     <section class="content-grid">
-      <div class="section-block section-anchor" id="research">
-        <div class="section-heading">
-          <p class="section-kicker">Overview</p>
-          <h2>Research profile</h2>
-        </div>
-        <div class="overview-grid">
-          <div class="rich-copy">
-            ${renderBio(data.bio)}
-          </div>
-        </div>
-        <aside class="metrics-panel" aria-label="Research highlights">
-          ${renderStats(data.stats)}
-        </aside>
-        <div class="subsection section-anchor" id="projects">
-          <div class="section-heading">
-            <h2>Projects</h2>
-          </div>
-          <div class="simple-list">
-            ${renderProjects(data.projects)}
-          </div>
-        </div>
-      </div>
-
-      <div class="section-block section-anchor" id="publications">
-        <div class="section-heading">
-          <p class="section-kicker">Publications</p>
-          <h2>Publications</h2>
-        </div>
-        <div class="publication-group">
-          <div class="simple-list">
-            ${renderPublications(data.publications.published, 'published')}
-          </div>
-          <button class="button-secondary publication-toggle" type="button">Show more publications</button>
-        </div>
-        <div class="publication-group">
-          <div class="group-label">In progress</div>
-          <div class="simple-list">
-            ${renderPublications(data.publications.inPrep, 'inPrep')}
-          </div>
-        </div>
-      </div>
-
       <div class="section-block section-anchor" id="profile">
         <div class="section-heading">
           <p class="section-kicker">Profile</p>
@@ -335,6 +294,51 @@ export function render(data) {
           </div>
         </div>
       </div>
+
+
+      <div class="section-block section-anchor" id="research">
+        <div class="section-heading">
+          <p class="section-kicker">Overview</p>
+          <h2>Research profile</h2>
+        </div>
+        <div class="overview-grid">
+          <div class="rich-copy">
+            ${renderBio(data.bio)}
+          </div>
+        </div>
+        <aside class="metrics-panel" aria-label="Research highlights">
+          ${renderStats(data.stats)}
+        </aside>
+        <div class="subsection section-anchor" id="projects">
+          <div class="section-heading">
+            <h2>Projects</h2>
+          </div>
+          <div class="simple-list">
+            ${renderProjects(data.projects)}
+          </div>
+          ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button">Show more projects</button>' : ''}
+        </div>
+      </div>
+
+      <div class="section-block section-anchor" id="publications">
+        <div class="section-heading">
+          <p class="section-kicker">Publications</p>
+          <h2>Publications</h2>
+        </div>
+        <div class="publication-group">
+          <div class="simple-list">
+            ${renderPublications(data.publications.published, 'published')}
+          </div>
+          <button class="button-secondary publication-toggle" type="button">Show more publications</button>
+        </div>
+        <div class="publication-group">
+          <div class="group-label">In progress</div>
+          <div class="simple-list">
+            ${renderPublications(data.publications.inPrep, 'inPrep')}
+          </div>
+        </div>
+      </div>
+
 
       <div class="section-block section-anchor" id="technical-background">
         <div class="section-heading">
@@ -376,8 +380,8 @@ export function render(data) {
           <h2>Photos</h2>
         </div>
         <div class="photo-slider">
-          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">‹</button>
-          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">›</button>
+          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">??/button>
+          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">??/button>
           <div class="photo-track" data-photo-track aria-label="Photo album placeholders" tabindex="0">
             <div class="photo-slot"><span>Add photo</span></div>
             <div class="photo-slot"><span>Add photo</span></div>
@@ -392,3 +396,11 @@ export function render(data) {
     </section>
   `;
 }
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ export function initInteractions() {
   initNavigation();
   initPublicationToggle();
   initPresentationToggle();
+  initProjectToggle();
   initHeroSlideshow();
   initPhotoSlider();
 }
@@ -77,6 +78,23 @@ function initPresentationToggle() {
   });
 }
 
+function initProjectToggle() {
+  const button = document.querySelector('.project-toggle');
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const items = document.querySelectorAll('[data-extra-project="true"]');
+    const expanded = button.dataset.expanded === 'true';
+
+    items.forEach(item => item.classList.toggle('project-hidden', expanded));
+    button.dataset.expanded = String(!expanded);
+    button.textContent = expanded ? 'Show more projects' : 'Show less projects';
+  });
+}
+
 function initHeroSlideshow() {
   const slideshow = document.querySelector('[data-slideshow]');
 
@@ -128,3 +146,5 @@ function initPhotoSlider() {
     });
   });
 }
+
+

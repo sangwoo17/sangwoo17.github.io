@@ -7,6 +7,7 @@
   --accent: #0f5c99;
   --accent-soft: #eff5fb;
   --content-width: 1040px;
+  --year-column-width: 120px;
 }
 
 * {
@@ -95,21 +96,21 @@ button {
 }
 
 .hero {
-  padding: 24px 0 32px;
+  padding: 28px 0 40px;
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 620px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 12px;
 }
 
 .hero-slideshow {
   position: relative;
-  width: 128px;
-  height: 128px;
-  margin: 0 auto 22px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 28px;
 }
 
 .hero-slide {
@@ -156,13 +157,14 @@ button {
 .hero h1 {
   font-size: clamp(1.95rem, 5.2vw, 3.3rem);
   line-height: 1.05;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .hero-tagline {
-  margin: 0 0 14px;
+  max-width: 24ch;
+  margin: 0 auto 18px;
   font-size: clamp(1.05rem, 2.4vw, 1.28rem);
-  line-height: 1.3;
+  line-height: 1.38;
   color: var(--text);
 }
 
@@ -177,9 +179,10 @@ button {
 }
 
 .hero-affiliation {
-  font-size: 0.96rem;
-  line-height: 1.6;
-  margin-top: 10px;
+  max-width: 36ch;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.72;
 }
 
 .hero-location {
@@ -191,8 +194,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-top: 28px;
+  gap: 10px 12px;
+  margin-top: 32px;
 }
 
 .button-primary,
@@ -354,7 +357,7 @@ button {
 
 .list-row {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
+  grid-template-columns: var(--year-column-width) minmax(0, 1fr);
   gap: 18px;
   padding: 0 0 14px;
   border-bottom: 1px solid var(--line);
@@ -368,6 +371,8 @@ button {
 }
 
 .publication-copy {
+  display: grid;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -377,20 +382,29 @@ button {
 }
 
 .publication-copy .item-subtitle {
-  margin-bottom: 14px;
-  line-height: 1.8;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: color-mix(in srgb, var(--muted) 88%, white);
+}
+
+.publication-copy .item-subtitle strong {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .publication-copy h3 {
-  margin-bottom: 14px;
+  margin-bottom: 0;
+  font-size: 1.1rem;
   letter-spacing: 0.01em;
-  line-height: 1.56;
+  line-height: 1.46;
+  color: var(--text);
 }
 
 .publication-meta {
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.75;
+  color: color-mix(in srgb, var(--muted) 90%, white);
+  font-size: 0.9rem;
+  line-height: 1.62;
 }
 
 .publication-thumb {
@@ -461,38 +475,72 @@ button {
 
 .publication-item {
   max-width: none;
+  padding-bottom: 18px;
+}
+
+#publications .simple-list {
+  gap: 22px;
+}
+
+.publication-toggle,
+.presentation-toggle,
+.project-toggle {
+  display: block;
+  min-height: 38px;
+  padding: 0 14px;
+  border-color: #cfd8e2;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .publication-toggle {
-  display: block;
   margin: 18px auto 0;
 }
 
 .presentation-toggle {
-  display: block;
-  margin: -8px auto 0;
+  margin: 8px auto 0;
+}
+
+.project-toggle {
+  margin: 18px auto 0;
+}
+
+.publication-toggle:hover,
+.presentation-toggle:hover,
+.project-toggle:hover {
+  background: #f5f8fb;
+  border-color: #bfd1e1;
+  color: var(--accent);
+}
+
+.year-group {
+  display: grid;
+  grid-template-columns: var(--year-column-width) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
 }
 
 .year-group + .year-group {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
-.year-heading {
-  margin: 0 0 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text);
+.year-label,
+.list-meta {
+  display: block;
+  width: 100%;
+  text-align: left;
 }
 
 .year-list {
   display: grid;
-  gap: 6px;
+  gap: 12px;
 }
 
 .presentation-entry {
   display: grid;
-  gap: 1px;
-  padding: 0 0 4px;
+  gap: 4px;
+  padding: 0 0 10px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -501,11 +549,11 @@ button {
 }
 
 #presentations .simple-list {
-  gap: 0;
+  gap: 18px;
 }
 
 .presentation-entry p {
-  line-height: 1.16;
+  line-height: 1.42;
 }
 
 .presentation-entry .item-subtitle {
@@ -514,6 +562,11 @@ button {
 
 .presentation-entry h3 {
   margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.project-hidden {
+  display: none;
 }
 
 .presentation-hidden {
@@ -711,20 +764,35 @@ button {
     gap: 56px;
   }
 
-  .hero-slideshow {
-    width: 104px;
-    height: 104px;
-    margin-bottom: 18px;
+  .hero-copy {
+    max-width: 100%;
   }
 
-  .list-row {
+  .hero-slideshow {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 20px;
+  }
+
+  .hero-tagline,
+  .hero-affiliation {
+    max-width: none;
+  }
+
+  .list-row,
+  .year-group {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
   .publication-content {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .publication-thumb,
+  .publication-thumb-link {
+    width: min(100%, 364px);
   }
 
   .photo-track {
@@ -741,3 +809,8 @@ button {
     right: 8px;
   }
 }
+
+
+
+
+
