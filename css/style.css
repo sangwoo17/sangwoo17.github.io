@@ -384,7 +384,7 @@ button {
   justify-content: center;
   width: 336px;
   max-width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 2.8;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
@@ -443,7 +443,7 @@ button {
 }
 
 .publication-item {
-  max-width: 920px;
+  max-width: none;
 }
 
 .publication-toggle {
