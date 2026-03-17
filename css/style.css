@@ -360,7 +360,7 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 336px minmax(0, 1fr);
+  grid-template-columns: 348px minmax(0, 1fr);
   align-items: start;
   gap: 30px;
 }
@@ -395,7 +395,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 336px;
+  width: 348px;
   max-width: 100%;
   aspect-ratio: 4 / 2.55;
   border: 1px solid var(--line);
@@ -414,7 +414,7 @@ button {
 
 .publication-thumb-link {
   display: block;
-  width: 336px;
+  width: 348px;
   max-width: 100%;
   border-radius: 2px;
   transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
