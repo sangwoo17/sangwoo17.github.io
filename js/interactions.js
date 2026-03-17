@@ -1,30 +1,35 @@
 export function initInteractions() {
   initNavigation();
   initPublicationToggle();
-  initPresentationToggle();
   initProjectToggle();
-  initHeroSlideshow();
-  initPhotoSlider();
 }
 
 function initNavigation() {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('site-nav');
-  const links = nav.querySelectorAll('a');
+  const links = nav ? nav.querySelectorAll('a') : [];
   const sections = [...document.querySelectorAll('.section-anchor')];
 
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    nav.classList.toggle('open');
-  });
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+  }
 
   links.forEach(link => {
     link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      if (nav && toggle) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     });
   });
+
+  if (!sections.length || !links.length) {
+    return;
+  }
 
   const observer = new IntersectionObserver(
     entries => {
@@ -57,24 +62,7 @@ function initPublicationToggle() {
 
     items.forEach(item => item.classList.toggle('publication-hidden', expanded));
     button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more' : 'Show less';
-  });
-}
-
-function initPresentationToggle() {
-  const button = document.querySelector('.presentation-toggle');
-
-  if (!button) {
-    return;
-  }
-
-  button.addEventListener('click', () => {
-    const items = document.querySelectorAll('[data-extra-presentation="true"]');
-    const expanded = button.dataset.expanded === 'true';
-
-    items.forEach(item => item.classList.toggle('presentation-hidden', expanded));
-    button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more presentations' : 'Show less presentations';
+    button.textContent = expanded ? 'Show more publications' : 'Show fewer publications';
   });
 }
 
@@ -91,61 +79,6 @@ function initProjectToggle() {
 
     items.forEach(item => item.classList.toggle('project-hidden', expanded));
     button.dataset.expanded = String(!expanded);
-    button.textContent = expanded ? 'Show more projects' : 'Show less projects';
+    button.textContent = expanded ? 'Show more projects' : 'Show fewer projects';
   });
 }
-
-function initHeroSlideshow() {
-  const slideshow = document.querySelector('[data-slideshow]');
-
-  if (!slideshow) {
-    return;
-  }
-
-  const slides = [...slideshow.querySelectorAll('.hero-slide')];
-
-  if (slides.length < 2) {
-    return;
-  }
-
-  let activeIndex = 0;
-
-  window.setInterval(() => {
-    slides[activeIndex].classList.remove('is-active');
-    slides[activeIndex].setAttribute('aria-hidden', 'true');
-
-    activeIndex = (activeIndex + 1) % slides.length;
-
-    slides[activeIndex].classList.add('is-active');
-    slides[activeIndex].removeAttribute('aria-hidden');
-  }, 2600);
-}
-
-function initPhotoSlider() {
-  const track = document.querySelector('[data-photo-track]');
-
-  if (!track) {
-    return;
-  }
-
-  const getStep = () => {
-    const firstCard = track.querySelector('.photo-slot');
-
-    if (!firstCard) {
-      return track.clientWidth;
-    }
-
-    const gap = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0');
-    return firstCard.getBoundingClientRect().width + gap;
-  };
-
-  document.querySelectorAll('[data-photo-nav]').forEach(button => {
-    button.addEventListener('click', () => {
-      const direction = button.dataset.photoNav === 'next' ? 1 : -1;
-      track.scrollBy({ left: getStep() * direction, behavior: 'smooth' });
-    });
-  });
-}
-
-
-
