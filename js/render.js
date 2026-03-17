@@ -268,15 +268,6 @@ export function render(data) {
         <aside class="metrics-panel" aria-label="Research highlights">
           ${renderStats(data.stats)}
         </aside>
-        <div class="subsection section-anchor" id="projects">
-          <div class="section-heading">
-            <h2>Projects</h2>
-          </div>
-          <div class="simple-list">
-            ${renderProjects(data.projects)}
-          </div>
-          ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button">Show more projects</button>' : ''}
-        </div>
       </div>
 
       
@@ -304,6 +295,16 @@ export function render(data) {
       </div>
 
 
+
+        <div class="subsection section-anchor" id="projects">
+          <div class="section-heading">
+            <h2>Projects</h2>
+          </div>
+          <div class="simple-list">
+            ${renderProjects(data.projects)}
+          </div>
+          ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button">Show more projects</button>' : ''}
+        </div>
       <div class="section-block section-anchor" id="publications">
         <div class="section-heading">
           <p class="section-kicker">Publications</p>
@@ -322,6 +323,7 @@ export function render(data) {
           </div>
         </div>
       </div>
+
 
 
       <div class="section-block section-anchor" id="technical-background">
