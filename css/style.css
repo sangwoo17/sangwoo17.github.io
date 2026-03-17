@@ -397,7 +397,7 @@ button {
   justify-content: center;
   width: 336px;
   max-width: 100%;
-  aspect-ratio: 4 / 2.8;
+  aspect-ratio: 4 / 2.55;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
@@ -407,7 +407,7 @@ button {
 
 .publication-thumb-image {
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   color: inherit;
 }
