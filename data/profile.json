@@ -122,7 +122,7 @@
         "journal": "Environmental Pollution",
         "detail": "374, 126254.",
         "link": "https://doi.org/10.1016/j.envpol.2025.126254",
-        "figure": "images/publication-2025.svg",
+        "figure": "ep_2025_ga.jpg",
         "figureAlt": "Graphical abstract placeholder for the 2025 Environmental Pollution paper"
       },
       {
@@ -132,7 +132,7 @@
         "journal": "Marine Pollution Bulletin",
         "detail": "206, 116703.",
         "link": "https://www.sciencedirect.com/science/article/abs/pii/S0025326X24005794",
-        "figure": "images/publication-2024.svg",
+        "figure": "mpb_2024_ga.jpg",
         "figureAlt": "Graphical abstract placeholder for the 2024 Marine Pollution Bulletin paper"
       },
       {
@@ -152,7 +152,7 @@
         "journal": "Science of the Total Environment",
         "detail": "762, 143934.",
         "link": "https://doi.org/10.1016/j.scitotenv.2020.143934",
-        "figure": "images/publication-2021.svg",
+        "figure": "stoten_2021_ga.jpg",
         "figureAlt": "Graphical abstract placeholder for the 2021 Science of the Total Environment paper"
       },
       {
@@ -162,7 +162,7 @@
         "journal": "Environmental Science & Technology",
         "detail": "54(16), 9949-9957.",
         "link": "https://doi.org/10.1021/acs.est.0c00154",
-        "figure": "images/publication-2020.svg",
+        "figure": "est_2020_ga.jpeg",
         "figureAlt": "Graphical abstract placeholder for the 2020 Environmental Science and Technology paper"
       }
     ],
