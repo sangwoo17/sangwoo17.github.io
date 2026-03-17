@@ -91,7 +91,7 @@ function renderPublications(items, type) {
               class="publication-thumb-link"
               href="${escapeHtml(item.link || item.url)}"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Open ${escapeHtml(item.title)}"
             >
               ${item.figure ? `
@@ -124,7 +124,7 @@ function renderPublications(items, type) {
         <p class="item-subtitle">${escapeHtml(item.authors)}</p>
         <h3>
           ${(item.link || item.url) ? `
-            <a class="publication-title-link" href="${escapeHtml(item.link || item.url)}" target="_blank" rel="noreferrer">
+            <a class="publication-title-link" href="${escapeHtml(item.link || item.url)}" target="_blank" rel="noopener noreferrer">
               ${escapeHtml(item.title)}
             </a>
           ` : `
