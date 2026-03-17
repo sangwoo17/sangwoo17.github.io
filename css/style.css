@@ -355,7 +355,7 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 248px minmax(0, 1fr);
+  grid-template-columns: 264px minmax(0, 1fr);
   align-items: start;
   gap: 30px;
 }
@@ -382,7 +382,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 248px;
+  width: 264px;
   max-width: 100%;
   aspect-ratio: 4 / 3;
   border: 1px solid var(--line);
@@ -394,13 +394,13 @@ button {
 
 .publication-thumb-image {
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   color: inherit;
 }
 
 .publication-thumb-link {
   display: block;
-  width: 248px;
+  width: 264px;
   max-width: 100%;
   border-radius: 2px;
   transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
