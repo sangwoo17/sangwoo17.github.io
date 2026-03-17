@@ -565,27 +565,25 @@ button {
 }
 
 .photo-slider {
-  display: grid;
-  gap: 16px;
-}
-
-.photo-slider-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  position: relative;
 }
 
 .photo-slider-button {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 38px;
-  padding: 0 14px;
+  width: 42px;
+  height: 42px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--muted);
   cursor: pointer;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 12px rgba(21, 32, 43, 0.08);
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
@@ -593,6 +591,14 @@ button {
   background: var(--accent-soft);
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.photo-slider-button-prev {
+  left: 12px;
+}
+
+.photo-slider-button-next {
+  right: 12px;
 }
 
 .photo-track {
@@ -604,7 +610,7 @@ button {
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: var(--line) transparent;
-  padding-bottom: 6px;
+  padding: 0 54px 6px;
 }
 
 .photo-track::-webkit-scrollbar {
@@ -723,5 +729,15 @@ button {
 
   .photo-track {
     grid-auto-columns: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .photo-slider-button-prev {
+    left: 8px;
+  }
+
+  .photo-slider-button-next {
+    right: 8px;
   }
 }

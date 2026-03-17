@@ -376,10 +376,8 @@ export function render(data) {
           <h2>Photos</h2>
         </div>
         <div class="photo-slider">
-          <div class="photo-slider-controls" aria-label="Photo album navigation">
-            <button class="photo-slider-button" type="button" data-photo-nav="prev" aria-label="Scroll photos left">Prev</button>
-            <button class="photo-slider-button" type="button" data-photo-nav="next" aria-label="Scroll photos right">Next</button>
-          </div>
+          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">‹</button>
+          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">›</button>
           <div class="photo-track" data-photo-track aria-label="Photo album placeholders" tabindex="0">
             <div class="photo-slot"><span>Add photo</span></div>
             <div class="photo-slot"><span>Add photo</span></div>
