@@ -3,6 +3,7 @@ export function initInteractions() {
   initPublicationToggle();
   initPresentationToggle();
   initHeroSlideshow();
+  initPhotoSlider();
 }
 
 function initNavigation() {
@@ -100,4 +101,30 @@ function initHeroSlideshow() {
     slides[activeIndex].classList.add('is-active');
     slides[activeIndex].removeAttribute('aria-hidden');
   }, 2600);
+}
+
+function initPhotoSlider() {
+  const track = document.querySelector('[data-photo-track]');
+
+  if (!track) {
+    return;
+  }
+
+  const getStep = () => {
+    const firstCard = track.querySelector('.photo-slot');
+
+    if (!firstCard) {
+      return track.clientWidth;
+    }
+
+    const gap = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0');
+    return firstCard.getBoundingClientRect().width + gap;
+  };
+
+  document.querySelectorAll('[data-photo-nav]').forEach(button => {
+    button.addEventListener('click', () => {
+      const direction = button.dataset.photoNav === 'next' ? 1 : -1;
+      track.scrollBy({ left: getStep() * direction, behavior: 'smooth' });
+    });
+  });
 }

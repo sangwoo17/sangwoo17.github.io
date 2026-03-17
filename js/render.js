@@ -375,13 +375,19 @@ export function render(data) {
           <p class="section-kicker">Photo Album</p>
           <h2>Photos</h2>
         </div>
-        <div class="photo-grid" aria-label="Photo album placeholders">
-          <div class="photo-slot"><span>Add photo</span></div>
-          <div class="photo-slot"><span>Add photo</span></div>
-          <div class="photo-slot"><span>Add photo</span></div>
-          <div class="photo-slot"><span>Add photo</span></div>
-          <div class="photo-slot"><span>Add photo</span></div>
-          <div class="photo-slot"><span>Add photo</span></div>
+        <div class="photo-slider">
+          <div class="photo-slider-controls" aria-label="Photo album navigation">
+            <button class="photo-slider-button" type="button" data-photo-nav="prev" aria-label="Scroll photos left">Prev</button>
+            <button class="photo-slider-button" type="button" data-photo-nav="next" aria-label="Scroll photos right">Next</button>
+          </div>
+          <div class="photo-track" data-photo-track aria-label="Photo album placeholders" tabindex="0">
+            <div class="photo-slot"><span>Add photo</span></div>
+            <div class="photo-slot"><span>Add photo</span></div>
+            <div class="photo-slot"><span>Add photo</span></div>
+            <div class="photo-slot"><span>Add photo</span></div>
+            <div class="photo-slot"><span>Add photo</span></div>
+            <div class="photo-slot"><span>Add photo</span></div>
+          </div>
         </div>
       </div>
 

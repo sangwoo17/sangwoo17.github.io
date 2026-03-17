@@ -564,21 +564,68 @@ button {
   background: #fdf0f8;
 }
 
-.photo-grid {
+.photo-slider {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.photo-slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.photo-slider-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.photo-slider-button:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.photo-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 18px) / 2);
   gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  padding-bottom: 6px;
+}
+
+.photo-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.photo-track::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
 }
 
 .photo-slot {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
+  min-height: 240px;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
   font-size: 0.9rem;
+  scroll-snap-align: start;
 }
 
 .contact-panel {
@@ -614,8 +661,8 @@ button {
     gap: 16px;
   }
 
-  .photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .photo-track {
+    grid-auto-columns: calc((100% - 18px) / 2);
   }
 }
 
@@ -674,7 +721,7 @@ button {
     gap: 12px;
   }
 
-  .photo-grid {
-    grid-template-columns: 1fr;
+  .photo-track {
+    grid-auto-columns: 100%;
   }
 }
