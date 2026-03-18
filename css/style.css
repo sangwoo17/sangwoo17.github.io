@@ -735,13 +735,13 @@ button {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 260px;
-  height: 260px;
+  width: 176px;
+  height: 176px;
   pointer-events: none;
   border-radius: 50%;
   opacity: 0;
-  background: radial-gradient(circle, rgba(15, 92, 153, 0.14) 0%, rgba(15, 92, 153, 0.08) 30%, rgba(15, 92, 153, 0.02) 55%, rgba(15, 92, 153, 0) 72%);
-  filter: blur(28px);
+  background: radial-gradient(circle, rgba(15, 92, 153, 0.24) 0%, rgba(15, 92, 153, 0.13) 34%, rgba(15, 92, 153, 0.04) 58%, rgba(15, 92, 153, 0) 76%);
+  filter: blur(22px);
   transform: translate(-50%, -50%);
   transition: opacity 220ms ease-out;
 }
