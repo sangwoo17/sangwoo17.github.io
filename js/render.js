@@ -9,10 +9,10 @@ const NAV_ITEMS = [
 
 
 const TECHNICAL_BACKGROUND_IMAGES = {
-  'Experimental Design': 'images/photo/20210601_Photoexperiment.jpg',
-  Fieldwork: 'images/photo/20240901_Arctic Cruise.jpg',
-  'Mercury Analysis': 'images/photo/20220801_Arctic Cruise.jpg',
-  Others: 'images/photo/20220802_Arctic Cruise2.jpg'
+  'Experimental Design': 'images/photo/Experimental Design_Photoexperiment.jpg',
+  Fieldwork: 'images/photo/Fieldwork_Arctic Ocean.jpg',
+  'Mercury Analysis': 'images/photo/Mercury Analysis_Continuous DGM measurement.jpg',
+  Others: 'images/photo/Others_SPE for seawater DOM.jpg'
 };
 
 
