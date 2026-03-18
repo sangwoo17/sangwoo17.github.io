@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Sangwoo Eom",
-    "tagline": "Arctic mercury biogeochemist with expertise in photoredox kinetics and air-sea Hg(0) exchange",
+    "tagline": "Marine biogeochemist studying trace-element cycling, with a focus on mercury dynamics in Arctic and coastal systems. Combines process-based field observations, photochemical experiments, and quantitative modeling to resolve reaction controls and improve predictive understanding.",
     "subtagline": "Ph.D. candidate, Department of Environmental and Energy Engineering,<br>Gwangju Institute of Science and Technology (GIST), Republic of Korea",
     "heroSlides": [
       {
@@ -52,16 +52,12 @@
   ],
   "focusAreas": [
     {
-      "title": "Redox Chemistry of Trace Elements in the Ocean",
-      "description": "Elucidating the redox reaction mechanisms of trace elements such as mercury mediated by superoxide, carbonate radicals, and halogen radicals under both dark and light conditions in the ocean."
+      "title": "Mechanistic Understanding of Marine Biogeochemical Processes",
+      "description": "Elucidating the mechanistic controls of marine biogeochemical processes, particularly trace-element cycling, through process-based field observations integrated with experimental approaches."
     },
     {
-      "title": "Particle Effects on Marine Biogeochemistry",
-      "description": "Investigating how particle characteristics such as particle-adsorbed metals, organic matter, and genomic composition influence marine biogeochemical processes."
-    },
-    {
-      "title": "Development of Air-Sea Flux Chamber",
-      "description": "Designing and developing an air-sea flux chamber that accounts for ocean waves and microbubbles, and comparing in-situ flux measurements with flux estimates derived from Fick's law."
+      "title": "Quantitative Parametrization and Predictive Modeling of Biogeochemical Cycles",
+      "description": "Identifying key environmental parameters governing biogeochemical reactions and incorporating these relationships into model parametrizations to improve predictive understanding of global biogeochemical cycles and their response to climate change."
     }
   ],
   "education": [
