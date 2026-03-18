@@ -349,13 +349,18 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
+#technical-background .list-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
 .technical-image-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: min(100%, 220px);
   aspect-ratio: 4 / 2.4;
-  margin-top: 14px;
+  margin: 14px auto 0;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
@@ -711,6 +716,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  #technical-background .list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .metrics-panel {
     flex-direction: column;
     gap: 16px;
@@ -775,6 +784,10 @@ button {
   .hero-tagline,
   .hero-affiliation {
     max-width: 1100px;
+  }
+
+  #technical-background .list-grid {
+    grid-template-columns: 1fr;
   }
 
   .list-row,
