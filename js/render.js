@@ -258,6 +258,7 @@ export function render(data) {
           <p class="hero-subtagline hero-affiliation">${formatInlineBreaks(data.site.subtagline)}</p>
           <div class="hero-actions">
             <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
+            <a class="button-secondary" href="https://scholar.google.com/citations?user=YOUR_PROFILE_ID" target="_blank" rel="noreferrer">Google Scholar</a>
             <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
           </div>
         </div>
