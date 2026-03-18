@@ -50,7 +50,7 @@ function renderEducation(items) {
 function renderHonors(items) {
   return items.map(({ year, title, meta }) => `
     <article class="list-row">
-      <span class="list-meta">${escapeHtml(year)}</span>
+      ${year ? `<span class="list-meta">${escapeHtml(year)}</span>` : '<span class="list-meta"></span>'}
       <div>
         <h3>${escapeHtml(title)}</h3>
         <p>${escapeHtml(meta)}</p>
