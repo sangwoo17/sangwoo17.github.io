@@ -157,7 +157,6 @@ function renderPresentations(items) {
   const internationalItems = items.filter(item => item.region === 'international');
 
   return internationalItems.map((item, index) => {
-    const venue = splitVenue(item.venue);
     const isHidden = index > 1;
 
     return `
@@ -168,8 +167,7 @@ function renderPresentations(items) {
       </div>
       <div>
         <h3>${escapeHtml(item.title)}</h3>
-        <p class="item-subtitle">${escapeHtml(venue.event)}</p>
-        ${venue.location ? `<p>${escapeHtml(venue.location)}</p>` : ''}
+        <p class="item-subtitle">${escapeHtml(item.venue)}</p>
         ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ''}
       </div>
     </article>
