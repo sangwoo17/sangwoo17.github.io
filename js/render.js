@@ -7,6 +7,16 @@ const NAV_ITEMS = [
   { id: 'photo-album', label: 'Photos' }
 ];
 
+const PHOTO_IMAGES = [
+  { src: 'images/photo/20240915_Yankees vs Mariners.jpg', alt: 'September 15, 2024 photo' },
+  { src: 'images/photo/20240901_Arctic Cruise.jpg', alt: 'September 1, 2024 Arctic cruise photo' },
+  { src: 'images/photo/20220802_Arctic Cruise2.jpg', alt: 'August 2, 2022 Arctic cruise photo' },
+  { src: 'images/photo/20220801_Arctic Cruise.jpg', alt: 'August 1, 2022 Arctic cruise photo' },
+  { src: 'images/photo/2022/01/01/2022_arctic_cruise.jpg', alt: 'January 1, 2022 Arctic cruise photo' },
+  { src: 'images/photo/2021/11/14/2021_photoexperiment.jpg', alt: 'November 14, 2021 photo experiment' },
+  { src: 'images/photo/20210601_Photoexperiment.jpg', alt: 'June 1, 2021 photo experiment' }
+];
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -68,6 +78,14 @@ function renderProjects(items) {
         <p>${escapeHtml(outcome)}</p>
       </div>
     </article>
+  `).join('');
+}
+
+function renderPhotos(items = PHOTO_IMAGES) {
+  return items.map(item => `
+    <div class="photo-slot">
+      <img class="photo-image" src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy">
+    </div>
   `).join('');
 }
 
@@ -374,13 +392,8 @@ export function render(data) {
         <div class="photo-slider">
           <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">&#8249;</button>
           <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">&#8250;</button>
-          <div class="photo-track" data-photo-track aria-label="Photo album placeholders" tabindex="0">
-            <div class="photo-slot"><span>Add photo</span></div>
-            <div class="photo-slot"><span>Add photo</span></div>
-            <div class="photo-slot"><span>Add photo</span></div>
-            <div class="photo-slot"><span>Add photo</span></div>
-            <div class="photo-slot"><span>Add photo</span></div>
-            <div class="photo-slot"><span>Add photo</span></div>
+          <div class="photo-track" data-photo-track aria-label="Photo album" tabindex="0">
+            ${renderPhotos()}
           </div>
         </div>
       </div>

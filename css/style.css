@@ -733,7 +733,15 @@ button {
   background: #f1f4f7;
   color: var(--muted);
   font-size: 0.9rem;
+  overflow: hidden;
   scroll-snap-align: start;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .contact-panel {
