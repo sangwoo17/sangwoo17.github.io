@@ -235,7 +235,7 @@ button {
 
 .content-grid {
   display: grid;
-  gap: 72px;
+  gap: 56px;
 }
 
 .section-block {
@@ -245,11 +245,11 @@ button {
 .section-heading {
   display: grid;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 .section-heading h2 {
-  font-size: clamp(1.65rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
   line-height: 1.15;
 }
 
@@ -316,7 +316,7 @@ button {
 
 .subsection + .subsection,
 .publication-group + .publication-group {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .subsection-heading {
