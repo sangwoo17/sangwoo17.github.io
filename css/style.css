@@ -389,7 +389,9 @@ button {
   flex: 1 1 auto;
   width: 100%;
   max-width: 360px;
-  aspect-ratio: 4 / 3;
+  height: 300px;
+  aspect-ratio: auto;
+  overflow: hidden;
 }
 
 .technical-image-placeholder {
@@ -416,13 +418,14 @@ button {
   position: relative;
   display: block;
   width: 100%;
-  padding: 0 56px;
+  padding: 0;
 }
 
 .technical-slider-frame {
+  position: relative;
   width: 100%;
-  height: 100%;
-  aspect-ratio: inherit;
+  height: 300px;
+  aspect-ratio: auto;
   border: 1px solid var(--line);
   background: #f1f4f7;
   overflow: hidden;
@@ -456,7 +459,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -472,11 +475,11 @@ button {
 }
 
 .technical-slider-prev {
-  left: -14px;
+  left: 10px;
 }
 
 .technical-slider-next {
-  right: -14px;
+  right: 10px;
 }
 
 .technical-slider-control:hover {
@@ -488,7 +491,7 @@ button {
 .technical-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -843,7 +846,7 @@ button {
 
 
   .technical-slider {
-    padding: 0 48px;
+    padding: 0;
   }
 
   .technical-slider-control {
@@ -919,6 +922,6 @@ button {
 }
 .research-item img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
 }
