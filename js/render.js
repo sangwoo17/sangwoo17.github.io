@@ -9,10 +9,24 @@ const NAV_ITEMS = [
 
 
 const TECHNICAL_BACKGROUND_IMAGES = {
-  'Experimental Design': 'images/photo/Experimental Design_Photoexperiment.jpg',
-  Fieldwork: 'images/photo/Fieldwork_Arctic Ocean.jpg',
-  'Mercury Analysis': 'images/photo/Mercury Analysis_Continuous DGM measurement.jpg',
-  Others: 'images/photo/Others_SPE for seawater DOM.jpg'
+  'Experimental Design': [
+    'images/photo/Experimental Design_Photoexperiment.jpg',
+    'images/photo/Experimental Design_Continuous Equilibrium Method.jpg'
+  ],
+  Fieldwork: [
+    'images/photo/Fieldwork_Arctic Ocean.jpg',
+    'images/photo/Fieldwork_Aquaculture (Geojae-Hansan Bay).jpg',
+    'images/photo/Fieldwork_Hyeongsan River Estuary.jpg',
+    'images/photo/Fieldwork_Paro Lake.jpg'
+  ],
+  'Mercury Analysis': [
+    'images/photo/Mercury Analysis_Continuous DGM measurement.jpg',
+    'images/photo/Hg Analysis_Methylation rate measurement.jpg',
+    'images/photo/Hg Analysis_Photoreduction rate measurement.jpg'
+  ],
+  Others: [
+    'images/photo/Others_SPE for seawater DOM.jpg'
+  ]
 };
 
 
@@ -215,16 +229,30 @@ function renderSkills(items) {
   }
 
   return orderedItems.map(({ category, placeholderLabel }) => {
-    const src = TECHNICAL_BACKGROUND_IMAGES[category];
-    const title = src ? formatTechnicalImageTitle(src) : (placeholderLabel || category);
+    const sources = TECHNICAL_BACKGROUND_IMAGES[category] || [];
+    const titles = sources.map(src => formatTechnicalImageTitle(src));
+    const title = titles[0] || placeholderLabel || category;
+    const hasSlider = sources.length > 1;
 
     return `
     <article class="list-entry technical-card">
       <h3>${escapeHtml(category)}</h3>
-      <div class="technical-image-placeholder${src ? ' technical-image-frame' : ''}" ${src ? '' : `role="img" aria-label="${escapeHtml(category)} image placeholder"`}>
-        ${src ? `<img class="technical-image" src="${escapeHtml(src)}" alt="${escapeHtml(title)}" loading="lazy">` : `<span>${escapeHtml(placeholderLabel || category)}</span>`}
+      <div class="technical-image-placeholder${sources.length ? ' technical-image-frame' : ''}${hasSlider ? ' technical-slider' : ''}" ${sources.length ? '' : `role="img" aria-label="${escapeHtml(category)} image placeholder"`} ${hasSlider ? `data-technical-slider data-slider-title="${escapeHtml(title)}"` : ''}>
+        ${hasSlider ? `
+          <button class="technical-slider-control technical-slider-prev" type="button" aria-label="Previous ${escapeHtml(category)} image">&#8249;</button>
+          <div class="technical-slider-viewport">
+            <div class="technical-slider-track">
+              ${sources.map((src, index) => `
+                <figure class="technical-slide${index === 0 ? ' is-active' : ''}" data-technical-title="${escapeHtml(titles[index])}" ${index > 0 ? 'aria-hidden="true"' : ''}>
+                  <img class="technical-image" src="${escapeHtml(src)}" alt="${escapeHtml(titles[index])}" loading="lazy">
+                </figure>
+              `).join('')}
+            </div>
+          </div>
+          <button class="technical-slider-control technical-slider-next" type="button" aria-label="Next ${escapeHtml(category)} image">&#8250;</button>
+        ` : sources.length ? `<img class="technical-image" src="${escapeHtml(sources[0])}" alt="${escapeHtml(title)}" loading="lazy">` : `<span>${escapeHtml(placeholderLabel || category)}</span>`}
       </div>
-      <p class="technical-image-title">${escapeHtml(title)}</p>
+      <p class="technical-image-title"${hasSlider ? ' data-technical-caption' : ''}>${escapeHtml(title)}</p>
     </article>
   `;
   }).join('');

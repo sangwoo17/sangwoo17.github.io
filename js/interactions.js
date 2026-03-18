@@ -5,6 +5,7 @@ export function initInteractions() {
   initPresentationToggle();
   initProjectToggle();
   initProgramToggle();
+  initTechnicalSliders();
   initHeroSlideshow();
   initScrollReveal();
 }
@@ -141,6 +142,67 @@ function initProgramToggle() {
     items.forEach(item => item.classList.toggle('program-hidden', expanded));
     button.dataset.expanded = String(!expanded);
     button.textContent = expanded ? 'Show more' : 'Show less';
+  });
+}
+
+function initTechnicalSliders() {
+  const sliders = document.querySelectorAll('[data-technical-slider]');
+
+  sliders.forEach(slider => {
+    const track = slider.querySelector('.technical-slider-track');
+    const slides = [...slider.querySelectorAll('.technical-slide')];
+    const caption = slider.closest('.technical-card')?.querySelector('[data-technical-caption]');
+    const prevButton = slider.querySelector('.technical-slider-prev');
+    const nextButton = slider.querySelector('.technical-slider-next');
+
+    if (!track || slides.length < 2 || !prevButton || !nextButton) {
+      return;
+    }
+
+    let index = 0;
+
+    const update = () => {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex == index;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+      });
+
+      if (caption) {
+        caption.textContent = slides[index]?.dataset.technicalTitle || slider.dataset.sliderTitle || '';
+      }
+    };
+
+    prevButton.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      update();
+    });
+
+    nextButton.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      update();
+    });
+
+    let touchStartX = 0;
+
+    slider.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0]?.clientX || 0;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', event => {
+      const touchEndX = event.changedTouches[0]?.clientX || 0;
+      const deltaX = touchEndX - touchStartX;
+
+      if (Math.abs(deltaX) < 32) {
+        return;
+      }
+
+      index = deltaX > 0 ? (index - 1 + slides.length) % slides.length : (index + 1) % slides.length;
+      update();
+    }, { passive: true });
+
+    update();
   });
 }
 
