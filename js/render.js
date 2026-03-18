@@ -248,16 +248,18 @@ export function render(data) {
 
   app.innerHTML = `
     <section class="hero section-anchor" id="intro">
-      <div class="hero-copy">
-        <div class="hero-slideshow" data-slideshow>
-          ${renderHeroSlides(data.site.heroSlides)}
+      <div class="hero-copy hero-layout">
+        <div class="hero-media">
+          <img class="hero-photo" src="images/photo/2021/11/14/2021_photoexperiment.jpg" alt="Sangwoo Eom profile photo">
         </div>
-        <h1>${escapeHtml(data.site.title)}</h1>
-        <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
-        <p class="hero-subtagline hero-affiliation">${formatInlineBreaks(data.site.subtagline)}</p>
-        <div class="hero-actions">
-          <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
-          <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
+        <div class="hero-content">
+          <h1>${escapeHtml(data.site.title)}</h1>
+          <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
+          <p class="hero-subtagline hero-affiliation">${formatInlineBreaks(data.site.subtagline)}</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
+            <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
+          </div>
         </div>
       </div>
     </section>
