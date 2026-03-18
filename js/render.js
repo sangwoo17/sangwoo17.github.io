@@ -14,8 +14,6 @@ const PHOTO_IMAGES = [
   { src: 'images/photo/20240901_Arctic Cruise.jpg', alt: 'September 1, 2024 Arctic cruise photo' },
   { src: 'images/photo/20220802_Arctic Cruise2.jpg', alt: 'August 2, 2022 Arctic cruise photo' },
   { src: 'images/photo/20220801_Arctic Cruise.jpg', alt: 'August 1, 2022 Arctic cruise photo' },
-  { src: 'images/photo/2022/01/01/2022_arctic_cruise.jpg', alt: 'January 1, 2022 Arctic cruise photo' },
-  { src: 'images/photo/2021/11/14/2021_photoexperiment.jpg', alt: 'November 14, 2021 photo experiment' },
   { src: 'images/photo/20210601_Photoexperiment.jpg', alt: 'June 1, 2021 photo experiment' }
 ];
 
@@ -317,7 +315,7 @@ export function render(data) {
     <section class="hero section-anchor" id="intro">
       <div class="hero-copy hero-layout">
         <div class="hero-media">
-          <img class="hero-photo" src="images/photo/2021/11/14/2021_photoexperiment.jpg" alt="Sangwoo Eom profile photo">
+          <img class="hero-photo" src="images/photo/20210601_Photoexperiment.jpg" alt="Sangwoo Eom profile photo">
         </div>
         <div class="hero-content">
           <h1>${escapeHtml(data.site.title)}</h1>
