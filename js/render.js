@@ -20,15 +20,6 @@ function formatInlineBreaks(value) {
   return escapeHtml(value).replaceAll('&lt;br&gt;', '<br>');
 }
 
-function renderStats(stats) {
-  return stats.map(({ value, label }) => `
-    <div class="metric-item">
-      <strong>${escapeHtml(value)}</strong>
-      <span>${escapeHtml(label).replace(' ', '<br>')}</span>
-    </div>
-  `).join('');
-}
-
 function renderBio(paragraphs) {
   return paragraphs.map(text => `<p>${escapeHtml(text)}</p>`).join('');
 }
@@ -280,13 +271,10 @@ export function render(data) {
           <h2>Research interests</h2>
         </div>
         <div class="overview-grid">
-          <div class="list-grid">
+          <div class="simple-list">
             ${renderFocus(data.focusAreas)}
           </div>
         </div>
-        <aside class="metrics-panel" aria-label="Research highlights">
-          ${renderStats(data.stats)}
-        </aside>
       </div>
 
       
