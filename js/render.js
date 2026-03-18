@@ -187,11 +187,26 @@ function renderPresentations(items) {
 }
 
 function renderSkills(items) {
-  return items.map(({ category }) => `
-    <article class="list-entry">
+  const categoryMap = new Map(items.map(item => [item.category, item]));
+  const orderedItems = [
+    categoryMap.get('Experimental Design'),
+    categoryMap.get('Fieldwork'),
+    categoryMap.get('Mercury Analysis')
+  ].filter(Boolean);
+  const otherItems = items.filter(item => !orderedItems.includes(item));
+
+  if (otherItems.length) {
+    orderedItems.push({
+      category: 'Others',
+      placeholderLabel: otherItems.map(item => item.category).join(' / ')
+    });
+  }
+
+  return orderedItems.map(({ category, placeholderLabel }) => `
+    <article class="list-entry technical-card">
       <h3>${escapeHtml(category)}</h3>
       <div class="technical-image-placeholder" role="img" aria-label="${escapeHtml(category)} image placeholder">
-        <span>${escapeHtml(category)}</span>
+        <span>${escapeHtml(placeholderLabel || category)}</span>
       </div>
     </article>
   `).join('');

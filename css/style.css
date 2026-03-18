@@ -350,8 +350,17 @@ button {
 }
 
 #technical-background .list-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+#technical-background .technical-card {
+  display: flex;
+  flex-direction: column;
+}
+
+#technical-background .technical-image-placeholder {
+  flex: 1 1 auto;
 }
 
 .technical-image-placeholder {
@@ -714,10 +723,6 @@ button {
   .contact-layout,
   .list-grid {
     grid-template-columns: 1fr;
-  }
-
-  #technical-background .list-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .metrics-panel {
