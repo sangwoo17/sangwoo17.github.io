@@ -1,5 +1,6 @@
 export function initInteractions() {
   initNavigation();
+  initHonorToggle();
   initPublicationToggle();
   initPresentationToggle();
   initProjectToggle();
@@ -59,6 +60,20 @@ function initNavigation() {
   );
 
   sections.forEach(section => observer.observe(section));
+}
+
+function initHonorToggle() {
+  const button = document.querySelector('.honor-toggle');
+  if (!button) {
+    return;
+  }
+  button.addEventListener('click', () => {
+    const items = document.querySelectorAll('[data-extra-honor="true"]');
+    const expanded = button.dataset.expanded === 'true';
+    items.forEach(item => item.classList.toggle('honor-hidden', expanded));
+    button.dataset.expanded = String(!expanded);
+    button.textContent = expanded ? 'Show more' : 'Show less';
+  });
 }
 
 function initPublicationToggle() {
@@ -198,5 +213,3 @@ function initScrollReveal() {
 
   nodes.forEach(node => observer.observe(node));
 }
-
-

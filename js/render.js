@@ -58,9 +58,8 @@ function renderEducation(items) {
 function renderHonors(items) {
   return [...items]
     .sort((a, b) => String(b.year).localeCompare(String(a.year)))
-    .slice(0, 2)
-    .map(({ year, title, meta }) => `
-    <article class="list-row">
+    .map(({ year, title, meta }, index) => `
+    <article class="list-row honor-item ${index > 1 ? 'honor-hidden' : ''}" ${index > 1 ? 'data-extra-honor="true"' : ''}>
       ${year ? `<span class="list-meta">${escapeHtml(year)}</span>` : '<span class="list-meta"></span>'}
       <div>
         <h3>${escapeHtml(title)}</h3>
@@ -329,6 +328,7 @@ export function render(data) {
           <div class="simple-list">
             ${renderHonors(data.honors)}
           </div>
+          ${data.honors.length > 2 ? '<button class="button-secondary honor-toggle" type="button">Show more</button>' : ''}
         </div>
       </div>
 
