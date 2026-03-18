@@ -728,20 +728,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 280px;
+  height: auto;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
   font-size: 0.9rem;
-  overflow: hidden;
   scroll-snap-align: start;
 }
 
 .photo-image {
   width: 82%;
   height: auto;
-  max-height: 82%;
-  object-fit: cover;
   display: block;
   margin: auto;
 }
