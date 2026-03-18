@@ -917,3 +917,7 @@ button {
   }
 
 }
+.research-item img {
+  height: 240px;
+  object-fit: cover;
+}
