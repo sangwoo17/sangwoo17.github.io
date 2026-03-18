@@ -361,7 +361,9 @@ button {
 
 #technical-background .technical-image-placeholder {
   flex: 1 1 auto;
-  width: min(100%, 300px);
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 2.5;
 }
 
 .technical-image-placeholder {
