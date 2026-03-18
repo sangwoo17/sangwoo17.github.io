@@ -161,7 +161,7 @@ button {
 }
 
 .hero-tagline {
-  max-width: 24ch;
+  max-width: 34ch;
   margin: 0 auto 18px;
   font-size: clamp(1.05rem, 2.4vw, 1.28rem);
   line-height: 1.38;
@@ -179,7 +179,7 @@ button {
 }
 
 .hero-affiliation {
-  max-width: 36ch;
+  max-width: 48ch;
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.72;
