@@ -101,7 +101,7 @@ button {
 
 .hero-copy {
   width: 100%;
-  max-width: var(--content-width);
+  max-width: calc(var(--content-width) * 2);
   margin: 0 auto;
   text-align: center;
   padding-top: 12px;
@@ -162,7 +162,7 @@ button {
 }
 
 .hero-tagline {
-  max-width: 34ch;
+  max-width: 68ch;
   margin: 0 auto 18px;
   font-size: clamp(1.05rem, 2.4vw, 1.28rem);
   line-height: 1.38;
@@ -180,7 +180,7 @@ button {
 }
 
 .hero-affiliation {
-  max-width: 48ch;
+  max-width: 96ch;
   margin: 0 auto;
   font-size: 0.95rem;
   line-height: 1.72;
@@ -763,7 +763,7 @@ button {
   }
 
   .hero-copy {
-    max-width: 1100px;
+    max-width: calc(var(--content-width) * 2);
   }
 
   .hero-slideshow {

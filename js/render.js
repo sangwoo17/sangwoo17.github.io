@@ -260,11 +260,11 @@ export function render(data) {
       <div class="section-block section-anchor" id="research">
         <div class="section-heading">
           <p class="section-kicker">Overview</p>
-          <h2>Research profile</h2>
+          <h2>Research interests</h2>
         </div>
         <div class="overview-grid">
-          <div class="rich-copy">
-            ${renderBio(data.bio)}
+          <div class="list-grid">
+            ${renderFocus(data.focusAreas)}
           </div>
         </div>
         <aside class="metrics-panel" aria-label="Research highlights">
