@@ -4,7 +4,7 @@ const NAV_ITEMS = [
   { id: 'projects', label: 'Projects' },
   { id: 'publications', label: 'Publications' },
   { id: 'presentations', label: 'Presentations' },
-  { id: 'technical-background', label: 'Technical background' },
+  { id: 'research-background', label: 'Research background' },
 ];
 
 
@@ -383,10 +383,10 @@ export function render(data) {
         ${data.programs.length > 2 ? '<button class="button-secondary program-toggle" type="button">Show more</button>' : ''}
       </div>
 
-      <div class="section-block section-anchor" id="technical-background">
+      <div class="section-block section-anchor" id="research-background">
         <div class="section-heading">
           <p class="section-kicker">Methods</p>
-          <h2>Technical background</h2>
+          <h2>Research background</h2>
         </div>
         <div class="subsection">
           <div class="list-grid">

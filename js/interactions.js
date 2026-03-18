@@ -20,8 +20,8 @@ function initNavigation() {
     projects: 'projects',
     publications: 'publications',
     presentations: 'presentations',
-    programs: 'technical-background',
-    'technical-background': 'technical-background',
+    programs: 'research-background',
+    'research-background': 'research-background',
   };
 
   toggle.addEventListener('click', () => {

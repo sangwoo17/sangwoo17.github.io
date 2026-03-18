@@ -375,17 +375,17 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
-#technical-background .list-grid {
+#research-background .list-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-#technical-background .technical-card {
+#research-background .technical-card {
   display: flex;
   flex-direction: column;
 }
 
-#technical-background .technical-image-placeholder {
+#research-background .technical-image-placeholder {
   flex: 1 1 auto;
   width: 100%;
   max-width: 360px;
@@ -802,7 +802,7 @@ button {
     max-width: 1100px;
   }
 
-  #technical-background .list-grid {
+  #research-background .list-grid {
     grid-template-columns: 1fr;
   }
 
