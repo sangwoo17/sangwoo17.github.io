@@ -7,7 +7,6 @@ export function initInteractions() {
   initHeroSlideshow();
   initPhotoSlider();
   initScrollReveal();
-  initCursorGlow();
 }
 
 function initNavigation() {
@@ -215,44 +214,3 @@ function initScrollReveal() {
 }
 
 
-function initCursorGlow() {
-  if (window.matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  const glow = document.createElement('div');
-  glow.className = 'cursor-glow';
-  document.body.append(glow);
-
-  let currentX = window.innerWidth / 2;
-  let currentY = window.innerHeight / 2;
-  let targetX = currentX;
-  let targetY = currentY;
-  let rafId = 0;
-
-  const render = () => {
-    currentX += (targetX - currentX) * 0.14;
-    currentY += (targetY - currentY) * 0.14;
-    glow.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-
-    if (Math.abs(targetX - currentX) > 0.2 || Math.abs(targetY - currentY) > 0.2) {
-      rafId = window.requestAnimationFrame(render);
-    } else {
-      rafId = 0;
-    }
-  };
-
-  window.addEventListener('mousemove', event => {
-    targetX = event.clientX;
-    targetY = event.clientY;
-    glow.classList.add('is-active');
-
-    if (!rafId) {
-      rafId = window.requestAnimationFrame(render);
-    }
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', () => {
-    glow.classList.remove('is-active');
-  });
-}
