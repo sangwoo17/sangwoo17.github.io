@@ -6,6 +6,7 @@ export function initInteractions() {
   initProgramToggle();
   initHeroSlideshow();
   initPhotoSlider();
+  initPhotoLightbox();
   initScrollReveal();
 }
 
@@ -166,8 +167,47 @@ function initPhotoSlider() {
   });
 }
 
+function initPhotoLightbox() {
+  const lightbox = document.querySelector('[data-photo-lightbox]');
 
+  if (!lightbox) {
+    return;
+  }
 
+  const image = lightbox.querySelector('[data-photo-lightbox-image]');
+  const caption = lightbox.querySelector('[data-photo-lightbox-caption]');
+  const closeTargets = lightbox.querySelectorAll('[data-photo-lightbox-close]');
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightbox.classList.remove('is-open');
+    image.setAttribute('src', '');
+    image.setAttribute('alt', '');
+    caption.textContent = '';
+    document.body.classList.remove('photo-lightbox-open');
+  };
+
+  document.querySelectorAll('[data-photo-preview-trigger]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      image.setAttribute('src', trigger.dataset.photoSrc || '');
+      image.setAttribute('alt', trigger.dataset.photoAlt || 'Photo preview');
+      caption.textContent = trigger.dataset.photoTitle || '';
+      lightbox.hidden = false;
+      lightbox.classList.add('is-open');
+      document.body.classList.add('photo-lightbox-open');
+    });
+  });
+
+  closeTargets.forEach(node => {
+    node.addEventListener('click', closeLightbox);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !lightbox.hidden) {
+      closeLightbox();
+    }
+  });
+}
 
 function initScrollReveal() {
   const nodes = [

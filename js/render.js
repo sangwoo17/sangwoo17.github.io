@@ -83,12 +83,59 @@ function renderProjects(items) {
   `).join('');
 }
 
+function formatPhotoTitle(item) {
+  if (item.title) {
+    return item.title;
+  }
+
+  const filename = String(item.src).split('/').pop() || '';
+  const baseName = filename.replace(/\.[^.]+$/, '');
+  const withoutDate = baseName
+    .replace(/^\d{8}_?/, '')
+    .replace(/^\d{4}_/, '')
+    .replace(/^\d{4}(?=[A-Za-z])/, '');
+
+  return withoutDate
+    .replaceAll('_', ' ')
+    .replace(/\s+/g, ' ')
+    .trim() || item.alt;
+}
+
 function renderPhotos(items = PHOTO_IMAGES) {
-  return items.map(item => `
-    <div class="photo-slot">
-      <img class="photo-image" src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy">
-    </div>
-  `).join('');
+  const seen = new Set();
+
+  return items
+    .filter(item => {
+      const key = String(item.src);
+
+      if (seen.has(key)) {
+        return false;
+      }
+
+      seen.add(key);
+      return true;
+    })
+    .map(item => {
+      const title = formatPhotoTitle(item);
+
+      return `
+    <figure class="photo-slot">
+      <button
+        class="photo-card"
+        type="button"
+        data-photo-preview-trigger
+        data-photo-src="${escapeHtml(item.src)}"
+        data-photo-alt="${escapeHtml(item.alt)}"
+        data-photo-title="${escapeHtml(title)}"
+        aria-label="Open photo preview for ${escapeHtml(title)}"
+      >
+        <img class="photo-image" src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy">
+      </button>
+      <figcaption class="photo-caption">${escapeHtml(title)}</figcaption>
+    </figure>
+  `;
+    })
+    .join('');
 }
 
 function renderPublications(items, type) {
@@ -396,6 +443,14 @@ export function render(data) {
           <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">&#8250;</button>
           <div class="photo-track" data-photo-track aria-label="Photo album" tabindex="0">
             ${renderPhotos()}
+          </div>
+        </div>
+        <div class="photo-lightbox" data-photo-lightbox hidden>
+          <div class="photo-lightbox-backdrop" data-photo-lightbox-close></div>
+          <div class="photo-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Photo preview">
+            <button class="photo-lightbox-close" type="button" data-photo-lightbox-close aria-label="Close photo preview">&times;</button>
+            <img class="photo-lightbox-image" data-photo-lightbox-image src="" alt="">
+            <p class="photo-lightbox-caption" data-photo-lightbox-caption></p>
           </div>
         </div>
       </div>
