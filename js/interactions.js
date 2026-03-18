@@ -5,8 +5,6 @@ export function initInteractions() {
   initProjectToggle();
   initProgramToggle();
   initHeroSlideshow();
-  initPhotoSlider();
-  initPhotoLightbox();
   initScrollReveal();
 }
 
@@ -24,7 +22,6 @@ function initNavigation() {
     presentations: 'presentations',
     programs: 'technical-background',
     'technical-background': 'technical-background',
-    'photo-album': 'photo-album'
   };
 
   toggle.addEventListener('click', () => {
@@ -158,73 +155,6 @@ function initHeroSlideshow() {
   }, 2600);
 }
 
-function initPhotoSlider() {
-  const track = document.querySelector('[data-photo-track]');
-
-  if (!track) {
-    return;
-  }
-
-  const getStep = () => {
-    const firstCard = track.querySelector('.photo-slot');
-
-    if (!firstCard) {
-      return track.clientWidth;
-    }
-
-    const gap = Number.parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || '0');
-    return firstCard.getBoundingClientRect().width + gap;
-  };
-
-  document.querySelectorAll('[data-photo-nav]').forEach(button => {
-    button.addEventListener('click', () => {
-      const direction = button.dataset.photoNav === 'next' ? 1 : -1;
-      track.scrollBy({ left: getStep() * direction, behavior: 'smooth' });
-    });
-  });
-}
-
-function initPhotoLightbox() {
-  const lightbox = document.querySelector('[data-photo-lightbox]');
-
-  if (!lightbox) {
-    return;
-  }
-
-  const image = lightbox.querySelector('[data-photo-lightbox-image]');
-  const caption = lightbox.querySelector('[data-photo-lightbox-caption]');
-  const closeTargets = lightbox.querySelectorAll('[data-photo-lightbox-close]');
-
-  const closeLightbox = () => {
-    lightbox.hidden = true;
-    lightbox.classList.remove('is-open');
-    image.setAttribute('src', '');
-    image.setAttribute('alt', '');
-    caption.textContent = '';
-    document.body.classList.remove('photo-lightbox-open');
-  };
-
-  document.querySelectorAll('[data-photo-preview-trigger]').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      image.setAttribute('src', trigger.dataset.photoSrc || '');
-      image.setAttribute('alt', trigger.dataset.photoAlt || 'Photo preview');
-      caption.textContent = trigger.dataset.photoTitle || '';
-      lightbox.hidden = false;
-      lightbox.classList.add('is-open');
-      document.body.classList.add('photo-lightbox-open');
-    });
-  });
-
-  closeTargets.forEach(node => {
-    node.addEventListener('click', closeLightbox);
-  });
-
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !lightbox.hidden) {
-      closeLightbox();
-    }
-  });
-}
 
 function initScrollReveal() {
   const nodes = [
@@ -235,7 +165,6 @@ function initScrollReveal() {
     ...document.querySelectorAll('.list-row'),
     ...document.querySelectorAll('.publication-item'),
     ...document.querySelectorAll('.presentation-entry'),
-    ...document.querySelectorAll('.photo-slider'),
     ...document.querySelectorAll('.button-secondary')
   ].filter((node, index, array) => array.indexOf(node) === index);
 

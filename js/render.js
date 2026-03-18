@@ -5,16 +5,8 @@ const NAV_ITEMS = [
   { id: 'publications', label: 'Publications' },
   { id: 'presentations', label: 'Presentations' },
   { id: 'technical-background', label: 'Technical background' },
-  { id: 'photo-album', label: 'Photos' }
 ];
 
-const PHOTO_IMAGES = [
-  { src: 'images/photo/20240915_Yankees vs Mariners.jpg', alt: 'September 15, 2024 photo' },
-  { src: 'images/photo/20240901_Arctic Cruise.jpg', alt: 'September 1, 2024 Arctic cruise photo' },
-  { src: 'images/photo/20220802_Arctic Cruise2.jpg', alt: 'August 2, 2022 Arctic cruise photo' },
-  { src: 'images/photo/20220801_Arctic Cruise.jpg', alt: 'August 1, 2022 Arctic cruise photo' },
-  { src: 'images/photo/20210601_Photoexperiment.jpg', alt: 'June 1, 2021 photo experiment' }
-];
 
 function escapeHtml(value) {
   return String(value)
@@ -80,60 +72,6 @@ function renderProjects(items) {
   `).join('');
 }
 
-function formatPhotoTitle(item) {
-  if (item.title) {
-    return item.title;
-  }
-
-  const filename = String(item.src).split('/').pop() || '';
-  const baseName = filename.replace(/\.[^.]+$/, '');
-  const withoutDate = baseName
-    .replace(/^\d{8}_?/, '')
-    .replace(/^\d{4}_/, '')
-    .replace(/^\d{4}(?=[A-Za-z])/, '');
-
-  return withoutDate
-    .replaceAll('_', ' ')
-    .replace(/\s+/g, ' ')
-    .trim() || item.alt;
-}
-
-function renderPhotos(items = PHOTO_IMAGES) {
-  const seen = new Set();
-
-  return items
-    .filter(item => {
-      const key = String(item.src);
-
-      if (seen.has(key)) {
-        return false;
-      }
-
-      seen.add(key);
-      return true;
-    })
-    .map(item => {
-      const title = formatPhotoTitle(item);
-
-      return `
-    <figure class="photo-slot">
-      <button
-        class="photo-card"
-        type="button"
-        data-photo-preview-trigger
-        data-photo-src="${escapeHtml(item.src)}"
-        data-photo-alt="${escapeHtml(item.alt)}"
-        data-photo-title="${escapeHtml(title)}"
-        aria-label="Open photo preview for ${escapeHtml(title)}"
-      >
-        <img class="photo-image" src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy">
-      </button>
-      <figcaption class="photo-caption">${escapeHtml(title)}</figcaption>
-    </figure>
-  `;
-    })
-    .join('');
-}
 
 function renderPublications(items, type) {
   return items.map((item, index) => `
@@ -432,27 +370,6 @@ export function render(data) {
         </div>
       </div>
 
-      <div class="section-block section-anchor" id="photo-album">
-        <div class="section-heading">
-          <p class="section-kicker">Photo Album</p>
-          <h2>Photos</h2>
-        </div>
-        <div class="photo-slider">
-          <button class="photo-slider-button photo-slider-button-prev" type="button" data-photo-nav="prev" aria-label="Scroll photos left">&#8249;</button>
-          <button class="photo-slider-button photo-slider-button-next" type="button" data-photo-nav="next" aria-label="Scroll photos right">&#8250;</button>
-          <div class="photo-track" data-photo-track aria-label="Photo album" tabindex="0">
-            ${renderPhotos()}
-          </div>
-        </div>
-        <div class="photo-lightbox" data-photo-lightbox hidden>
-          <div class="photo-lightbox-backdrop" data-photo-lightbox-close></div>
-          <div class="photo-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Photo preview">
-            <button class="photo-lightbox-close" type="button" data-photo-lightbox-close aria-label="Close photo preview">&times;</button>
-            <img class="photo-lightbox-image" data-photo-lightbox-image src="" alt="">
-            <p class="photo-lightbox-caption" data-photo-lightbox-caption></p>
-          </div>
-        </div>
-      </div>
 
     </section>
   `;
