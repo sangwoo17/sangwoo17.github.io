@@ -1,11 +1,10 @@
 const NAV_ITEMS = [
   { id: 'intro', label: 'Intro' },
-  { id: 'research', label: 'Research' },
-  { id: 'profile', label: 'Academic profile' },
+  { id: 'research', label: 'Profile' },
   { id: 'projects', label: 'Projects' },
   { id: 'publications', label: 'Publications' },
-  { id: 'technical-background', label: 'Technical background' },
   { id: 'presentations', label: 'Presentations' },
+  { id: 'technical-background', label: 'Technical background' },
   { id: 'photo-album', label: 'Photos' }
 ];
 
@@ -399,6 +398,17 @@ export function render(data) {
 
 
 
+      <div class="section-block section-anchor" id="presentations">
+        <div class="section-heading">
+          <p class="section-kicker">Presentations</p>
+          <h2>Presentations</h2>
+        </div>
+        <div class="simple-list">
+          ${renderPresentations(data.presentations)}
+        </div>
+        ${data.presentations.filter(item => item.region === 'international').length > 2 ? '<button class="button-secondary presentation-toggle" type="button">Show more presentations</button>' : ''}
+      </div>
+
       <div class="section-block section-anchor" id="technical-background">
         <div class="section-heading">
           <p class="section-kicker">Methods</p>
@@ -418,17 +428,6 @@ export function render(data) {
           </div>
           ${data.programs.length > 2 ? '<button class="button-secondary program-toggle" type="button">Show more</button>' : ''}
         </div>
-      </div>
-
-      <div class="section-block section-anchor" id="presentations">
-        <div class="section-heading">
-          <p class="section-kicker">Presentations</p>
-          <h2>Presentations</h2>
-        </div>
-        <div class="simple-list">
-          ${renderPresentations(data.presentations)}
-        </div>
-        ${data.presentations.filter(item => item.region === 'international').length > 2 ? '<button class="button-secondary presentation-toggle" type="button">Show more presentations</button>' : ''}
       </div>
 
       <div class="section-block section-anchor" id="photo-album">
