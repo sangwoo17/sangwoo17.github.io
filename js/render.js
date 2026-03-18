@@ -187,10 +187,12 @@ function renderPresentations(items) {
 }
 
 function renderSkills(items) {
-  return items.map(({ category, description }) => `
+  return items.map(({ category }) => `
     <article class="list-entry">
       <h3>${escapeHtml(category)}</h3>
-      <p>${escapeHtml(description)}</p>
+      <div class="technical-image-placeholder" role="img" aria-label="${escapeHtml(category)} image placeholder">
+        <span>${escapeHtml(category)}</span>
+      </div>
     </article>
   `).join('');
 }
@@ -332,9 +334,6 @@ export function render(data) {
           <h2>Technical background</h2>
         </div>
         <div class="subsection">
-          <div class="subsection-heading">
-            <h3>Tools and methods</h3>
-          </div>
           <div class="list-grid">
             ${renderSkills(data.skills)}
           </div>

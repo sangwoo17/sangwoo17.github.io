@@ -2,7 +2,7 @@
   "site": {
     "title": "Sangwoo Eom",
     "tagline": "Arctic mercury biogeochemist with expertise in photoredox kinetics and air-sea Hg(0) exchange",
-    "subtagline": "Ph.D. Candidate, Department of Environmental and Energy Engineering,<br>Gwangju Institute of Science and Technology (GIST), Republic of Korea",
+    "subtagline": "Ph.D. candidate, Department of Environmental and Energy Engineering,<br>Gwangju Institute of Science and Technology (GIST), Republic of Korea",
     "heroSlides": [
       {
         "src": "images/hero-slide-1.svg",
@@ -33,7 +33,7 @@
       "label": "Published papers"
     },
     {
-      "value": "14+",
+      "value": "14",
       "label": "Conference presentations"
     },
     {
@@ -53,27 +53,27 @@
   "focusAreas": [
     {
       "title": "Redox Chemistry of Trace Elements in the Ocean",
-      "description": "Elucidating mercury redox mechanisms mediated by superoxide, carbonate radicals, and halogen radicals under dark and light conditions."
+      "description": "Elucidating the redox reaction mechanisms of trace elements such as mercury mediated by superoxide, carbonate radicals, and halogen radicals under both dark and light conditions in the ocean."
     },
     {
       "title": "Particle Effects on Marine Biogeochemistry",
-      "description": "Investigating how particle-adsorbed metals, organic matter, and genomic composition influence marine biogeochemical processes."
+      "description": "Investigating how particle characteristics such as particle-adsorbed metals, organic matter, and genomic composition influence marine biogeochemical processes."
     },
     {
-      "title": "Air-Sea Flux Chamber Development",
-      "description": "Designing flux chambers that capture wave and microbubble effects and benchmarking in-situ measurements against Fick's law estimates."
+      "title": "Development of Air-Sea Flux Chamber",
+      "description": "Designing and developing an air-sea flux chamber that accounts for ocean waves and microbubbles, and comparing in-situ flux measurements with flux estimates derived from Fick's law."
     }
   ],
   "education": [
     {
-      "period": "2020-2026",
+      "period": "2020-2026 (expected)",
       "degree": "Integrated Ph.D., Environmental and Energy Engineering",
       "institution": "Gwangju Institute of Science and Technology (GIST)",
-      "detail": "Expected 2026. Advisor: Prof. Seunghee Han."
+      "detail": "Advisor: Seunghee Han."
     },
     {
       "period": "2016-2020",
-      "degree": "B.S., Earth Sciences and Environmental Engineering",
+      "degree": "B.S. Earth Sciences and Environmental Engineering",
       "institution": "Gwangju Institute of Science and Technology (GIST)",
       "detail": "Built foundational training across earth systems, environmental chemistry, and field analysis."
     }
@@ -87,12 +87,12 @@
     {
       "year": "2023",
       "title": "Best Poster Award",
-      "meta": "Korean Chemical Society Division of Environmental & Energy Winter Symposium"
+      "meta": "2023 Korean Chemical Society (KCS) Division of Environmental & Energy Winter Symposium"
     }
   ],
   "projects": [
     {
-      "period": "2024-Present",
+      "period": "2024-present",
       "title": "Photoreduction mechanisms of dissolved divalent mercury in surface seawater",
       "support": "National Research Foundation of Korea (NRF)",
       "outcome": "Demonstrated enhancing roles of carbonate and thiols, and the suppressing role of aromatic DOM on Hg(II) photoreduction in seawater."
@@ -101,19 +101,19 @@
       "period": "2021-2023",
       "title": "Air-sea exchange, sediment methylation, and ecosystem sources of mercury in the Arctic Ocean",
       "support": "Korean Institute of Marine Science & Technology (KIMST)",
-      "outcome": "Estimated air-sea Hg(0) exchange across sea-ice regimes and linked photoredox kinetics to DOM composition in Arctic seawater."
+      "outcome": "Estimated air-sea Hg(0) exchange across sea-ice regimes and first linked photoredox kinetics to DOM composition in Arctic seawater."
     },
     {
       "period": "2020-2022",
-      "title": "Investigation of water qualities and sediment contamination in Hyeongsan River Estuary",
+      "title": "Investigation of Water Qualities and Sediment Contamination in Hyeongsan River Estuary",
       "support": "National Institute of Environmental Research (NIER)",
-      "outcome": "Characterized biogeochemical cycling of dissolved and particulate mercury in a contaminated estuary."
+      "outcome": "Investigated the biogeochemical cycling of dissolved and particulate Hg in a contaminated estuary."
     },
     {
       "period": "2019-2020",
-      "title": "Rainwater mercury monitoring through the Asia-Pacific Mercury Monitoring Network",
-      "support": "APMMN collaboration",
-      "outcome": "Tracked potential mercury source regions in wet deposition across South Korea."
+      "title": "Rainwater Hg monitoring as part of the Asia-Pacific Mercury Monitoring Network",
+      "support": "Asia-Pacific Mercury Monitoring Network (APMMN)",
+      "outcome": "Tracked potential Hg sources in wet deposition."
     }
   ],
   "publications": {
@@ -173,11 +173,11 @@
       {
         "status": "Major revision requested",
         "authors": "Eom, S.; Nguyen, H. V.; Qureshi, A.; Han, S.",
-        "title": "Mechanistic insights into mercury photoreduction: effects of dissolved organic matter and inorganic carbon in seawater.",
+        "title": "Mechanistic Insights into Mercury Photoreduction: Effects of Dissolved Organic Matter and Inorganic Carbon in Seawater.",
         "journal": "Environmental Science & Technology"
       },
       {
-        "status": "In preparation",
+        "status": "Finalizing manuscript",
         "authors": "Eom, S.; Qureshi, A.; Lee, W.; Rhee, T. S.; Hong, J. K.; Rho, T. K.; Son, P.; Jang, K. S.; Han, S.",
         "title": "Sea ice melt modulates oceanic evasion and net production of dissolved gaseous mercury in Arctic summer.",
         "journal": "Target journal: Nature Communications"
@@ -190,7 +190,7 @@
       "region": "international",
       "type": "poster",
       "venue": "Ocean Sciences Meeting (OSM), Glasgow, Scotland",
-      "title": "Properties of inflowing Pacific and Atlantic water govern total and methylated mercury profiles in the Arctic Ocean."
+      "title": "Properties of Inflowing Pacific and Atlantic Water Govern Total and Methylated Mercury Profiles in the Arctic Ocean."
     },
     {
       "year": "2025",
@@ -203,7 +203,7 @@
       "year": "2024",
       "region": "international",
       "type": "oral",
-      "venue": "QUISS Symposium, Federal Institute of Hydrology (BfG), Koblenz, Germany",
+      "venue": "QUISS-Symposium: Biogeochemical Controls on Mercury Dynamics in Contaminated River Systems, Federal Institute of Hydrology (BfG) in Koblenz, Germany",
       "title": "Effects of hydrological regimes on the loading and spatiotemporal variation of mercury in the microtidal river estuary."
     },
     {
@@ -224,14 +224,14 @@
       "year": "2019",
       "region": "international",
       "type": "poster",
-      "venue": "14th International Conference on Mercury as a Global Pollutant (ICMGP), Krakow, Poland",
+      "venue": "14th International Conference on Mercury as Global Pollutant (ICMGP), Krakow, Poland",
       "title": "Source characterization for mercury wet deposition over five cities in South Korea."
     },
     {
       "year": "2019",
       "region": "international",
       "type": "oral",
-      "venue": "8th Annual Asia-Pacific Mercury Monitoring Network Partners Meeting, Jakarta, Indonesia",
+      "venue": "8th Annual Asia-Pacific Mercury Monitoring Network (APMMN) Partners Meeting, Jakarta, Indonesia",
       "title": "National mercury monitoring activities in Korea."
     },
     {
@@ -239,14 +239,14 @@
       "region": "domestic",
       "type": "oral",
       "venue": "The Korean Society of Oceanography, Gwangju, Republic of Korea",
-      "title": "Characteristics of inflowing Pacific and Atlantic water govern profiles of total and methylated mercury in the Arctic Ocean."
+      "title": "Characteristics of Inflowing Pacific and Atlantic Water Govern Profiles of Total and Methylated Mercury in the Arctic Ocean."
     },
     {
       "year": "2024",
       "region": "domestic",
       "type": "oral",
       "venue": "Asia Oceania Geosciences Society, Pyeongchang, Republic of Korea",
-      "title": "Influence of Beaufort Gyre on the spatiotemporal variation of total and methylated mercury in the Western Arctic Ocean."
+      "title": "Influence of Beaufort Gyre on the Spatiotemporal Variation of Total and Methylated Mercury in the Western Arctic Ocean."
     },
     {
       "year": "2024",
@@ -266,7 +266,7 @@
       "year": "2023",
       "region": "domestic",
       "type": "poster",
-      "venue": "Korean Chemical Society Division of Environmental & Energy Winter Symposium, Hongcheon, Republic of Korea",
+      "venue": "2023 Korean Chemical Society (KCS) Division of Environmental & Energy Winter Symposium, Hongcheon, Republic of Korea",
       "title": "Distribution of dissolved gaseous mercury concentrations and photo-induced reduction rate constants of divalent mercury in the Southern Beaufort Sea.",
       "note": "Best Poster Award"
     },
@@ -281,41 +281,41 @@
       "year": "2021",
       "region": "domestic",
       "type": "poster",
-      "venue": "128th Korean Chemical Society, Busan, Republic of Korea",
+      "venue": "The 128th Korean Chemical Society, Busan, Republic of Korea",
       "title": "Mixing behaviors and seasonal dynamics of total and methylated mercury in a shallow microtidal estuary: Hyeongsan River Estuary."
     }
   ],
   "skills": [
     {
       "category": "Experimental Design",
-      "description": "Photoredox rate-constant estimation, continuous dissolved gaseous mercury measurements, and seawater photo-experimental setup design."
+      "description": "Designed photo-experimental setups for estimating photoredox reaction rate constants and developed continuous measurements of dissolved gaseous Hg(0) in surface waters."
     },
     {
       "category": "Fieldwork",
-      "description": "Trace-element clean water and sediment sampling, ocean-atmosphere interface measurements, and Arctic Araon cruise operations."
+      "description": "Sampling techniques for trace elements in ambient water and sediment."
     },
     {
       "category": "Mercury Analysis",
-      "description": "CVAFS workflows using BrooksRand and Tekran 2537 series for THg, MeHg, Hg(0), and methylation-demethylation kinetics."
+      "description": "CVAFS workflows with BrooksRand and Tekran 2537 series for water, sediment, and atmospheric mercury analyses, including kinetic measurements."
     },
     {
       "category": "Organic Matter",
-      "description": "DOC by VarioTOC, SPE for FT-ICR-MS, and FDOM analysis with Hitachi F-2500."
+      "description": "Dissolved organic carbon by VarioTOC, solid phase extraction for FT-ICR-MS, and fluorescent dissolved organic matter analysis with Hitachi F-2500."
     },
     {
       "category": "Ancillary Parameters",
-      "description": "Chlorophyll-a, suspended particulate matter, UV-Vis, acid volatile sulfide, YSI meter, glove box, and ferrioxalate actinometry."
+      "description": "Chlorophyll-a fluorometry, suspended particulate matter, UV-Vis spectrophotometry, acid volatile sulfide, YSI meter, glove box operation, and ferrioxalate actinometry."
     },
     {
       "category": "Software & Modeling",
-      "description": "R, MATLAB, Excel, QGIS, Ocean Data View, SigmaPlot, SPSS, MINEQL+5.0, Mercury Guru, Hg Logger Plus, and MATLAB-based Hg modeling."
+      "description": "R, MATLAB, Excel, QGIS, Ocean Data View, SigmaPlot, SPSS, MINEQL+5.0, Mercury Guru, Hg Logger Plus, and multi-compartment Hg modeling."
     }
   ],
   "responsibilities": [
     {
       "period": "2026",
       "title": "Mentored Dr. Nguyen Huu Viet",
-      "detail": "Supported estimation of Hg photoreaction constants and operation of the Tekran 2537X Hg detector."
+      "detail": "Estimated Hg photoreaction constants and managed the Tekran 2537X Hg detector."
     },
     {
       "period": "2025",
@@ -324,17 +324,17 @@
     },
     {
       "period": "2025",
-      "title": "Method development collaboration",
-      "detail": "Modified a sediment MeHg extraction method with Dongmin Kim."
+      "title": "Modification of sediment MeHg extraction method",
+      "detail": "Collaborated with Dongmin Kim on sediment MeHg extraction method development."
     },
     {
       "period": "2023-2025",
-      "title": "Lab manager, Trace Metal Biogeochemistry Lab",
-      "detail": "Managed lab workflows, instrumentation coordination, and day-to-day research operations at GIST."
+      "title": "Lab manager, Trace Metal Biogeochemistry Lab (TMBL)",
+      "detail": "Served as lab manager in the Trace Metal Biogeochemistry Lab at GIST."
     },
     {
       "period": "2021-2022",
-      "title": "Mentored undergraduate research assistants",
+      "title": "Mentored two research assistants",
       "detail": "Trained Sanghyun Moon and Sungsook Park for Hg analysis."
     },
     {
@@ -356,24 +356,24 @@
     },
     {
       "year": "2024",
-      "title": "Arctic Araon Cruise ARA15B",
+      "title": "2024 Arctic Araon Cruise (ARA15B)",
       "detail": "Research collaboration with the Korean Polar Research Institute (KOPRI)."
     },
     {
       "year": "2022",
-      "title": "Arctic Araon Cruise ARA13C",
+      "title": "2022 Arctic Araon Cruise (ARA13C)",
       "detail": "Research collaboration with the Korean Polar Research Institute (KOPRI)."
     },
     {
       "year": "2019",
-      "title": "Asia-Pacific Mercury Monitoring Network Workshop",
-      "detail": "Participated in the 8th APMMN workshop in Jakarta, Indonesia."
+      "title": "8th Asia-Pacific Mercury Monitoring Network Workshop",
+      "detail": "Participated in the workshop in Jakarta, Indonesia."
     }
   ],
   "references": [
     {
       "name": "Prof. Seunghee Han",
-      "role": "Department of Environmental and Energy Engineering, GIST",
+      "role": "Department of Energy and Environmental Engineering, GIST",
       "email": "shan@gist.ac.kr"
     },
     {
@@ -383,7 +383,7 @@
     },
     {
       "name": "Dr. Tae Siek Rhee",
-      "role": "Division of Ocean and Atmospheric Sciences, Korea Polar Research Institute",
+      "role": "Division of Ocean and Atmospheric Sciences, Korea Polar Research Institute (KOPRI)",
       "email": "rhee@kopri.re.kr"
     }
   ]
