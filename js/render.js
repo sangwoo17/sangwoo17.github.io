@@ -56,7 +56,10 @@ function renderEducation(items) {
 }
 
 function renderHonors(items) {
-  return items.map(({ year, title, meta }) => `
+  return [...items]
+    .sort((a, b) => String(b.year).localeCompare(String(a.year)))
+    .slice(0, 2)
+    .map(({ year, title, meta }) => `
     <article class="list-row">
       ${year ? `<span class="list-meta">${escapeHtml(year)}</span>` : '<span class="list-meta"></span>'}
       <div>
