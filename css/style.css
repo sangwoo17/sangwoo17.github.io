@@ -416,7 +416,7 @@ button {
   position: relative;
   display: block;
   width: 100%;
-  padding: 0 44px;
+  padding: 0 56px;
 }
 
 .technical-slider-frame {
@@ -472,11 +472,11 @@ button {
 }
 
 .technical-slider-prev {
-  left: -4px;
+  left: -14px;
 }
 
 .technical-slider-next {
-  right: -4px;
+  right: -14px;
 }
 
 .technical-slider-control:hover {
@@ -843,7 +843,7 @@ button {
 
 
   .technical-slider {
-    padding: 0 40px;
+    padding: 0 48px;
   }
 
   .technical-slider-control {
