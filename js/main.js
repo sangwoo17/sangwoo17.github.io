@@ -32,6 +32,7 @@ async function bootstrap() {
     }
 
     const data = await response.json();
+    data.site.heroSlides.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
     render(data);
     initInteractions();
     reorderPublicationText();
