@@ -225,8 +225,10 @@ function renderResponsibilities(items) {
 }
 
 function renderPrograms(items) {
-  return items.map(({ year, title, detail }) => `
-    <article class="list-row">
+  return [...items]
+    .sort((a, b) => String(b.year).localeCompare(String(a.year)))
+    .map(({ year, title, detail }, index) => `
+    <article class="list-row program-item ${index > 1 ? 'program-hidden' : ''}" ${index > 1 ? 'data-extra-program="true"' : ''}>
       <span class="list-meta">${escapeHtml(year)}</span>
       <div>
         <h3>${escapeHtml(title)}</h3>
@@ -360,6 +362,7 @@ export function render(data) {
           <div class="simple-list">
             ${renderPrograms(data.programs)}
           </div>
+          ${data.programs.length > 2 ? '<button class="button-secondary program-toggle" type="button">Show more</button>' : ''}
         </div>
       </div>
 

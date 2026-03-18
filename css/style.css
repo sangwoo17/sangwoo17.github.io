@@ -519,7 +519,8 @@ button {
 
 .publication-toggle,
 .presentation-toggle,
-.project-toggle {
+.project-toggle,
+.program-toggle {
   display: block;
   min-height: 38px;
   padding: 0 14px;
@@ -541,9 +542,14 @@ button {
   margin: 18px auto 0;
 }
 
+.program-toggle {
+  margin: 18px auto 0;
+}
+
 .publication-toggle:hover,
 .presentation-toggle:hover,
-.project-toggle:hover {
+.project-toggle:hover,
+.program-toggle:hover {
   background: #f5f8fb;
   border-color: #bfd1e1;
   color: var(--accent);
@@ -575,6 +581,10 @@ button {
 }
 
 .project-hidden {
+  display: none;
+}
+
+.program-hidden {
   display: none;
 }
 

@@ -3,6 +3,7 @@ export function initInteractions() {
   initPublicationToggle();
   initPresentationToggle();
   initProjectToggle();
+  initProgramToggle();
   initHeroSlideshow();
   initPhotoSlider();
 }
@@ -92,6 +93,23 @@ function initProjectToggle() {
     items.forEach(item => item.classList.toggle('project-hidden', expanded));
     button.dataset.expanded = String(!expanded);
     button.textContent = expanded ? 'Show more projects' : 'Show less projects';
+  });
+}
+
+function initProgramToggle() {
+  const button = document.querySelector('.program-toggle');
+
+  if (!button) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    const items = document.querySelectorAll('[data-extra-program="true"]');
+    const expanded = button.dataset.expanded === 'true';
+
+    items.forEach(item => item.classList.toggle('program-hidden', expanded));
+    button.dataset.expanded = String(!expanded);
+    button.textContent = expanded ? 'Show more' : 'Show less';
   });
 }
 
