@@ -108,9 +108,9 @@ button {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(160px, 180px) minmax(0, 1fr);
+  grid-template-columns: minmax(200px, 220px) minmax(0, 1fr);
   align-items: center;
-  gap: 28px;
+  gap: 48px;
 }
 
 .hero-media {
@@ -861,7 +861,7 @@ button {
   }
 
   .hero-photo {
-    width: min(180px, 100%);
+    width: min(200px, 100%);
   }
 
   .hero-tagline,
