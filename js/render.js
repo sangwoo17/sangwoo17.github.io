@@ -51,8 +51,8 @@ function renderEducation(items) {
       <div class="list-meta">${escapeHtml(period)}</div>
       <div>
         <h3>${escapeHtml(degree)}</h3>
-        <p class="item-subtitle">${escapeHtml(institution)}</p>
-        <p>${escapeHtml(detail)}</p>
+        ${institution ? `<p class="item-subtitle">${escapeHtml(institution)}</p>` : ''}
+        ${detail ? `<p>${escapeHtml(detail)}</p>` : ''}
       </div>
     </article>
   `).join('');
