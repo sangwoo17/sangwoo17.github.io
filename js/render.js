@@ -1,9 +1,11 @@
 const NAV_ITEMS = [
   { id: 'intro', label: 'Intro' },
   { id: 'research', label: 'Research' },
-  { id: 'publications', label: 'Publications' },
-  { id: 'presentations', label: 'Presentations' },
+  { id: 'profile', label: 'Academic profile' },
   { id: 'projects', label: 'Projects' },
+  { id: 'publications', label: 'Publications' },
+  { id: 'technical-background', label: 'Technical background' },
+  { id: 'presentations', label: 'Presentations' },
   { id: 'photo-album', label: 'Photos' }
 ];
 
