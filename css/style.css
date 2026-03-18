@@ -108,7 +108,7 @@ button {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(200px, 220px) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 240px) minmax(0, 1fr);
   align-items: center;
   gap: 48px;
 }
@@ -180,7 +180,7 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(1.72rem, 4.5vw, 2.9rem);
+  font-size: clamp(1.55rem, 4.1vw, 2.55rem);
   line-height: 1.05;
   margin-bottom: 18px;
 }
@@ -863,7 +863,7 @@ button {
   }
 
   .hero-photo {
-    width: min(200px, 100%);
+    width: min(220px, 100%);
   }
 
   .hero-tagline,
