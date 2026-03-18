@@ -351,12 +351,6 @@ export function render(data) {
           </div>
           <button class="button-secondary publication-toggle" type="button">Show more publications</button>
         </div>
-        <div class="publication-group">
-          <div class="group-label">In progress</div>
-          <div class="simple-list">
-            ${renderPublications(data.publications.inPrep, 'inPrep')}
-          </div>
-        </div>
       </div>
 
 
