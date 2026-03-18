@@ -100,7 +100,7 @@ button {
 }
 
 .hero-copy {
-  max-width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
   text-align: center;
   padding-top: 12px;
@@ -743,7 +743,7 @@ button {
   }
 
   .hero-copy {
-    max-width: 100%;
+    max-width: 1100px;
   }
 
   .hero-slideshow {
@@ -791,6 +791,7 @@ button {
     right: 8px;
   }
 }
+
 
 
 
