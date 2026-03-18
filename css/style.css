@@ -726,19 +726,22 @@ button {
 
 .photo-slot {
   display: grid;
-  gap: 12px;
+  gap: 10px;
+  justify-items: center;
   height: auto;
   margin: 0;
   border: 1px solid var(--line);
-  background: #f1f4f7;
+  background: #f7f9fb;
   color: var(--muted);
   font-size: 0.9rem;
-  padding: 14px;
+  padding: 10px 10px 12px;
   scroll-snap-align: start;
 }
 
 .photo-card {
-  display: block;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
   padding: 0;
   border: 0;
   background: transparent;
@@ -746,7 +749,7 @@ button {
 }
 
 .photo-image {
-  width: 82%;
+  width: min(100%, 320px);
   height: auto;
   display: block;
   margin: 0 auto;
@@ -772,7 +775,8 @@ button {
 .photo-lightbox-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(17, 27, 39, 0.45);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(3px);
 }
 
 .photo-lightbox-dialog {
@@ -781,10 +785,10 @@ button {
   width: min(540px, calc(100% - 32px));
   margin: min(10vh, 72px) auto;
   padding: 18px 18px 14px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(216, 224, 232, 0.92);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 18px 48px rgba(17, 27, 39, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 48px rgba(17, 27, 39, 0.12);
 }
 
 .photo-lightbox-image {
@@ -797,7 +801,7 @@ button {
 .photo-lightbox-caption {
   margin: 12px 0 0;
   text-align: center;
-  color: var(--muted);
+  color: #4a5562;
 }
 
 .photo-lightbox-close {
