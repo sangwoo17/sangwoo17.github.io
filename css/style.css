@@ -361,6 +361,7 @@ button {
 
 #technical-background .technical-image-placeholder {
   flex: 1 1 auto;
+  width: min(100%, 300px);
 }
 
 .technical-image-placeholder {
