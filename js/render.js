@@ -409,6 +409,17 @@ export function render(data) {
         ${data.presentations.filter(item => item.region === 'international').length > 2 ? '<button class="button-secondary presentation-toggle" type="button">Show more presentations</button>' : ''}
       </div>
 
+      <div class="section-block section-anchor" id="programs">
+        <div class="section-heading">
+          <p class="section-kicker">Programs</p>
+          <h2>Programs and collaborations</h2>
+        </div>
+        <div class="simple-list">
+          ${renderPrograms(data.programs)}
+        </div>
+        ${data.programs.length > 2 ? '<button class="button-secondary program-toggle" type="button">Show more</button>' : ''}
+      </div>
+
       <div class="section-block section-anchor" id="technical-background">
         <div class="section-heading">
           <p class="section-kicker">Methods</p>
@@ -418,15 +429,6 @@ export function render(data) {
           <div class="list-grid">
             ${renderSkills(data.skills)}
           </div>
-        </div>
-        <div class="subsection">
-          <div class="subsection-heading">
-            <h3>Programs and collaborations</h3>
-          </div>
-          <div class="simple-list">
-            ${renderPrograms(data.programs)}
-          </div>
-          ${data.programs.length > 2 ? '<button class="button-secondary program-toggle" type="button">Show more</button>' : ''}
         </div>
       </div>
 

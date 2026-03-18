@@ -15,6 +15,17 @@ function initNavigation() {
   const nav = document.getElementById('site-nav');
   const links = nav.querySelectorAll('a');
   const sections = [...document.querySelectorAll('.section-anchor')];
+  const sectionNavMap = {
+    intro: 'intro',
+    research: 'research',
+    profile: 'research',
+    projects: 'projects',
+    publications: 'publications',
+    presentations: 'presentations',
+    programs: 'technical-background',
+    'technical-background': 'technical-background',
+    'photo-album': 'photo-album'
+  };
 
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
@@ -36,8 +47,14 @@ function initNavigation() {
           return;
         }
 
+        const activeId = sectionNavMap[entry.target.id];
+
+        if (!activeId) {
+          return;
+        }
+
         links.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+          link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
         });
       });
     },
