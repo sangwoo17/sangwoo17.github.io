@@ -730,6 +730,26 @@ button {
   color: var(--muted);
 }
 
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 260px;
+  height: 260px;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(15, 92, 153, 0.14) 0%, rgba(15, 92, 153, 0.08) 30%, rgba(15, 92, 153, 0.02) 55%, rgba(15, 92, 153, 0) 72%);
+  filter: blur(28px);
+  transform: translate(-50%, -50%);
+  transition: opacity 220ms ease-out;
+}
+
+.cursor-glow.is-active {
+  opacity: 1;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(12px);
