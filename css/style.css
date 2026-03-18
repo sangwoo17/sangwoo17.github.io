@@ -492,6 +492,8 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: auto;
+  transform: none;
   display: block;
 }
 
@@ -925,4 +927,6 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: left center;
+  image-rendering: auto;
+  transform: none;
 }
