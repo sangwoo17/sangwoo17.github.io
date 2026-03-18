@@ -108,7 +108,7 @@ button {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(120px, 160px) minmax(0, 1fr);
+  grid-template-columns: minmax(160px, 180px) minmax(0, 1fr);
   align-items: center;
   gap: 28px;
 }
@@ -180,16 +180,20 @@ button {
 }
 
 .hero h1 {
-  font-size: clamp(1.95rem, 5.2vw, 3.3rem);
+  font-size: clamp(1.72rem, 4.5vw, 2.9rem);
   line-height: 1.05;
   margin-bottom: 18px;
 }
 
 .hero-tagline {
-  max-width: 68ch;
-  margin: 0 0 18px;
-  font-size: clamp(0.95rem, 2vw, 1.12rem);
-  line-height: 1.38;
+  max-width: 96ch;
+  margin: 0 0 8px;
+}
+
+.hero-tagline,
+.hero-affiliation {
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -205,9 +209,7 @@ button {
 
 .hero-affiliation {
   max-width: 96ch;
-  margin: 0 auto;
-  font-size: 0.95rem;
-  line-height: 1.72;
+  margin: 0;
 }
 
 .hero-location {
@@ -851,7 +853,7 @@ button {
   }
 
   .hero-photo {
-    width: min(160px, 100%);
+    width: min(180px, 100%);
   }
 
   .hero-tagline,
