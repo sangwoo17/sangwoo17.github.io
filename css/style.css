@@ -409,15 +409,23 @@ button {
 
 .technical-image-frame {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .technical-slider {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 8px;
-  padding: 0 10px;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 34px;
+}
+
+.technical-slider-frame {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: inherit;
+  border: 1px solid var(--line);
+  background: #f1f4f7;
+  overflow: hidden;
 }
 
 .technical-slider-viewport {
@@ -434,13 +442,21 @@ button {
 }
 
 .technical-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
   margin: 0;
+  background: #f1f4f7;
 }
 
 .technical-slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -449,10 +465,18 @@ button {
   padding: 0;
   border: 1px solid rgba(216, 224, 232, 0.95);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--muted);
   cursor: pointer;
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.technical-slider-prev {
+  left: 0;
+}
+
+.technical-slider-next {
+  right: 0;
 }
 
 .technical-slider-control:hover {
@@ -464,7 +488,7 @@ button {
 .technical-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -819,22 +843,7 @@ button {
 
 
   .technical-slider {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0;
-  }
-
-  .technical-slider-viewport {
-    order: 1;
-  }
-
-  .technical-slider-prev,
-  .technical-slider-next {
-    order: 2;
-  }
-
-  .technical-slider {
-    justify-items: center;
+    padding: 0 32px;
   }
 
   .technical-slider-control {

@@ -240,13 +240,15 @@ function renderSkills(items) {
       <div class="technical-image-placeholder${sources.length ? ' technical-image-frame' : ''}${hasSlider ? ' technical-slider' : ''}" ${sources.length ? '' : `role="img" aria-label="${escapeHtml(category)} image placeholder"`} ${hasSlider ? `data-technical-slider data-slider-title="${escapeHtml(title)}"` : ''}>
         ${hasSlider ? `
           <button class="technical-slider-control technical-slider-prev" type="button" aria-label="Previous ${escapeHtml(category)} image">&#8249;</button>
-          <div class="technical-slider-viewport">
-            <div class="technical-slider-track">
-              ${sources.map((src, index) => `
-                <figure class="technical-slide${index === 0 ? ' is-active' : ''}" data-technical-title="${escapeHtml(titles[index])}" ${index > 0 ? 'aria-hidden="true"' : ''}>
-                  <img class="technical-image" src="${escapeHtml(src)}" alt="${escapeHtml(titles[index])}" loading="lazy">
-                </figure>
-              `).join('')}
+          <div class="technical-slider-frame">
+            <div class="technical-slider-viewport">
+              <div class="technical-slider-track">
+                ${sources.map((src, index) => `
+                  <figure class="technical-slide${index === 0 ? ' is-active' : ''}" data-technical-title="${escapeHtml(titles[index])}" ${index > 0 ? 'aria-hidden="true"' : ''}>
+                    <img class="technical-image" src="${escapeHtml(src)}" alt="${escapeHtml(titles[index])}" loading="lazy">
+                  </figure>
+                `).join('')}
+              </div>
             </div>
           </div>
           <button class="technical-slider-control technical-slider-next" type="button" aria-label="Next ${escapeHtml(category)} image">&#8250;</button>
