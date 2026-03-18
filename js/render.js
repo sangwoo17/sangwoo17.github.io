@@ -8,6 +8,14 @@ const NAV_ITEMS = [
 ];
 
 
+const TECHNICAL_BACKGROUND_IMAGES = {
+  'Experimental Design': 'images/photo/20210601_Photoexperiment.jpg',
+  Fieldwork: 'images/photo/20240901_Arctic Cruise.jpg',
+  'Mercury Analysis': 'images/photo/20220801_Arctic Cruise.jpg',
+  Others: 'images/photo/20220802_Arctic Cruise2.jpg'
+};
+
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -177,6 +185,17 @@ function renderPresentations(items) {
   }).join('');
 }
 
+function formatTechnicalImageTitle(src) {
+  const filename = String(src).split('/').pop() || '';
+  const baseName = filename.replace(/\.[^.]+$/, '');
+  const afterUnderscore = baseName.includes('_') ? baseName.split('_').slice(1).join('_') : baseName;
+
+  return afterUnderscore
+    .replaceAll('_', ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function renderSkills(items) {
   const categoryMap = new Map(items.map(item => [item.category, item]));
   const orderedItems = [
@@ -193,14 +212,20 @@ function renderSkills(items) {
     });
   }
 
-  return orderedItems.map(({ category, placeholderLabel }) => `
+  return orderedItems.map(({ category, placeholderLabel }) => {
+    const src = TECHNICAL_BACKGROUND_IMAGES[category];
+    const title = src ? formatTechnicalImageTitle(src) : (placeholderLabel || category);
+
+    return `
     <article class="list-entry technical-card">
       <h3>${escapeHtml(category)}</h3>
-      <div class="technical-image-placeholder" role="img" aria-label="${escapeHtml(category)} image placeholder">
-        <span>${escapeHtml(placeholderLabel || category)}</span>
+      <div class="technical-image-placeholder${src ? ' technical-image-frame' : ''}" ${src ? '' : `role="img" aria-label="${escapeHtml(category)} image placeholder"`}>
+        ${src ? `<img class="technical-image" src="${escapeHtml(src)}" alt="${escapeHtml(title)}" loading="lazy">` : `<span>${escapeHtml(placeholderLabel || category)}</span>`}
       </div>
+      <p class="technical-image-title">${escapeHtml(title)}</p>
     </article>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function renderResponsibilities(items) {
