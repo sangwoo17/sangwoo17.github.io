@@ -930,3 +930,22 @@ button {
   image-rendering: auto;
   transform: none;
 }
+
+.site-credit {
+  padding: 8px 0 32px;
+  text-align: center;
+}
+
+.site-credit p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.site-credit a {
+  color: inherit;
+}
+
+.site-credit a:hover {
+  color: var(--accent);
+}

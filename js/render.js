@@ -424,8 +424,13 @@ export function render(data) {
 
 
     </section>
+
+    <footer class="site-credit" aria-label="Site credit">
+      <p>This webpage was created with the assistance of my colleague, <a href="https://hiskim1.github.io/" target="_blank" rel="noreferrer">Hisu Kim</a></p>
+    </footer>
   `;
 }
+
 
 
 
