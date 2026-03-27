@@ -524,9 +524,9 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 390px minmax(0, 1fr);
+  grid-template-columns: 420px minmax(0, 1fr);
   align-items: start;
-  gap: 42px;
+  gap: 54px;
 }
 
 .publication-copy {
@@ -590,7 +590,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 390px;
+  width: 420px;
   max-width: 100%;
   aspect-ratio: 4 / 2;
   padding: 8px;
@@ -603,16 +603,16 @@ button {
 
 .publication-thumb-image {
   display: block;
-  width: 102%;
-  height: 102%;
+  width: 104%;
+  height: 104%;
   object-fit: contain;
-  object-position: 44% center;
+  object-position: 42% center;
   color: inherit;
 }
 
 .publication-thumb-link {
   display: block;
-  width: 390px;
+  width: 420px;
   max-width: 100%;
   border-radius: 2px;
   transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
@@ -939,7 +939,7 @@ button {
 
   .publication-thumb,
   .publication-thumb-link {
-    width: min(100%, 390px);
+    width: min(100%, 420px);
   }
 
 }
