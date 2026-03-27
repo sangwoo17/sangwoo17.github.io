@@ -594,7 +594,7 @@ button {
   width: 390px;
   max-width: 100%;
   aspect-ratio: 4 / 2;
-  padding: 16px;
+  padding: 8px;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
