@@ -379,24 +379,11 @@ export function render(data) {
           <h2>Publications</h2>
         </div>
         <div class="publication-group">
-          <div class="subsection-heading">
-            <h3>Published</h3>
-          </div>
           <div class="simple-list">
             ${renderPublications(data.publications.published, 'published')}
           </div>
           <button class="button-secondary publication-toggle" type="button">Show more publications</button>
         </div>
-        ${data.publications.inPrep?.length ? `
-          <div class="publication-group">
-            <div class="subsection-heading">
-              <h3>In review / in preparation</h3>
-            </div>
-            <div class="simple-list">
-              ${renderPublications(data.publications.inPrep, 'inPrep')}
-            </div>
-          </div>
-        ` : ''}
       </div>
 
 
