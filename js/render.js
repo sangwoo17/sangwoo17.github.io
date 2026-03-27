@@ -148,7 +148,7 @@ function renderPublications(items, type) {
             ${escapeHtml(item.title)}
           `}
         </h3>
-        <p class="publication-meta">${escapeHtml(item.journal)}${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
+        <p class="publication-meta"><span class="publication-journal">${escapeHtml(item.journal)}</span>${item.detail ? `, ${escapeHtml(item.detail)}` : ''}</p>
         </div>
       </div>
     </article>

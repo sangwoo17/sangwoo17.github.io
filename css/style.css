@@ -583,6 +583,12 @@ button {
   font-size: 1.02rem;
 }
 
+.publication-journal {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text);
+}
+
 .publication-thumb {
   display: flex;
   align-items: center;
