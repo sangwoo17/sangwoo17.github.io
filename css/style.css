@@ -582,7 +582,10 @@ button {
   font-size: 1.02rem;
 }
 
-.publication-journal {`r`n  font-weight: 700;`r`n}
+.publication-journal {
+  font-weight: 700;
+  font-style: italic;
+}
 
 .publication-thumb {
   display: flex;
