@@ -570,7 +570,6 @@ button {
 .publication-item-published .publication-title-link {
   font-size: 1.26rem;
   font-weight: 700;
-  font-style: italic;
 }
 
 .publication-meta {
@@ -596,6 +595,7 @@ button {
   width: 437px;
   max-width: 100%;
   aspect-ratio: 4 / 2;
+  padding: 16px;
   border: 1px solid var(--line);
   background: #f1f4f7;
   color: var(--muted);
@@ -605,8 +605,8 @@ button {
 
 .publication-thumb-image {
   display: block;
-  width: 92%;
-  height: 92%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center center;
   color: inherit;
