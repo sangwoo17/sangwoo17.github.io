@@ -524,7 +524,7 @@ button {
 
 .publication-content {
   display: grid;
-  grid-template-columns: 437px minmax(0, 1fr);
+  grid-template-columns: 390px minmax(0, 1fr);
   align-items: start;
   gap: 30px;
 }
@@ -588,7 +588,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 437px;
+  width: 390px;
   max-width: 100%;
   aspect-ratio: 4 / 2;
   padding: 16px;
@@ -610,7 +610,7 @@ button {
 
 .publication-thumb-link {
   display: block;
-  width: 437px;
+  width: 390px;
   max-width: 100%;
   border-radius: 2px;
   transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
@@ -937,7 +937,7 @@ button {
 
   .publication-thumb,
   .publication-thumb-link {
-    width: min(100%, 437px);
+    width: min(100%, 390px);
   }
 
 }
