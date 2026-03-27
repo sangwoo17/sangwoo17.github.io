@@ -99,7 +99,7 @@ function renderProjects(items) {
 
 function renderPublications(items, type) {
   return items.map((item, index) => `
-    <article class="list-row publication-item ${index > 1 && type === 'published' ? 'publication-hidden' : ''}" ${index > 1 && type === 'published' ? 'data-extra-publication="true"' : ''}>
+    <article class="list-row publication-item publication-item-${type} ${index > 1 && type === 'published' ? 'publication-hidden' : ''}" ${index > 1 && type === 'published' ? 'data-extra-publication="true"' : ''}>
       <span class="list-meta">${escapeHtml(item.year || item.status)}</span>
       <div class="publication-content ${type !== 'published' ? 'publication-content-text-only' : ''}">
         ${type === 'published' ? `

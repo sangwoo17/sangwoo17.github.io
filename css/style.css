@@ -542,8 +542,8 @@ button {
 
 .publication-copy .item-subtitle {
   margin-bottom: 0;
-  font-size: 0.95rem;
-  line-height: 1.68;
+  font-size: 1rem;
+  line-height: 1.72;
   color: color-mix(in srgb, var(--muted) 88%, white);
 }
 
@@ -554,16 +554,33 @@ button {
 
 .publication-copy h3 {
   margin-bottom: 0;
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   letter-spacing: 0.01em;
-  line-height: 1.46;
+  line-height: 1.5;
   color: var(--text);
+  font-weight: 700;
+}
+
+.publication-item-published .publication-copy .item-subtitle {
+  font-size: 1.08rem;
+  line-height: 1.76;
+}
+
+.publication-item-published .publication-copy h3,
+.publication-item-published .publication-title-link {
+  font-size: 1.26rem;
+  font-weight: 700;
+  font-style: italic;
 }
 
 .publication-meta {
   color: color-mix(in srgb, var(--muted) 90%, white);
-  font-size: 0.9rem;
-  line-height: 1.62;
+  font-size: 0.96rem;
+  line-height: 1.66;
+}
+
+.publication-item-published .publication-meta {
+  font-size: 1.02rem;
 }
 
 .publication-thumb {
