@@ -307,10 +307,7 @@ export function render(data) {
 
   app.innerHTML = `
     <section class="hero section-anchor" id="intro">
-      <div class="hero-copy hero-layout">
-        <div class="hero-media">
-          <img class="hero-photo" src="images/photo/20210601_Photoexperiment.jpg" alt="Sangwoo Eom profile photo">
-        </div>
+      <div class="hero-copy">
         <div class="hero-content">
           <h1>${escapeHtml(data.site.title)}</h1>
           <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
