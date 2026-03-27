@@ -29,7 +29,7 @@
   },
   "stats": [
     {
-      "value": "5",
+      "value": "6",
       "label": "Published papers"
     },
     {
@@ -120,6 +120,14 @@
   "publications": {
     "published": [
       {
+        "year": "2026",
+        "authors": "Eom, S.; Nguyen, H. V.; Qureshi, A.; Han, S.",
+        "title": "Mechanistic Insights into Mercury Photoreduction: Effects of Dissolved Organic Matter and Inorganic Carbon in Seawater.",
+        "journal": "Environmental Science and Technology",
+        "detail": "2026.",
+        "figureAlt": "Graphical abstract placeholder for the 2026 Environmental Science and Technology paper"
+      },
+      {
         "year": "2025",
         "authors": "Eom, S.; Soerensen, A. L.; Rhee, T. S.; Hong, J. K.; Son, P.; Rho, T. K.; Han, S.",
         "title": "Properties of inflowing Pacific and Atlantic water govern total and methylated mercury profiles in the Arctic Ocean.",
@@ -171,12 +179,6 @@
       }
     ],
     "inPrep": [
-      {
-        "status": "Major revision requested",
-        "authors": "Eom, S.; Nguyen, H. V.; Qureshi, A.; Han, S.",
-        "title": "Mechanistic Insights into Mercury Photoreduction: Effects of Dissolved Organic Matter and Inorganic Carbon in Seawater.",
-        "journal": "Environmental Science & Technology"
-      },
       {
         "status": "Finalizing manuscript",
         "authors": "Eom, S.; Qureshi, A.; Lee, W.; Rhee, T. S.; Hong, J. K.; Rho, T. K.; Son, P.; Jang, K. S.; Han, S.",
