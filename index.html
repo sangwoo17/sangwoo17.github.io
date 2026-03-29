@@ -36,5 +36,23 @@
   </div>
 
   <script type="module" src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('click', function (event) {
+        const el = event.target.closest('[data-ga-event]');
+
+        if (!el || typeof gtag !== 'function') return;
+
+        const eventName = el.dataset.gaEvent;
+        const eventLabel = el.dataset.gaLabel || el.textContent.trim() || '';
+        const eventCategory = el.dataset.gaCategory || 'engagement';
+
+        gtag('event', eventName, {
+          event_category: eventCategory,
+          event_label: eventLabel
+        });
+      });
+    });
+  </script>
 </body>
 </html>

@@ -110,6 +110,9 @@ function renderPublications(items, type) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open ${escapeHtml(item.title)}"
+              data-ga-event="click_publication_image"
+              data-ga-category="publication"
+              data-ga-label="${escapeHtml(item.title || (item.link || item.url).split('/').pop() || 'publication_image')}"
             >
               ${item.figure ? `
                 <img
@@ -141,7 +144,7 @@ function renderPublications(items, type) {
         <p class="item-subtitle">${escapeHtml(item.authors)}</p>
         <h3>
           ${(item.link || item.url) ? `
-            <a class="publication-title-link" href="${escapeHtml(item.link || item.url)}" target="_blank" rel="noopener noreferrer">
+            <a class="publication-title-link" href="${escapeHtml(item.link || item.url)}" target="_blank" rel="noopener noreferrer" data-ga-event="click_publication" data-ga-category="publication" data-ga-label="${escapeHtml(item.title || (item.link || item.url).split('/').pop() || 'publication')}">
               ${escapeHtml(item.title)}
             </a>
           ` : `
@@ -313,9 +316,9 @@ export function render(data) {
           <p class="hero-tagline">${escapeHtml(data.site.tagline)}</p>
           <p class="hero-subtagline hero-affiliation">${formatInlineBreaks(data.site.subtagline)}</p>
           <div class="hero-actions">
-            <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}">Email</a>
-            <a class="button-secondary" href="https://scholar.google.co.kr/citations?user=LRgQOosAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx">Curriculum Vitae</a>
+            <a class="button-primary" href="mailto:${escapeHtml(data.contact.email)}" data-ga-event="click_email" data-ga-category="contact" data-ga-label="email">Email</a>
+            <a class="button-secondary" href="https://scholar.google.co.kr/citations?user=LRgQOosAAAAJ&hl=en" target="_blank" rel="noreferrer" data-ga-event="click_google_scholar" data-ga-category="profile" data-ga-label="google_scholar">Google Scholar</a>
+            <a class="button-secondary" href="Curriculum%20Vitae%20(CV)_Sangwoo%20Eom_.docx" data-ga-event="click_cv" data-ga-category="profile" data-ga-label="cv">Curriculum Vitae</a>
           </div>
         </div>
       </div>
@@ -355,7 +358,7 @@ export function render(data) {
           <div class="simple-list">
             ${renderHonors(data.honors)}
           </div>
-          ${data.honors.length > 2 ? '<button class="button-secondary honor-toggle" type="button">Show more</button>' : ''}
+          ${data.honors.length > 2 ? '<button class="button-secondary honor-toggle" type="button" data-ga-event="click_honors_show_more" data-ga-category="engagement" data-ga-label="honors">Show more</button>' : ''}
         </div>
       </div>
 
@@ -368,7 +371,7 @@ export function render(data) {
           <div class="simple-list">
             ${renderProjects(data.projects)}
           </div>
-          ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button">Show more projects</button>' : ''}
+          ${data.projects.length > 2 ? '<button class="button-secondary project-toggle" type="button" data-ga-event="click_projects_show_more" data-ga-category="engagement" data-ga-label="projects">Show more projects</button>' : ''}
         </div>
       <div class="section-block section-anchor" id="publications">
         <div class="section-heading">
@@ -379,7 +382,7 @@ export function render(data) {
           <div class="simple-list">
             ${renderPublications(data.publications.published, 'published')}
           </div>
-          <button class="button-secondary publication-toggle" type="button">Show more publications</button>
+          <button class="button-secondary publication-toggle" type="button" data-ga-event="click_publications_show_more" data-ga-category="engagement" data-ga-label="publications">Show more publications</button>
         </div>
       </div>
 
