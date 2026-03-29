@@ -55,4 +55,20 @@
     });
   </script>
 </body>
+  <script>
+document.addEventListener('click', function (e) {
+  const el = e.target.closest('a, button');
+  if (!el) return;
+
+  if (typeof gtag !== 'function') return;
+
+  let label = el.innerText || el.href || 'unknown';
+  label = label.trim().slice(0, 100);
+
+  gtag('event', 'click_any', {
+    event_category: 'interaction',
+    event_label: label
+  });
+});
+</script>
 </html>
