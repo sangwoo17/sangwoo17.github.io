@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Sangwoo Eom",
-    "tagline": "Ph.D. Candidate, Department of Environmental and Energy Engineering,",
+    "tagline": "Ph.D., Department of Environmental and Energy Engineering,",
     "subtagline": "Gwangju Institute of Science and Technology (GIST), Republic of Korea",
     "heroSlides": [
       {
@@ -62,7 +62,7 @@
   ],
   "education": [
     {
-      "period": "2020-2026 (expected)",
+      "period": "2020-2026",
       "degree": "Integrated Ph.D., Environmental and Energy Engineering",
       "institution": "Gwangju Institute of Science and Technology (GIST), Advisor: Seunghee Han",
       "detail": ""
